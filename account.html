@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Akun Saya — Akunku</title>
+  <meta name="description" content="Kelola akun Akunku Anda — profil, pesanan, wishlist, dan panel admin.">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<!-- NAVBAR -->
+<header id="navbar" class="navbar">
+  <div class="container">
+    <div class="navbar-inner">
+      <a href="index.html" class="navbar-logo">
+        <svg viewBox="0 0 26 26" fill="none"><path d="M14.5 2L4 15h9.5l-2 9L22 11h-9l1.5-9z" fill="#FF6B35" stroke="#FF6B35" stroke-width="1.5" stroke-linejoin="round"/></svg>
+        Akun<span class="logo-accent">ku</span>
+      </a>
+      <nav class="navbar-links">
+        <a href="index.html">Beranda</a>
+        <a href="products.html">Produk</a>
+        <a href="products.html">Kategori</a>
+        <a href="account.html" class="active">Akun</a>
+      </nav>
+      <div class="navbar-actions">
+        <button class="icon-btn" id="searchBtn">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+        </button>
+        <a href="#" class="icon-btn">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+          <span class="cart-badge">0</span>
+        </a>
+        <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </div>
+  <div class="mobile-nav" id="mobileNav">
+    <a href="index.html">🏠 Beranda</a>
+    <a href="products.html">📦 Produk</a>
+    <a href="account.html" class="active">👤 Akun</a>
+    <div class="mobile-nav-divider"></div>
+    <div class="mobile-nav-actions">
+      <a href="#" class="btn btn-outline btn-sm">Masuk</a>
+      <a href="#" class="btn btn-primary btn-sm">Daftar</a>
+    </div>
+  </div>
+</header>
+
+<!-- PAGE HEADER -->
+<div style="background:var(--card-bg);border-bottom:1px solid var(--card-border);padding:1.5rem 0;">
+  <div class="container">
+    <div class="page-breadcrumb" style="margin:0 0 0.5rem;">
+      <a href="index.html">Beranda</a>
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+      <span>Akun Saya</span>
+    </div>
+    <h1 style="font-size:1.5rem;font-weight:800;">Dashboard <span class="gradient-text">Akunku</span></h1>
+  </div>
+</div>
+
+<!-- ACCOUNT LAYOUT -->
+<div class="container">
+  <div class="account-layout">
+
+    <!-- SIDEBAR -->
+    <aside class="account-sidebar">
+      <!-- User Info -->
+      <div class="sidebar-user">
+        <div class="user-avatar-lg">RD</div>
+        <div class="sidebar-name">Rizky Darmawan</div>
+        <div class="sidebar-email">rizky.d@gmail.com</div>
+        <div style="margin-top:0.75rem;">
+          <span style="background:rgba(0,208,132,0.15);border:1px solid rgba(0,208,132,0.25);color:var(--success);font-size:0.7rem;font-weight:700;padding:0.2rem 0.65rem;border-radius:100px;">✅ Verified Member</span>
+        </div>
+      </div>
+
+      <!-- Nav Items -->
+      <nav class="sidebar-nav">
+        <div class="sidebar-nav-item active" data-view="dashboard">
+          <div class="nav-icon">🏠</div>
+          Dashboard
+        </div>
+        <div class="sidebar-nav-item" data-view="profile">
+          <div class="nav-icon">👤</div>
+          Profil Saya
+        </div>
+        <div class="sidebar-nav-item" data-view="orders">
+          <div class="nav-icon">📦</div>
+          Pesanan Saya
+          <span style="margin-left:auto;background:var(--primary);color:#fff;font-size:0.65rem;font-weight:700;padding:0.15rem 0.5rem;border-radius:100px;">3</span>
+        </div>
+        <div class="sidebar-nav-item" data-view="wishlist">
+          <div class="nav-icon">❤️</div>
+          Wishlist
+        </div>
+        <div class="sidebar-nav-item" data-view="payment">
+          <div class="nav-icon">💳</div>
+          Metode Pembayaran
+        </div>
+        <div class="sidebar-nav-item" data-view="notifications">
+          <div class="nav-icon">🔔</div>
+          Notifikasi
+          <span style="margin-left:auto;background:var(--danger);color:#fff;font-size:0.65rem;font-weight:700;padding:0.15rem 0.5rem;border-radius:100px;">5</span>
+        </div>
+        <div class="sidebar-nav-item" data-view="settings">
+          <div class="nav-icon">⚙️</div>
+          Pengaturan
+        </div>
+
+        <div class="sidebar-divider"></div>
+
+        <div class="sidebar-nav-item admin-item" data-view="admin">
+          <div class="nav-icon">🛡️</div>
+          Panel Admin
+        </div>
+        <div class="sidebar-nav-item" data-view="logout" onclick="if(confirm('Yakin ingin keluar?')) window.location.href='index.html'">
+          <div class="nav-icon">🚪</div>
+          Keluar
+        </div>
+      </nav>
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <div class="account-main">
+
+      <!-- ================================================
+           VIEW: DASHBOARD
+      ================================================ -->
+      <div class="view-section active" id="view-dashboard">
+
+        <!-- Welcome Card -->
+        <div class="welcome-card reveal">
+          <h2>Selamat Datang Kembali, Rizky! 👋</h2>
+          <p>Kamu memiliki 3 pesanan aktif dan 5 notifikasi baru. Selamat berbelanja!</p>
+        </div>
+
+        <!-- Stats Row -->
+        <div class="stats-row reveal">
+          <div class="stat-card">
+            <div class="stat-card-icon" style="background:rgba(108,63,232,0.15);">📦</div>
+            <div class="stat-card-val">24</div>
+            <div class="stat-card-label">Total Pesanan</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-card-icon" style="background:rgba(0,208,132,0.15);">💰</div>
+            <div class="stat-card-val">Rp 2,8jt</div>
+            <div class="stat-card-label">Total Belanja</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-card-icon" style="background:rgba(255,77,106,0.15);">❤️</div>
+            <div class="stat-card-val">18</div>
+            <div class="stat-card-label">Wishlist</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-card-icon" style="background:rgba(255,184,0,0.15);">⭐</div>
+            <div class="stat-card-val">1,250</div>
+            <div class="stat-card-label">Poin Reward</div>
+          </div>
+        </div>
+
+        <!-- Recent Orders -->
+        <div class="data-table-wrap reveal">
+          <div class="table-header">
+            <span class="table-title">Pesanan Terbaru</span>
+            <span class="table-link" onclick="document.querySelector('[data-view=orders]').click()">Lihat Semua →</span>
+          </div>
+          <div style="overflow-x:auto;">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>#ID Pesanan</th>
+                  <th>Produk</th>
+                  <th>Tanggal</th>
+                  <th>Status</th>
+                  <th>Harga</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>#AK-2024-0892</strong></td>
+                  <td>Kursus React.js Lengkap</td>
+                  <td>14 Nov 2024</td>
+                  <td><span class="status-badge success">Berhasil</span></td>
+                  <td><strong>Rp 129.000</strong></td>
+                </tr>
+                <tr>
+                  <td><strong>#AK-2024-0891</strong></td>
+                  <td>Netflix Premium 1 Bulan</td>
+                  <td>13 Nov 2024</td>
+                  <td><span class="status-badge success">Berhasil</span></td>
+                  <td><strong>Rp 45.000</strong></td>
+                </tr>
+                <tr>
+                  <td><strong>#AK-2024-0885</strong></td>
+                  <td>Adobe CC All Apps</td>
+                  <td>10 Nov 2024</td>
+                  <td><span class="status-badge warning">Diproses</span></td>
+                  <td><strong>Rp 189.000</strong></td>
+                </tr>
+                <tr>
+                  <td><strong>#AK-2024-0879</strong></td>
+                  <td>Spotify Premium 3 Bulan</td>
+                  <td>8 Nov 2024</td>
+                  <td><span class="status-badge success">Berhasil</span></td>
+                  <td><strong>Rp 55.000</strong></td>
+                </tr>
+                <tr>
+                  <td><strong>#AK-2024-0870</strong></td>
+                  <td>Free Fire 2100 Diamond</td>
+                  <td>5 Nov 2024</td>
+                  <td><span class="status-badge danger">Gagal</span></td>
+                  <td><strong>Rp 139.000</strong></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Quick Access -->
+        <div class="reveal" style="display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;">
+          <div onclick="document.querySelector('[data-view=orders]').click()" style="background:var(--card-bg);border:1px solid var(--card-border);border-radius:var(--radius-lg);padding:1.25rem;cursor:pointer;transition:var(--transition);text-align:center;" onmouseover="this.style.borderColor='rgba(108,63,232,0.4)'" onmouseout="this.style.borderColor='var(--card-border)'">
+            <div style="font-size:2rem;margin-bottom:0.5rem;">📦</div>
+            <div style="font-size:0.82rem;font-weight:600;color:#fff;">Lacak Pesanan</div>
+          </div>
+          <a href="products.html" style="background:var(--card-bg);border:1px solid var(--card-border);border-radius:var(--radius-lg);padding:1.25rem;cursor:pointer;transition:var(--transition);text-align:center;display:block;" onmouseover="this.style.borderColor='rgba(108,63,232,0.4)'" onmouseout="this.style.borderColor='var(--card-border)'">
+            <div style="font-size:2rem;margin-bottom:0.5rem;">🛍️</div>
+            <div style="font-size:0.82rem;font-weight:600;color:#fff;">Belanja Lagi</div>
+          </a>
+          <div onclick="document.querySelector('[data-view=notifications]').click()" style="background:var(--card-bg);border:1px solid var(--card-border);border-radius:var(--radius-lg);padding:1.25rem;cursor:pointer;transition:var(--transition);text-align:center;" onmouseover="this.style.borderColor='rgba(108,63,232,0.4)'" onmouseout="this.style.borderColor='var(--card-border)'">
+            <div style="font-size:2rem;margin-bottom:0.5rem;">🔔</div>
+            <div style="font-size:0.82rem;font-weight:600;color:#fff;">Notifikasi (5)</div>
+          </div>
+        </div>
+
+      </div><!-- /view-dashboard -->
+
+      <!-- ================================================
+           VIEW: PROFILE
+      ================================================ -->
+      <div class="view-section" id="view-profile">
+        <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:1.5rem;flex-wrap:wrap;gap:1rem;">
+          <h2 style="font-size:1.25rem;font-weight:800;">Profil Saya</h2>
+          <button class="btn btn-primary btn-sm">Simpan Perubahan</button>
+        </div>
+
+        <!-- Avatar Section -->
+        <div style="background:var(--card-bg);border:1px solid var(--card-border);border-radius:var(--radius-lg);padding:1.5rem;margin-bottom:1.25rem;display:flex;align-items:center;gap:1.25rem;flex-wrap:wrap;">
+          <div style="width:80px;height:80px;border-radius:50%;background:linear-gradient(135deg,var(--primary),var(--secondary));display:flex;align-items:center;justify-content:center;font-family:var(--font-heading);font-size:1.75rem;font-weight:800;color:#fff;flex-shrink:0;box-shadow:0 0 0 3px rgba(108,63,232,0.3);">RD</div>
+          <div>
+            <div style="font-weight:700;color:#fff;margin-bottom:0.3rem;">Foto Profil</div>
+            <div style="font-size:0.8rem;color:var(--muted);margin-bottom:0.75rem;">JPG, PNG maks. 2MB</div>
+            <button class="btn btn-outline btn-sm">Ubah Foto</button>
+          </div>
+        </div>
+
+        <!-- Form -->
+        <div style="background:var(--card-bg);border:1px solid var(--card-border);border-radius:var(--radius-lg);padding:1.5rem;">
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:1rem;">
+            <div>
+              <label style="font-size:0.8rem;font-weight:600;color:var(--muted);display:block;margin-bottom:0.4rem;">Nama Depan</label>
+              <input type="text" value="Rizky" style="width:100%;background:rgba(255,255,255,0.06);border:1px solid var(--card-border);border-radius:var(--radius-sm);color:#fff;padding:0.6rem 0.875rem;font-family:var(--font-body);font-size:0.875rem;outline:none;transition:border-color 0.2s;" onfocus="this.style.borderColor='var(--primary)'" onblur="this.style.borderColor='var(--card-border)'">
+            </div>
+            <div>
+              <label style="font-size:0.8rem;font-weight:600;color:var(--muted);display:block;margin-bottom:0.4rem;">Nama Belakang</label>
+              <input type="text" value="Darmawan" style="width:100%;background:rgba(255,255,255,0.06);border:1px solid var(--card-border);border-radius:var(--radius-sm);color:#fff;padding:0.6rem 0.875rem;font-family:var(--font-body);font-size:0.875rem;outline:none;transition:border-color 0.2s;" onfocus="this.style.borderColor='var(--primary)'" onblur="this.style.borderColor='var(--card-border)'">
+            </div>
+          </div>
+          <div style="margin-bottom:1rem;">
+            <label style="font-size:0.8rem;font-weight:600;color:var(--muted);display:block;margin-bottom:0.4rem;">Email</label>
+            <input type="email" value="rizky.d@gmail.com" style="width:100%;background:rgba(255,255,255,0.06);border:1px solid var(--card-border);border-radius:var(--radius-sm);color:#fff;padding:0.6rem 0.875rem;font-family:var(--font-body);font-size:0.875rem;outline:none;transition:border-color 0.2s;" onfocus="this.style.borderColor='var(--primary)'" onblur="this.style.borderColor='var(--card-border)'">
+          </div>
+          <div style="margin-bottom:1rem;">
+            <label style="font-size:0.8rem;font-weight:600;color:var(--muted);display:block;margin-bottom:0.4rem;">Nomor HP</label>
+            <input type="tel" value="+62 812 3456 7890" style="width:100%;background:rgba(255,255,255,0.06);border:1px solid var(--card-border);border-radius:var(--radius-sm);color:#fff;padding:0.6rem 0.875rem;font-family:var(--font-body);font-size:0.875rem;outline:none;transition:border-color 0.2s;" onfocus="this.style.borderColor='var(--primary)'" onblur="this.style.borderColor='var(--card-border)'">
+          </div>
+          <div>
+            <label style="font-size:0.8rem;font-weight:600;color:var(--muted);display:block;margin-bottom:0.4rem;">Bio</label>
+            <textarea rows="3" style="width:100%;background:rgba(255,255,255,0.06);border:1px solid var(--card-border);border-radius:var(--radius-sm);color:#fff;padding:0.6rem 0.875rem;font-family:var(--font-body);font-size:0.875rem;outline:none;resize:vertical;transition:border-color 0.2s;" onfocus="this.style.borderColor='var(--primary)'" onblur="this.style.borderColor='var(--card-border)'">Developer & Digital Enthusiast. Suka beli kursus online dan produk digital.</textarea>
+          </div>
+        </div>
+      </div><!-- /view-profile -->
+
+      <!-- ================================================
+           VIEW: ORDERS
+      ================================================ -->
+      <div class="view-section" id="view-orders">
+        <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:1.5rem;flex-wrap:wrap;gap:1rem;">
+          <h2 style="font-size:1.25rem;font-weight:800;">Pesanan Saya</h2>
+          <div style="display:flex;gap:0.5rem;">
+            <select style="background:var(--card-bg);border:1px solid var(--card-border);border-radius:var(--radius-sm);color:#fff;padding:0.45rem 0.75rem;font-family:var(--font-body);font-size:0.8rem;outline:none;">
+              <option>Semua Status</option>
+              <option>Berhasil</option>
+              <option>Diproses</option>
+              <option>Gagal</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="data-table-wrap">
+          <div style="overflow-x:auto;">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>#ID Pesanan</th>
+                  <th>Produk</th>
+                  <th>Tanggal</th>
+                  <th>Status</th>
+                  <th>Harga</th>
+                  <th>Aksi</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>#AK-2024-0892</strong></td>
+                  <td>Kursus React.js Lengkap</td>
+                  <td>14 Nov 2024</td>
+                  <td><span class="status-badge success">Berhasil</span></td>
+                  <td><strong>Rp 129.000</strong></td>
+                  <td><a href="product-detail.html" style="font-size:0.75rem;color:var(--primary-light);">Unduh</a></td>
+                </tr>
+                <tr>
+                  <td><strong>#AK-2024-0891</strong></td>
+                  <td>Netflix Premium 1 Bulan</td>
+                  <td>13 Nov 2024</td>
+                  <td><span class="status-badge success">Berhasil</span></td>
+                  <td><strong>Rp 45.000</strong></td>
+                  <td><a href="#" style="font-size:0.75rem;color:var(--primary-light);">Unduh</a></td>
+                </tr>
+                <tr>
+                  <td><strong>#AK-2024-0885</strong></td>
+                  <td>Adobe CC All Apps 1 Bulan</td>
+                  <td>10 Nov 2024</td>
+                  <td><span class="status-badge warning">Diproses</span></td>
+                  <td><strong>Rp 189.000</strong></td>
+                  <td><a href="#" style="font-size:0.75rem;color:var(--muted);">Menunggu</a></td>
+                </tr>
+                <tr>
+                  <td><strong>#AK-2024-0879</strong></td>
+                  <td>Spotify Premium 3 Bulan</td>
+                  <td>8 Nov 2024</td>
+                  <td><span class="status-badge success">Berhasil</span></td>
+                  <td><strong>Rp 55.000</strong></td>
+                  <td><a href="#" style="font-size:0.75rem;color:var(--primary-light);">Unduh</a></td>
+                </tr>
+                <tr>
+                  <td><strong>#AK-2024-0870</strong></td>
+                  <td>Free Fire 2100 Diamond</td>
+                  <td>5 Nov 2024</td>
+                  <td><span class="status-badge danger">Gagal</span></td>
+                  <td><strong>Rp 139.000</strong></td>
+                  <td><a href="#" style="font-size:0.75rem;color:var(--secondary);">Refund</a></td>
+                </tr>
+                <tr>
+                  <td><strong>#AK-2024-0865</strong></td>
+                  <td>Canva Pro 1 Bulan</td>
+                  <td>2 Nov 2024</td>
+                  <td><span class="status-badge success">Berhasil</span></td>
+                  <td><strong>Rp 29.000</strong></td>
+                  <td><a href="#" style="font-size:0.75rem;color:var(--primary-light);">Unduh</a></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div><!-- /view-orders -->
+
+      <!-- ================================================
+           VIEW: WISHLIST
+      ================================================ -->
+      <div class="view-section" id="view-wishlist">
+        <h2 style="font-size:1.25rem;font-weight:800;margin-bottom:1.5rem;">Wishlist Saya ❤️</h2>
+
+        <div class="products-grid" style="grid-template-columns:repeat(3,1fr);">
+          <div class="product-card">
+            <div class="product-thumb"><div class="product-thumb-img gt-6">🎨</div><span class="product-badge">Software</span><span class="discount-badge">-46%</span></div>
+            <div class="product-body">
+              <div class="product-name">Adobe CC All Apps 1 Bulan</div>
+              <div class="product-pricing"><span class="price-original">Rp 350.000</span><span class="price-final">Rp 189.000</span></div>
+              <div class="product-footer"><button class="btn btn-primary btn-sm btn-full add-to-cart">Beli Sekarang</button></div>
+            </div>
+          </div>
+          <div class="product-card">
+            <div class="product-thumb"><div class="product-thumb-img gt-8">🤖</div><span class="product-badge">Tools</span><span class="discount-badge">-50%</span></div>
+            <div class="product-body">
+              <div class="product-name">ChatGPT Plus Premium 1 Bulan</div>
+              <div class="product-pricing"><span class="price-original">Rp 320.000</span><span class="price-final">Rp 159.000</span></div>
+              <div class="product-footer"><button class="btn btn-primary btn-sm btn-full add-to-cart">Beli Sekarang</button></div>
+            </div>
+          </div>
+          <div class="product-card">
+            <div class="product-thumb"><div class="product-thumb-img gt-5">📈</div><span class="product-badge">Ebook</span><span class="discount-badge">-56%</span></div>
+            <div class="product-body">
+              <div class="product-name">Investasi Saham Pemula 2024</div>
+              <div class="product-pricing"><span class="price-original">Rp 79.000</span><span class="price-final">Rp 35.000</span></div>
+              <div class="product-footer"><button class="btn btn-primary btn-sm btn-full add-to-cart">Beli Sekarang</button></div>
+            </div>
+          </div>
+        </div>
+      </div><!-- /view-wishlist -->
+
+      <!-- ================================================
+           VIEW: PAYMENT
+      ================================================ -->
+      <div class="view-section" id="view-payment">
+        <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:1.5rem;">
+          <h2 style="font-size:1.25rem;font-weight:800;">Metode Pembayaran</h2>
+          <button class="btn btn-primary btn-sm">+ Tambah Metode</button>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:1rem;">
+          <div style="background:var(--card-bg);border:1px solid var(--primary);border-radius:var(--radius-lg);padding:1.25rem;display:flex;align-items:center;gap:1rem;">
+            <div style="width:48px;height:48px;border-radius:var(--radius-sm);background:linear-gradient(135deg,#003087,#0057b8);display:flex;align-items:center;justify-content:center;font-size:1.25rem;flex-shrink:0;">💳</div>
+            <div style="flex:1;"><div style="font-weight:700;color:#fff;">GoPay</div><div style="font-size:0.8rem;color:var(--muted);">Saldo: Rp 250.000</div></div>
+            <span style="background:rgba(0,208,132,0.15);color:var(--success);font-size:0.7rem;font-weight:700;padding:0.2rem 0.6rem;border-radius:100px;border:1px solid rgba(0,208,132,0.2);">Utama</span>
+          </div>
+          <div style="background:var(--card-bg);border:1px solid var(--card-border);border-radius:var(--radius-lg);padding:1.25rem;display:flex;align-items:center;gap:1rem;">
+            <div style="width:48px;height:48px;border-radius:var(--radius-sm);background:linear-gradient(135deg,#00AE00,#006600);display:flex;align-items:center;justify-content:center;font-size:1.25rem;flex-shrink:0;">🏦</div>
+            <div style="flex:1;"><div style="font-weight:700;color:#fff;">OVO</div><div style="font-size:0.8rem;color:var(--muted);">Saldo: Rp 100.000</div></div>
+          </div>
+          <div style="background:var(--card-bg);border:1px solid var(--card-border);border-radius:var(--radius-lg);padding:1.25rem;display:flex;align-items:center;gap:1rem;">
+            <div style="width:48px;height:48px;border-radius:var(--radius-sm);background:linear-gradient(135deg,#0070BA,#1546A0);display:flex;align-items:center;justify-content:center;font-size:1.25rem;flex-shrink:0;">🏧</div>
+            <div style="flex:1;"><div style="font-weight:700;color:#fff;">BCA Virtual Account</div><div style="font-size:0.8rem;color:var(--muted);">1234-5678-9012-3456</div></div>
+          </div>
+        </div>
+      </div><!-- /view-payment -->
+
+      <!-- ================================================
+           VIEW: NOTIFICATIONS
+      ================================================ -->
+      <div class="view-section" id="view-notifications">
+        <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:1.5rem;">
+          <h2 style="font-size:1.25rem;font-weight:800;">Notifikasi 🔔</h2>
+          <button class="btn btn-outline btn-sm" onclick="this.textContent='Semua dibaca ✓'">Tandai Semua Dibaca</button>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:0.75rem;">
+          <div style="background:var(--card-bg);border:1px solid rgba(108,63,232,0.3);border-radius:var(--radius-lg);padding:1.1rem 1.25rem;display:flex;gap:0.875rem;align-items:flex-start;">
+            <div style="width:40px;height:40px;border-radius:50%;background:rgba(0,208,132,0.15);display:flex;align-items:center;justify-content:center;font-size:1.1rem;flex-shrink:0;">✅</div>
+            <div style="flex:1;">
+              <div style="font-weight:600;font-size:0.875rem;color:#fff;margin-bottom:0.2rem;">Pesanan Berhasil! #AK-2024-0892</div>
+              <div style="font-size:0.8rem;color:var(--muted);">Kursus React.js Lengkap telah berhasil dibeli. Cek email kamu untuk link akses.</div>
+              <div style="font-size:0.72rem;color:var(--muted);margin-top:0.35rem;">2 jam lalu</div>
+            </div>
+            <div style="width:8px;height:8px;border-radius:50%;background:var(--primary);flex-shrink:0;margin-top:4px;"></div>
+          </div>
+          <div style="background:var(--card-bg);border:1px solid rgba(255,107,53,0.25);border-radius:var(--radius-lg);padding:1.1rem 1.25rem;display:flex;gap:0.875rem;align-items:flex-start;">
+            <div style="width:40px;height:40px;border-radius:50%;background:rgba(255,107,53,0.15);display:flex;align-items:center;justify-content:center;font-size:1.1rem;flex-shrink:0;">⚡</div>
+            <div style="flex:1;">
+              <div style="font-weight:600;font-size:0.875rem;color:#fff;margin-bottom:0.2rem;">Flash Sale dimulai! Diskon hingga 70%</div>
+              <div style="font-size:0.8rem;color:var(--muted);">Jangan lewatkan Flash Sale hari ini. Banyak produk dengan diskon besar!</div>
+              <div style="font-size:0.72rem;color:var(--muted);margin-top:0.35rem;">5 jam lalu</div>
+            </div>
+            <div style="width:8px;height:8px;border-radius:50%;background:var(--secondary);flex-shrink:0;margin-top:4px;"></div>
+          </div>
+          <div style="background:var(--card-bg);border:1px solid var(--card-border);border-radius:var(--radius-lg);padding:1.1rem 1.25rem;display:flex;gap:0.875rem;align-items:flex-start;opacity:0.7;">
+            <div style="width:40px;height:40px;border-radius:50%;background:rgba(255,255,255,0.05);display:flex;align-items:center;justify-content:center;font-size:1.1rem;flex-shrink:0;">🎁</div>
+            <div style="flex:1;">
+              <div style="font-weight:600;font-size:0.875rem;color:#fff;margin-bottom:0.2rem;">Poin reward kamu bertambah!</div>
+              <div style="font-size:0.8rem;color:var(--muted);">Kamu mendapatkan 129 poin dari pembelian terakhir. Total: 1,250 poin.</div>
+              <div style="font-size:0.72rem;color:var(--muted);margin-top:0.35rem;">1 hari lalu</div>
+            </div>
+          </div>
+          <div style="background:var(--card-bg);border:1px solid var(--card-border);border-radius:var(--radius-lg);padding:1.1rem 1.25rem;display:flex;gap:0.875rem;align-items:flex-start;opacity:0.7;">
+            <div style="width:40px;height:40px;border-radius:50%;background:rgba(255,77,106,0.12);display:flex;align-items:center;justify-content:center;font-size:1.1rem;flex-shrink:0;">⚠️</div>
+            <div style="flex:1;">
+              <div style="font-weight:600;font-size:0.875rem;color:#fff;margin-bottom:0.2rem;">Pesanan gagal #AK-2024-0870</div>
+              <div style="font-size:0.8rem;color:var(--muted);">Pembayaran untuk Free Fire 2100 Diamond gagal diproses. Silakan coba lagi.</div>
+              <div style="font-size:0.72rem;color:var(--muted);margin-top:0.35rem;">3 hari lalu</div>
+            </div>
+          </div>
+          <div style="background:var(--card-bg);border:1px solid var(--card-border);border-radius:var(--radius-lg);padding:1.1rem 1.25rem;display:flex;gap:0.875rem;align-items:flex-start;opacity:0.7;">
+            <div style="width:40px;height:40px;border-radius:50%;background:rgba(108,63,232,0.12);display:flex;align-items:center;justify-content:center;font-size:1.1rem;flex-shrink:0;">🔐</div>
+            <div style="flex:1;">
+              <div style="font-weight:600;font-size:0.875rem;color:#fff;margin-bottom:0.2rem;">Login dari perangkat baru terdeteksi</div>
+              <div style="font-size:0.8rem;color:var(--muted);">Login berhasil dari Chrome di Windows 10. Jakarta, Indonesia.</div>
+              <div style="font-size:0.72rem;color:var(--muted);margin-top:0.35rem;">5 hari lalu</div>
+            </div>
+          </div>
+        </div>
+      </div><!-- /view-notifications -->
+
+      <!-- ================================================
+           VIEW: SETTINGS
+      ================================================ -->
+      <div class="view-section" id="view-settings">
+        <h2 style="font-size:1.25rem;font-weight:800;margin-bottom:1.5rem;">Pengaturan ⚙️</h2>
+        <div style="display:flex;flex-direction:column;gap:1rem;">
+          <div style="background:var(--card-bg);border:1px solid var(--card-border);border-radius:var(--radius-lg);padding:1.25rem;">
+            <h4 style="font-size:0.9rem;margin-bottom:1rem;">Notifikasi Email</h4>
+            <div style="display:flex;flex-direction:column;gap:0.75rem;">
+              <label style="display:flex;align-items:center;justify-content:space-between;cursor:pointer;">
+                <span style="font-size:0.875rem;color:var(--muted);">Pesanan berhasil</span>
+                <input type="checkbox" checked style="accent-color:var(--primary);width:16px;height:16px;">
+              </label>
+              <label style="display:flex;align-items:center;justify-content:space-between;cursor:pointer;">
+                <span style="font-size:0.875rem;color:var(--muted);">Flash sale & promo</span>
+                <input type="checkbox" checked style="accent-color:var(--primary);width:16px;height:16px;">
+              </label>
+              <label style="display:flex;align-items:center;justify-content:space-between;cursor:pointer;">
+                <span style="font-size:0.875rem;color:var(--muted);">Newsletter mingguan</span>
+                <input type="checkbox" style="accent-color:var(--primary);width:16px;height:16px;">
+              </label>
+            </div>
+          </div>
+          <div style="background:var(--card-bg);border:1px solid var(--card-border);border-radius:var(--radius-lg);padding:1.25rem;">
+            <h4 style="font-size:0.9rem;margin-bottom:1rem;">Keamanan</h4>
+            <div style="display:flex;flex-direction:column;gap:0.75rem;">
+              <button class="btn btn-outline btn-sm" style="width:fit-content;">Ubah Password</button>
+              <button class="btn btn-outline btn-sm" style="width:fit-content;">Aktifkan 2FA</button>
+              <button class="btn btn-sm" style="width:fit-content;background:rgba(255,77,106,0.12);border:1px solid rgba(255,77,106,0.3);color:var(--danger);">Hapus Akun</button>
+            </div>
+          </div>
+        </div>
+      </div><!-- /view-settings -->
+
+      <!-- ================================================
+           VIEW: ADMIN PANEL
+      ================================================ -->
+      <div class="view-section" id="view-admin">
+        <div class="admin-header">
+          <div>
+            <h2 style="font-size:1.25rem;font-weight:800;">Panel Admin 🛡️</h2>
+            <p style="font-size:0.82rem;color:var(--muted);margin-top:0.25rem;">Kelola toko dan pantau performa Akunku</p>
+          </div>
+          <div class="admin-toggle">
+            <button class="toggle-btn active" data-toggle="overview">📊 Overview</button>
+            <button class="toggle-btn" data-toggle="products">📦 Produk</button>
+            <button class="toggle-btn" data-toggle="users">👥 Pengguna</button>
+          </div>
+        </div>
+
+        <!-- Admin Sub: Overview -->
+        <div class="admin-sub-view" id="admin-overview">
+          <!-- Admin Stats -->
+          <div class="stats-row reveal" style="margin-bottom:1.25rem;">
+            <div class="stat-card" style="border-color:rgba(108,63,232,0.3);">
+              <div class="stat-card-icon" style="background:rgba(108,63,232,0.15);">📦</div>
+              <div class="stat-card-val">1,248</div>
+              <div class="stat-card-label">Total Produk</div>
+            </div>
+            <div class="stat-card" style="border-color:rgba(0,208,132,0.3);">
+              <div class="stat-card-icon" style="background:rgba(0,208,132,0.15);">👥</div>
+              <div class="stat-card-val">52,341</div>
+              <div class="stat-card-label">Total Pengguna</div>
+            </div>
+            <div class="stat-card" style="border-color:rgba(255,107,53,0.3);">
+              <div class="stat-card-icon" style="background:rgba(255,107,53,0.15);">💰</div>
+              <div class="stat-card-val">Rp 8,4jt</div>
+              <div class="stat-card-label">Pendapatan Hari Ini</div>
+            </div>
+            <div class="stat-card" style="border-color:rgba(255,184,0,0.3);">
+              <div class="stat-card-icon" style="background:rgba(255,184,0,0.15);">🛒</div>
+              <div class="stat-card-val">127</div>
+              <div class="stat-card-label">Pesanan Baru</div>
+            </div>
+          </div>
+
+          <!-- Quick Actions -->
+          <div class="quick-actions reveal">
+            <div class="quick-action">
+              <div class="qa-icon">➕</div>
+              <div class="qa-label">Tambah Produk</div>
+            </div>
+            <div class="quick-action">
+              <div class="qa-icon">👥</div>
+              <div class="qa-label">Kelola Pengguna</div>
+            </div>
+            <div class="quick-action">
+              <div class="qa-icon">📊</div>
+              <div class="qa-label">Lihat Laporan</div>
+            </div>
+            <div class="quick-action">
+              <div class="qa-icon">🏪</div>
+              <div class="qa-label">Pengaturan Toko</div>
+            </div>
+          </div>
+
+          <!-- Recent Transactions -->
+          <div class="data-table-wrap reveal">
+            <div class="table-header">
+              <span class="table-title">Transaksi Terkini</span>
+              <span class="table-link">Ekspor CSV →</span>
+            </div>
+            <div style="overflow-x:auto;">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>ID Transaksi</th>
+                    <th>Pembeli</th>
+                    <th>Produk</th>
+                    <th>Waktu</th>
+                    <th>Status</th>
+                    <th>Nominal</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong>#TRX-9241</strong></td>
+                    <td>Andi Saputra</td>
+                    <td>Netflix Premium</td>
+                    <td>14:32 WIB</td>
+                    <td><span class="status-badge success">Sukses</span></td>
+                    <td><strong style="color:var(--success);">+Rp 45.000</strong></td>
+                  </tr>
+                  <tr>
+                    <td><strong>#TRX-9240</strong></td>
+                    <td>Budi Santoso</td>
+                    <td>Adobe CC All Apps</td>
+                    <td>14:18 WIB</td>
+                    <td><span class="status-badge success">Sukses</span></td>
+                    <td><strong style="color:var(--success);">+Rp 189.000</strong></td>
+                  </tr>
+                  <tr>
+                    <td><strong>#TRX-9239</strong></td>
+                    <td>Citra Dewi</td>
+                    <td>Kursus React.js</td>
+                    <td>13:55 WIB</td>
+                    <td><span class="status-badge warning">Diproses</span></td>
+                    <td><strong>Rp 129.000</strong></td>
+                  </tr>
+                  <tr>
+                    <td><strong>#TRX-9238</strong></td>
+                    <td>Danu Wiratama</td>
+                    <td>ChatGPT Plus</td>
+                    <td>13:41 WIB</td>
+                    <td><span class="status-badge success">Sukses</span></td>
+                    <td><strong style="color:var(--success);">+Rp 159.000</strong></td>
+                  </tr>
+                  <tr>
+                    <td><strong>#TRX-9237</strong></td>
+                    <td>Eka Pertiwi</td>
+                    <td>Free Fire Diamond</td>
+                    <td>13:22 WIB</td>
+                    <td><span class="status-badge danger">Gagal</span></td>
+                    <td><strong style="color:var(--danger);">Rp 139.000</strong></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div><!-- /admin-overview -->
+
+        <!-- Admin Sub: Products -->
+        <div class="admin-sub-view" id="admin-products" style="display:none;">
+          <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:1.25rem;flex-wrap:wrap;gap:0.75rem;">
+            <h3 style="font-size:1rem;font-weight:700;">Kelola Produk</h3>
+            <button class="btn btn-primary btn-sm">+ Tambah Produk Baru</button>
+          </div>
+          <div class="data-table-wrap">
+            <div style="overflow-x:auto;">
+              <table class="data-table">
+                <thead><tr><th>Produk</th><th>Kategori</th><th>Harga</th><th>Terjual</th><th>Status</th><th>Aksi</th></tr></thead>
+                <tbody>
+                  <tr><td><strong>Kursus React.js</strong></td><td>Video</td><td>Rp 129.000</td><td>12,400</td><td><span class="status-badge success">Aktif</span></td><td><button class="btn btn-outline btn-sm" style="font-size:0.7rem;padding:0.2rem 0.5rem;">Edit</button></td></tr>
+                  <tr><td><strong>Netflix Premium</strong></td><td>VIP</td><td>Rp 45.000</td><td>34,200</td><td><span class="status-badge success">Aktif</span></td><td><button class="btn btn-outline btn-sm" style="font-size:0.7rem;padding:0.2rem 0.5rem;">Edit</button></td></tr>
+                  <tr><td><strong>Adobe CC All Apps</strong></td><td>Software</td><td>Rp 189.000</td><td>8,900</td><td><span class="status-badge warning">Review</span></td><td><button class="btn btn-outline btn-sm" style="font-size:0.7rem;padding:0.2rem 0.5rem;">Edit</button></td></tr>
+                  <tr><td><strong>ChatGPT Plus</strong></td><td>Tools</td><td>Rp 159.000</td><td>5,320</td><td><span class="status-badge success">Aktif</span></td><td><button class="btn btn-outline btn-sm" style="font-size:0.7rem;padding:0.2rem 0.5rem;">Edit</button></td></tr>
+                  <tr><td><strong>Free Fire Diamond</strong></td><td>Game</td><td>Rp 139.000</td><td>56,780</td><td><span class="status-badge success">Aktif</span></td><td><button class="btn btn-outline btn-sm" style="font-size:0.7rem;padding:0.2rem 0.5rem;">Edit</button></td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div><!-- /admin-products -->
+
+        <!-- Admin Sub: Users -->
+        <div class="admin-sub-view" id="admin-users" style="display:none;">
+          <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:1.25rem;">
+            <h3 style="font-size:1rem;font-weight:700;">Kelola Pengguna</h3>
+          </div>
+          <div class="data-table-wrap">
+            <div style="overflow-x:auto;">
+              <table class="data-table">
+                <thead><tr><th>Pengguna</th><th>Email</th><th>Bergabung</th><th>Total Belanja</th><th>Status</th></tr></thead>
+                <tbody>
+                  <tr><td><strong>Rizky Darmawan</strong></td><td>rizky.d@gmail.com</td><td>Jan 2024</td><td>Rp 2,8jt</td><td><span class="status-badge success">Aktif</span></td></tr>
+                  <tr><td><strong>Sari Andriani</strong></td><td>sari.a@email.com</td><td>Feb 2024</td><td>Rp 1,2jt</td><td><span class="status-badge success">Aktif</span></td></tr>
+                  <tr><td><strong>Budi Santoso</strong></td><td>budi.s@yahoo.com</td><td>Mar 2024</td><td>Rp 890rb</td><td><span class="status-badge warning">Verifikasi</span></td></tr>
+                  <tr><td><strong>Dimas Pratama</strong></td><td>dimas.p@gmail.com</td><td>Apr 2024</td><td>Rp 3,5jt</td><td><span class="status-badge success">Aktif</span></td></tr>
+                  <tr><td><strong>Eka Pertiwi</strong></td><td>eka.p@email.com</td><td>Mei 2024</td><td>Rp 450rb</td><td><span class="status-badge danger">Banned</span></td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div><!-- /admin-users -->
+
+      </div><!-- /view-admin -->
+
+    </div><!-- /account-main -->
+  </div><!-- /account-layout -->
+</div>
+
+<!-- FOOTER -->
+<footer class="footer" style="margin-top:4rem;">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="footer-logo">
+          <svg width="22" height="22" viewBox="0 0 26 26" fill="none"><path d="M14.5 2L4 15h9.5l-2 9L22 11h-9l1.5-9z" fill="#FF6B35" stroke="#FF6B35" stroke-width="1.5" stroke-linejoin="round"/></svg>
+          Akun<span class="logo-accent">ku</span>
+        </div>
+        <p class="footer-tagline">Toko Digital Terpercaya Indonesia.</p>
+      </div>
+      <div class="footer-col"><h4>Akunku</h4><ul class="footer-links"><li><a href="#">Tentang</a></li></ul></div>
+      <div class="footer-col"><h4>Kategori</h4><ul class="footer-links"><li><a href="products.html">Semua Produk</a></li></ul></div>
+      <div class="footer-col"><h4>Dukungan</h4><ul class="footer-links"><li><a href="#">Bantuan</a></li></ul></div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2024 Akunku — Toko Digital Terpercaya Indonesia.</p>
+      <div class="footer-badges"><span class="footer-badge">🔒 SSL</span></div>
+    </div>
+  </div>
+</footer>
+
+<style>
+  /* Wishlist grid responsive */
+  @media (max-width: 767px) {
+    #view-wishlist .products-grid {
+      grid-template-columns: repeat(2, 1fr) !important;
+    }
+  }
+</style>
+
+<script src="js/main.js"></script>
+</body>
+</html>

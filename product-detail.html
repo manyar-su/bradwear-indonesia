@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kursus React.js Lengkap — Akunku</title>
+  <meta name="description" content="Kursus React.js Lengkap dari Nol hingga Pro. Pelajari React, Redux, Next.js dan lebih banyak lagi dengan harga terjangkau di Akunku.">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<!-- NAVBAR -->
+<header id="navbar" class="navbar">
+  <div class="container">
+    <div class="navbar-inner">
+      <a href="index.html" class="navbar-logo">
+        <svg viewBox="0 0 26 26" fill="none"><path d="M14.5 2L4 15h9.5l-2 9L22 11h-9l1.5-9z" fill="#FF6B35" stroke="#FF6B35" stroke-width="1.5" stroke-linejoin="round"/></svg>
+        Akun<span class="logo-accent">ku</span>
+      </a>
+      <nav class="navbar-links">
+        <a href="index.html">Beranda</a>
+        <a href="products.html" class="active">Produk</a>
+        <a href="products.html">Kategori</a>
+        <a href="account.html">Tentang</a>
+      </nav>
+      <div class="navbar-actions">
+        <button class="icon-btn" id="searchBtn">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+        </button>
+        <a href="#" class="icon-btn">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+          <span class="cart-badge">0</span>
+        </a>
+        <a href="account.html" class="btn btn-outline btn-sm">Masuk</a>
+        <a href="account.html" class="btn btn-primary btn-sm">Daftar</a>
+        <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </div>
+  <div class="mobile-nav" id="mobileNav">
+    <a href="index.html">🏠 Beranda</a>
+    <a href="products.html" class="active">📦 Produk</a>
+    <a href="account.html">👤 Akun</a>
+    <div class="mobile-nav-divider"></div>
+    <div class="mobile-nav-actions">
+      <a href="account.html" class="btn btn-outline btn-sm">Masuk</a>
+      <a href="account.html" class="btn btn-primary btn-sm">Daftar</a>
+    </div>
+  </div>
+</header>
+
+<!-- BREADCRUMB -->
+<div style="background:var(--card-bg);border-bottom:1px solid var(--card-border);padding:0.875rem 0;">
+  <div class="container">
+    <div class="page-breadcrumb" style="margin:0;">
+      <a href="index.html">Beranda</a>
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+      <a href="products.html">Produk</a>
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+      <a href="products.html">Video Learning</a>
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+      <span>Kursus React.js Lengkap</span>
+    </div>
+  </div>
+</div>
+
+<!-- PRODUCT DETAIL HERO -->
+<section class="product-detail-hero" style="background:var(--dark-bg);">
+  <div class="container">
+    <div class="product-detail-grid">
+
+      <!-- Thumbnail -->
+      <div>
+        <div class="product-detail-thumb gt-3 reveal">
+          💻
+        </div>
+        <!-- Thumbnail Row -->
+        <div style="display:flex;gap:0.5rem;margin-top:0.75rem;">
+          <div style="width:64px;height:64px;border-radius:var(--radius-sm);display:flex;align-items:center;justify-content:center;font-size:1.5rem;border:2px solid var(--primary);" class="gt-3 reveal">💻</div>
+          <div style="width:64px;height:64px;border-radius:var(--radius-sm);display:flex;align-items:center;justify-content:center;font-size:1.5rem;border:1px solid var(--card-border);cursor:pointer;" class="gt-9 reveal">🖥️</div>
+          <div style="width:64px;height:64px;border-radius:var(--radius-sm);display:flex;align-items:center;justify-content:center;font-size:1.5rem;border:1px solid var(--card-border);cursor:pointer;" class="gt-1 reveal">📱</div>
+          <div style="width:64px;height:64px;border-radius:var(--radius-sm);display:flex;align-items:center;justify-content:center;font-size:1.5rem;border:1px solid var(--card-border);cursor:pointer;" class="gt-8 reveal">⚛️</div>
+        </div>
+      </div>
+
+      <!-- Detail Body -->
+      <div class="product-detail-body reveal">
+        <div class="detail-badge">
+          <svg width="10" height="10" viewBox="0 0 24 24" fill="currentColor"><path d="M14.5 2L4 15h9.5l-2 9L22 11h-9l1.5-9z"/></svg>
+          Video Learning
+        </div>
+
+        <h1 class="detail-title">Kursus React.js Lengkap — dari Nol hingga Developer Pro 🚀</h1>
+
+        <div class="detail-meta-row">
+          <div class="detail-rating">
+            ⭐⭐⭐⭐⭐ 4.9
+            <span>(892 ulasan)</span>
+          </div>
+          <div class="detail-sold">Terjual: <strong>12.400+</strong></div>
+          <div class="detail-sold">Stok: <strong style="color:var(--success);">Tersedia</strong></div>
+        </div>
+
+        <!-- Price Box -->
+        <div class="detail-price-box">
+          <div class="detail-original">Harga Normal: Rp 299.000</div>
+          <div class="detail-price-row">
+            <div class="detail-price">Rp 129.000</div>
+            <div class="detail-discount">HEMAT 57%</div>
+          </div>
+          <div style="font-size:0.75rem;color:var(--success);margin-top:0.5rem;display:flex;align-items:center;gap:0.35rem;">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            Harga flash sale berakhir dalam
+            <span id="countdown-hours" style="color:#fff;font-weight:700;">--</span>:<span id="countdown-minutes" style="color:#fff;font-weight:700;">--</span>:<span id="countdown-seconds" style="color:#fff;font-weight:700;">--</span>
+          </div>
+        </div>
+
+        <!-- Quantity -->
+        <div class="qty-selector">
+          <span class="qty-label">Jumlah:</span>
+          <div class="qty-controls">
+            <button class="qty-btn" id="qtyMinus">−</button>
+            <div class="qty-num" id="qtyNum">1</div>
+            <button class="qty-btn" id="qtyPlus">+</button>
+          </div>
+          <span style="font-size:0.8rem;color:var(--muted);">Maks. 5 per akun</span>
+        </div>
+
+        <!-- Action Buttons -->
+        <div class="detail-actions">
+          <button class="btn btn-secondary btn-lg" id="buyNowBtn">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+            Beli Sekarang
+          </button>
+          <button class="btn btn-primary btn-lg" id="addCartBtn">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+            Tambah ke Keranjang
+          </button>
+        </div>
+
+        <!-- Trust Badges -->
+        <div class="trust-badges">
+          <div class="trust-badge">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            Garansi 7 Hari
+          </div>
+          <div class="trust-badge">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            Pengiriman Instan
+          </div>
+          <div class="trust-badge">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            Produk Asli & Legal
+          </div>
+          <div class="trust-badge">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            CS 24/7
+          </div>
+        </div>
+
+        <!-- Seller Info -->
+        <div style="display:flex;align-items:center;gap:0.875rem;margin-top:1.5rem;padding:1rem;background:var(--card-bg);border:1px solid var(--card-border);border-radius:var(--radius-lg);">
+          <div style="width:48px;height:48px;border-radius:50%;background:linear-gradient(135deg,#61DAFB,#21B9F5);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:1rem;color:#fff;flex-shrink:0;">DC</div>
+          <div style="flex:1;">
+            <div style="font-weight:700;font-size:0.9rem;color:#fff;">DevCourse ID</div>
+            <div style="font-size:0.75rem;color:var(--muted);">⭐ 4.9 · 12.4K penjualan · Seller Verified</div>
+          </div>
+          <a href="#" class="btn btn-outline btn-sm">Lihat Toko</a>
+        </div>
+
+      </div><!-- /detail-body -->
+    </div><!-- /grid -->
+  </div>
+</section>
+
+<!-- PRODUCT TABS -->
+<section class="product-tabs-section">
+  <div class="container">
+    <div class="tabs-nav">
+      <button class="tab-btn active" data-tab="description">📋 Deskripsi</button>
+      <button class="tab-btn" data-tab="spec">⚙️ Spesifikasi</button>
+      <button class="tab-btn" data-tab="reviews">⭐ Ulasan (892)</button>
+    </div>
+
+    <!-- Description -->
+    <div class="tab-content active" id="tab-description">
+      <div class="description-content">
+        <h4>Tentang Kursus Ini</h4>
+        <p>Kursus React.js Lengkap ini dirancang untuk membawa kamu dari pemula total menjadi developer React yang percaya diri. Dengan lebih dari <strong>120 jam konten video</strong>, kamu akan belajar semua yang perlu kamu ketahui tentang React modern.</p>
+
+        <h4>Yang Akan Kamu Pelajari</h4>
+        <ul>
+          <li>Dasar-dasar React: JSX, Komponen, Props, dan State</li>
+          <li>React Hooks: useState, useEffect, useContext, useReducer, dan Custom Hooks</li>
+          <li>Manajemen state dengan Redux Toolkit dan Zustand</li>
+          <li>Routing dengan React Router v6</li>
+          <li>Server-Side Rendering dengan Next.js 14</li>
+          <li>Integrasi REST API dan GraphQL</li>
+          <li>Testing dengan Jest dan React Testing Library</li>
+          <li>Deployment ke Vercel, Netlify, dan AWS</li>
+          <li>TypeScript dengan React</li>
+          <li>Optimasi performa dan best practices industri</li>
+        </ul>
+
+        <h4>Persyaratan</h4>
+        <ul>
+          <li>Pengetahuan dasar HTML, CSS, dan JavaScript</li>
+          <li>Komputer dengan koneksi internet</li>
+          <li>Semangat belajar yang tinggi 🔥</li>
+        </ul>
+
+        <h4>Untuk Siapa Kursus Ini?</h4>
+        <p>Kursus ini cocok untuk web developer yang ingin menguasai React, fresh graduate yang ingin meningkatkan skill, maupun profesional yang ingin berpindah ke frontend development.</p>
+
+        <h4>Cara Pengiriman</h4>
+        <p>Setelah pembayaran berhasil, kamu akan mendapatkan link akses kursus melalui email dalam <strong>5 menit</strong>. Akses berlaku seumur hidup termasuk semua pembaruan konten di masa mendatang.</p>
+      </div>
+    </div>
+
+    <!-- Spec -->
+    <div class="tab-content" id="tab-spec">
+      <table class="spec-table">
+        <tbody>
+          <tr><td>Tipe Produk</td><td>Video Course (Akses Online)</td></tr>
+          <tr><td>Durasi Konten</td><td>120+ Jam Video HD</td></tr>
+          <tr><td>Jumlah Modul</td><td>45 Modul + 12 Proyek</td></tr>
+          <tr><td>Bahasa</td><td>Bahasa Indonesia + Subtitle Indonesia</td></tr>
+          <tr><td>Level</td><td>Pemula hingga Mahir</td></tr>
+          <tr><td>Platform</td><td>Udemy (Akses Seumur Hidup)</td></tr>
+          <tr><td>Update Konten</td><td>Gratis seumur hidup</td></tr>
+          <tr><td>Sertifikat</td><td>✅ Ya, sertifikat penyelesaian</td></tr>
+          <tr><td>Pengiriman</td><td>Instan (maks. 5 menit)</td></tr>
+          <tr><td>Garansi</td><td>7 hari uang kembali</td></tr>
+          <tr><td>Versi React</td><td>React 18 (terbaru)</td></tr>
+          <tr><td>Lisensi</td><td>1 Akun pribadi</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Reviews -->
+    <div class="tab-content" id="tab-reviews">
+      <!-- Rating Summary -->
+      <div style="display:flex;align-items:center;gap:2rem;padding:1.5rem;background:var(--card-bg);border:1px solid var(--card-border);border-radius:var(--radius-lg);margin-bottom:1.5rem;flex-wrap:wrap;">
+        <div style="text-align:center;">
+          <div style="font-size:4rem;font-weight:800;font-family:var(--font-heading);color:#fff;line-height:1;">4.9</div>
+          <div style="color:var(--warning);font-size:1.1rem;margin:0.35rem 0;">★★★★★</div>
+          <div style="font-size:0.78rem;color:var(--muted);">892 ulasan</div>
+        </div>
+        <div style="flex:1;min-width:180px;">
+          <div style="display:flex;align-items:center;gap:0.75rem;margin-bottom:0.35rem;">
+            <span style="font-size:0.75rem;color:var(--warning);">★★★★★</span>
+            <div style="flex:1;height:6px;background:rgba(255,255,255,0.1);border-radius:3px;overflow:hidden;"><div style="width:82%;height:100%;background:var(--warning);border-radius:3px;"></div></div>
+            <span style="font-size:0.75rem;color:var(--muted);width:30px;">82%</span>
+          </div>
+          <div style="display:flex;align-items:center;gap:0.75rem;margin-bottom:0.35rem;">
+            <span style="font-size:0.75rem;color:var(--warning);">★★★★☆</span>
+            <div style="flex:1;height:6px;background:rgba(255,255,255,0.1);border-radius:3px;overflow:hidden;"><div style="width:13%;height:100%;background:var(--warning);border-radius:3px;"></div></div>
+            <span style="font-size:0.75rem;color:var(--muted);width:30px;">13%</span>
+          </div>
+          <div style="display:flex;align-items:center;gap:0.75rem;">
+            <span style="font-size:0.75rem;color:var(--warning);">★★★☆☆</span>
+            <div style="flex:1;height:6px;background:rgba(255,255,255,0.1);border-radius:3px;overflow:hidden;"><div style="width:5%;height:100%;background:var(--warning);border-radius:3px;"></div></div>
+            <span style="font-size:0.75rem;color:var(--muted);width:30px;">5%</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="reviews-list">
+        <!-- Review 1 -->
+        <div class="review-card">
+          <div class="review-header">
+            <div class="review-avatar" style="background:linear-gradient(135deg,#6C3FE8,#FF6B35)">MR</div>
+            <div class="review-info">
+              <div class="review-name">Muhammad Rizal</div>
+              <div class="review-date">12 November 2024</div>
+            </div>
+            <div class="review-stars">★★★★★</div>
+          </div>
+          <p class="review-text">Kursus terbaik yang pernah saya beli di Akunku! Materi sangat komprehensif dan mudah dipahami. Instructor menjelaskan dengan sangat detail dan sabar. Dalam 2 bulan belajar, saya sudah bisa membuat aplikasi React sendiri dan berhasil landing job di startup Jakarta. Worth every rupiah! 🔥</p>
+        </div>
+
+        <!-- Review 2 -->
+        <div class="review-card">
+          <div class="review-header">
+            <div class="review-avatar" style="background:linear-gradient(135deg,#FF416C,#FF4B2B)">SA</div>
+            <div class="review-info">
+              <div class="review-name">Sari Andriani</div>
+              <div class="review-date">5 November 2024</div>
+            </div>
+            <div class="review-stars">★★★★★</div>
+          </div>
+          <p class="review-text">Pengiriman super cepat, sekitar 3 menit setelah transfer langsung dapat link kursus. Materi up-to-date sampai React 18 dan Next.js 14. Project-based learning bikin lebih mudah paham konsep. Sangat recommended untuk yang mau belajar React dari awal!</p>
+        </div>
+
+        <!-- Review 3 -->
+        <div class="review-card">
+          <div class="review-header">
+            <div class="review-avatar" style="background:linear-gradient(135deg,#0575E6,#021B79)">DP</div>
+            <div class="review-info">
+              <div class="review-name">Dimas Pratama</div>
+              <div class="review-date">28 Oktober 2024</div>
+            </div>
+            <div class="review-stars">★★★★☆</div>
+          </div>
+          <p class="review-text">Kursusnya bagus banget, penjelasan detail dan ada forum diskusi yang aktif. Cuma ada beberapa materi yang butuh di-update (section tentang Class Components), tapi overall sangat memuaskan. Harga sangat worth it dibanding beli langsung di platform. Akunku memang juara!</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- RELATED PRODUCTS -->
+<section class="section" style="padding-top:1rem;">
+  <div class="container">
+    <div class="section-header reveal" style="margin-bottom:2rem;">
+      <h2 class="section-title">Produk <span class="gradient-text">Terkait</span></h2>
+      <p class="section-subtitle">Produk lain yang mungkin kamu suka</p>
+    </div>
+
+    <div class="products-grid" style="grid-template-columns:repeat(4,1fr);">
+
+      <div class="product-card reveal">
+        <div class="product-thumb">
+          <div class="product-thumb-img gt-8">🎨</div>
+          <span class="product-badge">Video</span>
+          <span class="discount-badge">-60%</span>
+          <button class="wishlist-btn" data-id="rel-1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></button>
+        </div>
+        <div class="product-body">
+          <div class="product-name">UI/UX Design Masterclass</div>
+          <div class="product-pricing"><span class="price-original">Rp 249.000</span><span class="price-final">Rp 99.000</span></div>
+          <div class="product-footer"><button class="btn btn-primary btn-sm btn-full add-to-cart">Beli Sekarang</button></div>
+        </div>
+      </div>
+
+      <div class="product-card reveal reveal-delay-1">
+        <div class="product-thumb">
+          <div class="product-thumb-img gt-9">🐍</div>
+          <span class="product-badge">Video</span>
+          <span class="discount-badge">-60%</span>
+          <button class="wishlist-btn" data-id="rel-2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></button>
+        </div>
+        <div class="product-body">
+          <div class="product-name">Python Programming Pro</div>
+          <div class="product-pricing"><span class="price-original">Rp 199.000</span><span class="price-final">Rp 79.000</span></div>
+          <div class="product-footer"><button class="btn btn-primary btn-sm btn-full add-to-cart">Beli Sekarang</button></div>
+        </div>
+      </div>
+
+      <div class="product-card reveal reveal-delay-2">
+        <div class="product-thumb">
+          <div class="product-thumb-img gt-6">🎨</div>
+          <span class="product-badge">Software</span>
+          <span class="discount-badge">-46%</span>
+          <button class="wishlist-btn" data-id="rel-3"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></button>
+        </div>
+        <div class="product-body">
+          <div class="product-name">Adobe CC All Apps 1 Bulan</div>
+          <div class="product-pricing"><span class="price-original">Rp 350.000</span><span class="price-final">Rp 189.000</span></div>
+          <div class="product-footer"><button class="btn btn-primary btn-sm btn-full add-to-cart">Beli Sekarang</button></div>
+        </div>
+      </div>
+
+      <div class="product-card reveal reveal-delay-3">
+        <div class="product-thumb">
+          <div class="product-thumb-img gt-10">🎨</div>
+          <span class="product-badge">Tools</span>
+          <span class="discount-badge">-47%</span>
+          <button class="wishlist-btn" data-id="rel-4"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></button>
+        </div>
+        <div class="product-body">
+          <div class="product-name">Canva Pro 1 Bulan Premium</div>
+          <div class="product-pricing"><span class="price-original">Rp 55.000</span><span class="price-final">Rp 29.000</span></div>
+          <div class="product-footer"><button class="btn btn-primary btn-sm btn-full add-to-cart">Beli Sekarang</button></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="footer-logo">
+          <svg width="22" height="22" viewBox="0 0 26 26" fill="none"><path d="M14.5 2L4 15h9.5l-2 9L22 11h-9l1.5-9z" fill="#FF6B35" stroke="#FF6B35" stroke-width="1.5" stroke-linejoin="round"/></svg>
+          Akun<span class="logo-accent">ku</span>
+        </div>
+        <p class="footer-tagline">Toko Digital Terpercaya Indonesia.</p>
+        <div class="footer-socials">
+          <a href="#" class="social-btn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+          <a href="#" class="social-btn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+        </div>
+      </div>
+      <div class="footer-col"><h4>Akunku</h4><ul class="footer-links"><li><a href="#">Tentang</a></li><li><a href="#">Blog</a></li></ul></div>
+      <div class="footer-col"><h4>Kategori</h4><ul class="footer-links"><li><a href="products.html">Semua Produk</a></li><li><a href="products.html">Video Learning</a></li></ul></div>
+      <div class="footer-col"><h4>Dukungan</h4><ul class="footer-links"><li><a href="#">Bantuan</a></li><li><a href="#">Kebijakan</a></li></ul></div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2024 Akunku — Toko Digital Terpercaya Indonesia.</p>
+      <div class="footer-badges"><span class="footer-badge">🔒 SSL</span><span class="footer-badge">✅ Terpercaya</span></div>
+    </div>
+  </div>
+</footer>
+
+<style>
+  /* Related products 2-col on mobile */
+  @media (max-width: 767px) {
+    .products-grid[style*="repeat(4"] {
+      grid-template-columns: repeat(2, 1fr) !important;
+    }
+  }
+</style>
+
+<script src="js/main.js"></script>
+</body>
+</html>

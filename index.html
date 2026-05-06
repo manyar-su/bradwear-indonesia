@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Akunku — Toko Digital Terpercaya Indonesia</title>
+  <meta name="description" content="Temukan ribuan produk digital terbaik: ebook, akun VIP, kursus online, software, dan banyak lagi di Akunku.">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<!-- ========================================================
+     NAVBAR
+======================================================== -->
+<header id="navbar" class="navbar">
+  <div class="container">
+    <div class="navbar-inner">
+      <!-- Logo -->
+      <a href="index.html" class="navbar-logo">
+        <svg viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M14.5 2L4 15h9.5l-2 9L22 11h-9l1.5-9z" fill="#FF6B35" stroke="#FF6B35" stroke-width="1.5" stroke-linejoin="round"/>
+        </svg>
+        Akun<span class="logo-accent">ku</span>
+      </a>
+
+      <!-- Desktop Nav Links -->
+      <nav class="navbar-links">
+        <a href="index.html" class="active">Beranda</a>
+        <a href="products.html">Produk</a>
+        <a href="products.html">Kategori</a>
+        <a href="account.html">Tentang</a>
+      </nav>
+
+      <!-- Actions -->
+      <div class="navbar-actions">
+        <button class="icon-btn" id="searchBtn" title="Cari Produk">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/>
+          </svg>
+        </button>
+        <a href="#" class="icon-btn" title="Keranjang">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/>
+          </svg>
+          <span class="cart-badge">0</span>
+        </a>
+        <a href="account.html" class="btn btn-outline btn-sm">Masuk</a>
+        <a href="account.html" class="btn btn-primary btn-sm">Daftar</a>
+        <button class="hamburger" id="hamburger" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </div>
+  <!-- Mobile Nav -->
+  <div class="mobile-nav" id="mobileNav">
+    <a href="index.html" class="active">🏠 Beranda</a>
+    <a href="products.html">📦 Produk</a>
+    <a href="products.html">🗂️ Kategori</a>
+    <a href="account.html">👤 Akun</a>
+    <div class="mobile-nav-divider"></div>
+    <div class="mobile-nav-actions">
+      <a href="account.html" class="btn btn-outline btn-sm">Masuk</a>
+      <a href="account.html" class="btn btn-primary btn-sm">Daftar</a>
+    </div>
+  </div>
+</header>
+
+<!-- ========================================================
+     HERO SECTION
+======================================================== -->
+<section id="hero" class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-grid"></div>
+
+  <!-- Parallax Orbs -->
+  <div class="orb orb-1" data-parallax="-0.08"></div>
+  <div class="orb orb-2" data-parallax="0.12"></div>
+  <div class="orb orb-3" data-parallax="-0.15"></div>
+
+  <div class="container" style="position:relative;z-index:2;width:100%;">
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span class="hero-badge-dot"></span>
+        Marketplace #1 Produk Digital Indonesia
+      </div>
+      <h1 class="hero-title">
+        Dapatkan Produk<br>
+        Digital <span class="gradient-text">Terbaik</span><br>
+        di Sini 🚀
+      </h1>
+      <p class="hero-sub">
+        Temukan ribuan produk digital berkualitas — ebook, akun VIP premium,
+        video pembelajaran, software, dan banyak lagi. Pengiriman instan,
+        harga terjangkau, garansi terpercaya.
+      </p>
+      <div class="hero-actions">
+        <a href="products.html" class="btn btn-primary btn-lg">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+          Jelajahi Produk
+        </a>
+        <a href="products.html" class="btn btn-outline-white btn-lg" data-scroll-to="#categories">
+          Lihat Kategori
+        </a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat-item">
+          <span class="stat-value">1,200+</span>
+          <span class="stat-label">Produk Digital</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-value">50K+</span>
+          <span class="stat-label">Pengguna Aktif</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-value">4.9★</span>
+          <span class="stat-label">Rating Kepuasan</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Floating Visual Cards -->
+  <div class="hero-visual">
+    <div class="floating-card fc-main">
+      <div class="fc-thumb gt-1">📚</div>
+      <div class="fc-name">Panduan Bisnis Online 2024</div>
+      <div class="fc-price">Rp 85.000</div>
+    </div>
+    <div class="floating-card fc-1">
+      <div class="fc-thumb gt-2">🎬</div>
+      <div class="fc-name">Netflix Premium</div>
+      <div class="fc-price">Rp 45.000</div>
+    </div>
+    <div class="floating-card fc-2">
+      <div class="fc-thumb gt-3">💻</div>
+      <div class="fc-name">Kursus React.js</div>
+      <div class="fc-price">Rp 129.000</div>
+    </div>
+    <div class="floating-card fc-3">
+      <div class="fc-thumb gt-4">🎵</div>
+      <div class="fc-name">Spotify Premium</div>
+      <div class="fc-price">Rp 55.000</div>
+    </div>
+  </div>
+</section>
+
+<!-- ========================================================
+     CATEGORY SECTION
+======================================================== -->
+<section class="section" id="categories">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-label">Temukan yang Kamu Butuhkan</span>
+      <h2 class="section-title">Jelajahi <span class="gradient-text">Kategori</span> Produk</h2>
+      <p class="section-subtitle">Dari ebook, akun premium, hingga kursus online — semua ada di Akunku</p>
+    </div>
+
+    <div class="categories-scroll">
+      <a href="products.html?cat=ebook" class="category-card reveal reveal-delay-1" style="--cat-color:#6C3FE8">
+        <div class="cat-bg"></div>
+        <span class="cat-icon">📚</span>
+        <div class="cat-name">Ebook</div>
+        <div class="cat-count">1,200+ Judul</div>
+      </a>
+      <a href="products.html?cat=vip" class="category-card reveal reveal-delay-2" style="--cat-color:#FFB800">
+        <div class="cat-bg"></div>
+        <span class="cat-icon">👑</span>
+        <div class="cat-name">Akun VIP</div>
+        <div class="cat-count">300+ Akun</div>
+      </a>
+      <a href="products.html?cat=video" class="category-card reveal reveal-delay-3" style="--cat-color:#FF4D6A">
+        <div class="cat-bg"></div>
+        <span class="cat-icon">🎬</span>
+        <div class="cat-name">Video Learning</div>
+        <div class="cat-count">500+ Course</div>
+      </a>
+      <a href="products.html?cat=game" class="category-card reveal reveal-delay-4" style="--cat-color:#00D084">
+        <div class="cat-bg"></div>
+        <span class="cat-icon">🎮</span>
+        <div class="cat-name">Game</div>
+        <div class="cat-count">200+ Item</div>
+      </a>
+      <a href="products.html?cat=software" class="category-card reveal" style="--cat-color:#FF6B35">
+        <div class="cat-bg"></div>
+        <span class="cat-icon">🔑</span>
+        <div class="cat-name">Software License</div>
+        <div class="cat-count">150+ Lisensi</div>
+      </a>
+      <a href="products.html?cat=tools" class="category-card reveal reveal-delay-1" style="--cat-color:#8B65F0">
+        <div class="cat-bg"></div>
+        <span class="cat-icon">💎</span>
+        <div class="cat-name">Premium Tools</div>
+        <div class="cat-count">80+ Tools</div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ========================================================
+     FEATURED PRODUCTS
+======================================================== -->
+<section class="section" style="padding-top:1rem;">
+  <div class="container">
+    <div class="section-header reveal" style="display:flex;align-items:flex-end;justify-content:space-between;flex-wrap:wrap;gap:1rem;margin-bottom:2rem;">
+      <div>
+        <span class="section-label">Terlaris Bulan Ini</span>
+        <h2 class="section-title">Produk Terlaris 🔥</h2>
+      </div>
+      <a href="products.html" class="btn btn-outline btn-sm">Lihat Semua →</a>
+    </div>
+
+    <div class="products-grid">
+
+      <!-- Product 1 -->
+      <div class="product-card reveal" data-category="ebook">
+        <div class="product-thumb">
+          <div class="product-thumb-img gt-1">📚</div>
+          <div class="product-thumb-overlay"></div>
+          <span class="product-badge">Ebook</span>
+          <span class="discount-badge">-43%</span>
+          <button class="wishlist-btn" data-id="prod-1">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+          </button>
+        </div>
+        <div class="product-body">
+          <div class="product-name">Panduan Bisnis Online 2024 — Strategi Lengkap</div>
+          <div class="product-meta">
+            <div class="product-rating">⭐ 4.9 <span>(1.2K)</span></div>
+          </div>
+          <div class="product-seller">
+            <div class="seller-avatar">BS</div>
+            BisnisPro Store
+          </div>
+          <div class="product-pricing">
+            <span class="price-original">Rp 150.000</span>
+            <span class="price-final">Rp 85.000</span>
+          </div>
+          <div class="product-footer">
+            <button class="btn btn-primary btn-sm btn-full add-to-cart">Beli Sekarang</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 2 -->
+      <div class="product-card reveal reveal-delay-1" data-category="vip">
+        <div class="product-thumb">
+          <div class="product-thumb-img gt-2">🎬</div>
+          <div class="product-thumb-overlay"></div>
+          <span class="product-badge">Akun VIP</span>
+          <span class="discount-badge">-40%</span>
+          <button class="wishlist-btn" data-id="prod-2">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+          </button>
+        </div>
+        <div class="product-body">
+          <div class="product-name">Netflix Premium 1 Bulan Akun Pribadi</div>
+          <div class="product-meta">
+            <div class="product-rating">⭐ 4.8 <span>(3.4K)</span></div>
+          </div>
+          <div class="product-seller">
+            <div class="seller-avatar">AS</div>
+            AkunStore Official
+          </div>
+          <div class="product-pricing">
+            <span class="price-original">Rp 75.000</span>
+            <span class="price-final">Rp 45.000</span>
+          </div>
+          <div class="product-footer">
+            <button class="btn btn-primary btn-sm btn-full add-to-cart">Beli Sekarang</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 3 -->
+      <div class="product-card reveal reveal-delay-2" data-category="video">
+        <div class="product-thumb">
+          <div class="product-thumb-img gt-3">💻</div>
+          <div class="product-thumb-overlay"></div>
+          <span class="product-badge">Video Learning</span>
+          <span class="discount-badge">-57%</span>
+          <button class="wishlist-btn" data-id="prod-3">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+          </button>
+        </div>
+        <div class="product-body">
+          <div class="product-name">Kursus React.js Lengkap dari Nol hingga Pro</div>
+          <div class="product-meta">
+            <div class="product-rating">⭐ 4.9 <span>(892)</span></div>
+          </div>
+          <div class="product-seller">
+            <div class="seller-avatar">DC</div>
+            DevCourse ID
+          </div>
+          <div class="product-pricing">
+            <span class="price-original">Rp 299.000</span>
+            <span class="price-final">Rp 129.000</span>
+          </div>
+          <div class="product-footer">
+            <button class="btn btn-primary btn-sm btn-full add-to-cart">Beli Sekarang</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 4 -->
+      <div class="product-card reveal reveal-delay-3" data-category="vip">
+        <div class="product-thumb">
+          <div class="product-thumb-img gt-4">🎵</div>
+          <div class="product-thumb-overlay"></div>
+          <span class="product-badge">Akun VIP</span>
+          <span class="discount-badge">-39%</span>
+          <button class="wishlist-btn" data-id="prod-4">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+          </button>
+        </div>
+        <div class="product-body">
+          <div class="product-name">Spotify Premium 3 Bulan Tanpa Iklan</div>
+          <div class="product-meta">
+            <div class="product-rating">⭐ 4.7 <span>(2.1K)</span></div>
+          </div>
+          <div class="product-seller">
+            <div class="seller-avatar">PM</div>
+            PremiumMall
+          </div>
+          <div class="product-pricing">
+            <span class="price-original">Rp 90.000</span>
+            <span class="price-final">Rp 55.000</span>
+          </div>
+          <div class="product-footer">
+            <button class="btn btn-primary btn-sm btn-full add-to-cart">Beli Sekarang</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 5 -->
+      <div class="product-card reveal" data-category="ebook">
+        <div class="product-thumb">
+          <div class="product-thumb-img gt-5">📈</div>
+          <div class="product-thumb-overlay"></div>
+          <span class="product-badge">Ebook</span>
+          <span class="discount-badge">-56%</span>
+          <button class="wishlist-btn" data-id="prod-5">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+          </button>
+        </div>
+        <div class="product-body">
+          <div class="product-name">Investasi Saham untuk Pemula 2024</div>
+          <div class="product-meta">
+            <div class="product-rating">⭐ 4.6 <span>(543)</span></div>
+          </div>
+          <div class="product-seller">
+            <div class="seller-avatar">IF</div>
+            InvestorForum
+          </div>
+          <div class="product-pricing">
+            <span class="price-original">Rp 79.000</span>
+            <span class="price-final">Rp 35.000</span>
+          </div>
+          <div class="product-footer">
+            <button class="btn btn-primary btn-sm btn-full add-to-cart">Beli Sekarang</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 6 -->
+      <div class="product-card reveal reveal-delay-1" data-category="software">
+        <div class="product-thumb">
+          <div class="product-thumb-img gt-6">🎨</div>
+          <div class="product-thumb-overlay"></div>
+          <span class="product-badge">Software</span>
+          <span class="discount-badge">-46%</span>
+          <button class="wishlist-btn" data-id="prod-6">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+          </button>
+        </div>
+        <div class="product-body">
+          <div class="product-name">Adobe Creative Cloud All Apps 1 Bulan</div>
+          <div class="product-meta">
+            <div class="product-rating">⭐ 4.9 <span>(1.8K)</span></div>
+          </div>
+          <div class="product-seller">
+            <div class="seller-avatar">SW</div>
+            SoftwareHub
+          </div>
+          <div class="product-pricing">
+            <span class="price-original">Rp 350.000</span>
+            <span class="price-final">Rp 189.000</span>
+          </div>
+          <div class="product-footer">
+            <button class="btn btn-primary btn-sm btn-full add-to-cart">Beli Sekarang</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 7 -->
+      <div class="product-card reveal reveal-delay-2" data-category="game">
+        <div class="product-thumb">
+          <div class="product-thumb-img gt-7">💎</div>
+          <div class="product-thumb-overlay"></div>
+          <span class="product-badge">Game</span>
+          <span class="discount-badge">-31%</span>
+          <button class="wishlist-btn" data-id="prod-7">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+          </button>
+        </div>
+        <div class="product-body">
+          <div class="product-name">Free Fire 2100 Diamond Top Up Resmi</div>
+          <div class="product-meta">
+            <div class="product-rating">⭐ 4.8 <span>(5.6K)</span></div>
+          </div>
+          <div class="product-seller">
+            <div class="seller-avatar">GS</div>
+            GameStore ID
+          </div>
+          <div class="product-pricing">
+            <span class="price-original">Rp 200.000</span>
+            <span class="price-final">Rp 139.000</span>
+          </div>
+          <div class="product-footer">
+            <button class="btn btn-primary btn-sm btn-full add-to-cart">Beli Sekarang</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 8 -->
+      <div class="product-card reveal reveal-delay-3" data-category="video">
+        <div class="product-thumb">
+          <div class="product-thumb-img gt-8">🎨</div>
+          <div class="product-thumb-overlay"></div>
+          <span class="product-badge">Video Learning</span>
+          <span class="discount-badge">-60%</span>
+          <button class="wishlist-btn" data-id="prod-8">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+          </button>
+        </div>
+        <div class="product-body">
+          <div class="product-name">UI/UX Design Masterclass — Figma & Prototype</div>
+          <div class="product-meta">
+            <div class="product-rating">⭐ 5.0 <span>(432)</span></div>
+          </div>
+          <div class="product-seller">
+            <div class="seller-avatar">UD</div>
+            UXDesign Academy
+          </div>
+          <div class="product-pricing">
+            <span class="price-original">Rp 249.000</span>
+            <span class="price-final">Rp 99.000</span>
+          </div>
+          <div class="product-footer">
+            <button class="btn btn-primary btn-sm btn-full add-to-cart">Beli Sekarang</button>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /products-grid -->
+  </div>
+</section>
+
+<!-- ========================================================
+     FLASH SALE SECTION
+======================================================== -->
+<section class="flash-sale">
+  <div class="container" style="position:relative;z-index:1;">
+    <div class="flash-header reveal">
+      <div class="flash-title">
+        <span class="flash-icon">⚡</span>
+        <h2>Flash Sale <span class="gradient-text">Hari Ini</span></h2>
+      </div>
+      <div class="countdown">
+        <div class="count-block">
+          <span class="count-num" id="countdown-hours">--</span>
+          <span class="count-label">Jam</span>
+        </div>
+        <span class="count-sep">:</span>
+        <div class="count-block">
+          <span class="count-num" id="countdown-minutes">--</span>
+          <span class="count-label">Menit</span>
+        </div>
+        <span class="count-sep">:</span>
+        <div class="count-block">
+          <span class="count-num" id="countdown-seconds">--</span>
+          <span class="count-label">Detik</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="flash-products">
+      <div class="product-card reveal">
+        <div class="product-thumb">
+          <div class="product-thumb-img gt-9">🐍</div>
+          <span class="product-badge">Video</span>
+          <span class="discount-badge">-60%</span>
+          <button class="wishlist-btn" data-id="prod-flash-1">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+          </button>
+        </div>
+        <div class="product-body">
+          <div class="product-name">Python Programming Pro — Data Science</div>
+          <div class="product-pricing">
+            <span class="price-original">Rp 199.000</span>
+            <span class="price-final">Rp 79.000</span>
+          </div>
+          <div class="product-footer">
+            <button class="btn btn-primary btn-sm btn-full add-to-cart">Beli Sekarang</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card reveal reveal-delay-1">
+        <div class="product-thumb">
+          <div class="product-thumb-img gt-10">🎨</div>
+          <span class="product-badge">Tools</span>
+          <span class="discount-badge">-47%</span>
+          <button class="wishlist-btn" data-id="prod-flash-2">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+          </button>
+        </div>
+        <div class="product-body">
+          <div class="product-name">Canva Pro 1 Bulan — Desain Tanpa Batas</div>
+          <div class="product-pricing">
+            <span class="price-original">Rp 55.000</span>
+            <span class="price-final">Rp 29.000</span>
+          </div>
+          <div class="product-footer">
+            <button class="btn btn-primary btn-sm btn-full add-to-cart">Beli Sekarang</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card reveal reveal-delay-2">
+        <div class="product-thumb">
+          <div class="product-thumb-img gt-11">▶️</div>
+          <span class="product-badge">Akun VIP</span>
+          <span class="discount-badge">-45%</span>
+          <button class="wishlist-btn" data-id="prod-flash-3">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+          </button>
+        </div>
+        <div class="product-body">
+          <div class="product-name">YouTube Premium 1 Bulan Bebas Iklan</div>
+          <div class="product-pricing">
+            <span class="price-original">Rp 69.000</span>
+            <span class="price-final">Rp 38.000</span>
+          </div>
+          <div class="product-footer">
+            <button class="btn btn-primary btn-sm btn-full add-to-cart">Beli Sekarang</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card reveal reveal-delay-3">
+        <div class="product-thumb">
+          <div class="product-thumb-img gt-12">📊</div>
+          <span class="product-badge">Ebook</span>
+          <span class="discount-badge">-51%</span>
+          <button class="wishlist-btn" data-id="prod-flash-4">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+          </button>
+        </div>
+        <div class="product-body">
+          <div class="product-name">Digital Marketing A-Z Panduan Lengkap</div>
+          <div class="product-pricing">
+            <span class="price-original">Rp 99.000</span>
+            <span class="price-final">Rp 49.000</span>
+          </div>
+          <div class="product-footer">
+            <button class="btn btn-primary btn-sm btn-full add-to-cart">Beli Sekarang</button>
+          </div>
+        </div>
+      </div>
+    </div><!-- /flash-products -->
+  </div>
+</section>
+
+<!-- ========================================================
+     TESTIMONIALS
+======================================================== -->
+<section class="section">
+  <div class="container">
+    <div class="section-header center reveal">
+      <span class="section-label">Apa Kata Mereka</span>
+      <h2 class="section-title">Dipercaya <span class="gradient-text">50.000+</span> Pengguna</h2>
+      <p class="section-subtitle">Bergabunglah dengan ribuan pelanggan puas yang telah berbelanja di Akunku</p>
+    </div>
+
+    <div class="testimonials-grid" style="margin-top:2.5rem;">
+      <div class="testimonial-card reveal">
+        <div class="t-stars">★★★★★</div>
+        <p class="t-quote">"Pengiriman super cepat! Beli Netflix Premium jam 10 malam, langsung aktif dalam 5 menit. Harga juga jauh lebih murah dibanding beli langsung. Recommended banget!"</p>
+        <div class="t-author">
+          <div class="t-avatar" style="background:linear-gradient(135deg,#6C3FE8,#FF6B35)">AR</div>
+          <div>
+            <div class="t-name">Ahmad Rizky</div>
+            <div class="t-role">Content Creator, Jakarta</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-card reveal reveal-delay-2">
+        <div class="t-stars">★★★★★</div>
+        <p class="t-quote">"Udah langganan Adobe CC dari Akunku selama 6 bulan. Harganya konsisten murah, akun aman & stabil. CS juga sangat responsif kalau ada masalah. 10/10 deh!"</p>
+        <div class="t-author">
+          <div class="t-avatar" style="background:linear-gradient(135deg,#FF416C,#FF4B2B)">SI</div>
+          <div>
+            <div class="t-name">Siti Indriani</div>
+            <div class="t-role">Graphic Designer, Bandung</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-card reveal reveal-delay-3">
+        <div class="t-stars">★★★★☆</div>
+        <p class="t-quote">"Beli kursus React.js di sini, materi lengkap dan update. Harga diskon sampai 60% bikin dompet senang. Sudah selesai kursus dan langsung dapat kerja. Terima kasih Akunku!"</p>
+        <div class="t-author">
+          <div class="t-avatar" style="background:linear-gradient(135deg,#0575E6,#021B79)">BH</div>
+          <div>
+            <div class="t-name">Budi Hartono</div>
+            <div class="t-role">Junior Developer, Surabaya</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ========================================================
+     CTA BANNER
+======================================================== -->
+<section style="padding:0 0 5rem;">
+  <div class="container">
+    <div class="reveal" style="background:linear-gradient(135deg,var(--primary) 0%,#8B45E8 50%,var(--secondary) 100%);border-radius:24px;padding:3rem 2.5rem;text-align:center;position:relative;overflow:hidden;">
+      <div style="position:absolute;top:-60px;right:-60px;width:200px;height:200px;background:rgba(255,255,255,0.05);border-radius:50%;"></div>
+      <div style="position:absolute;bottom:-80px;left:-40px;width:240px;height:240px;background:rgba(255,255,255,0.04);border-radius:50%;"></div>
+      <div style="position:relative;z-index:1;">
+        <h2 style="font-size:clamp(1.5rem,3vw,2.25rem);font-weight:800;margin-bottom:0.75rem;">Mulai Belanja Digital Sekarang! 🛍️</h2>
+        <p style="color:rgba(255,255,255,0.85);font-size:0.95rem;margin-bottom:2rem;max-width:480px;margin-left:auto;margin-right:auto;">Daftar gratis dan dapatkan voucher Rp 25.000 untuk pembelian pertama kamu</p>
+        <div style="display:flex;gap:0.75rem;justify-content:center;flex-wrap:wrap;">
+          <a href="account.html" class="btn btn-outline-white btn-lg">Daftar Gratis</a>
+          <a href="products.html" class="btn btn-lg" style="background:rgba(255,255,255,0.15);color:#fff;border:2px solid rgba(255,255,255,0.3);">Lihat Produk →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========================================================
+     FOOTER
+======================================================== -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <!-- Brand -->
+      <div class="footer-brand">
+        <div class="footer-logo">
+          <svg width="22" height="22" viewBox="0 0 26 26" fill="none">
+            <path d="M14.5 2L4 15h9.5l-2 9L22 11h-9l1.5-9z" fill="#FF6B35" stroke="#FF6B35" stroke-width="1.5" stroke-linejoin="round"/>
+          </svg>
+          Akun<span class="logo-accent">ku</span>
+        </div>
+        <p class="footer-tagline">Toko Digital Terpercaya Indonesia. Temukan ribuan produk digital berkualitas dengan harga terbaik dan pengiriman instan.</p>
+        <div class="footer-socials">
+          <a href="#" class="social-btn" title="Instagram">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          </a>
+          <a href="#" class="social-btn" title="Twitter/X">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          </a>
+          <a href="#" class="social-btn" title="YouTube">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 0 0-1.95 1.96A29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58A2.78 2.78 0 0 0 3.41 19.6C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.95A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02"/></svg>
+          </a>
+          <a href="#" class="social-btn" title="WhatsApp">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Links -->
+      <div class="footer-col">
+        <h4>Akunku</h4>
+        <ul class="footer-links">
+          <li><a href="#">Tentang Kami</a></li>
+          <li><a href="#">Karir</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Press Kit</a></li>
+          <li><a href="#">Mitra Seller</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Kategori</h4>
+        <ul class="footer-links">
+          <li><a href="products.html">📚 Ebook</a></li>
+          <li><a href="products.html">👑 Akun VIP</a></li>
+          <li><a href="products.html">🎬 Video Learning</a></li>
+          <li><a href="products.html">🎮 Game Item</a></li>
+          <li><a href="products.html">🔑 Software</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Dukungan</h4>
+        <ul class="footer-links">
+          <li><a href="#">Pusat Bantuan</a></li>
+          <li><a href="#">Cara Pembelian</a></li>
+          <li><a href="#">Kebijakan Refund</a></li>
+          <li><a href="#">Syarat & Ketentuan</a></li>
+          <li><a href="#">Kebijakan Privasi</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2024 Akunku — Toko Digital Terpercaya Indonesia. Hak cipta dilindungi.</p>
+      <div class="footer-badges">
+        <span class="footer-badge">🔒 SSL Secure</span>
+        <span class="footer-badge">✅ Terpercaya</span>
+        <span class="footer-badge">💳 Multi Payment</span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
