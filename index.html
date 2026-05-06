@@ -1,729 +1,3374 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="id" data-theme="light">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Akunku — Toko Digital Terpercaya Indonesia</title>
-  <meta name="description" content="Temukan ribuan produk digital terbaik: ebook, akun VIP, kursus online, software, dan banyak lagi di Akunku.">
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/style.css" />
+
+  <!-- SEO Meta Tags -->
+  <title>Bradwear Indonesia — Kemeja Seragam Custom Premium | Workshirt Specialist</title>
+  <meta name="description" content="Bradwear Indonesia spesialis kemeja seragam kantor custom, celana, rompi vest, polo. Melayani BUMN, BUMD, instansi pemerintah. Bordir 3D, desain gratis, produksi ratusan/hari, pengiriman seluruh Indonesia.">
+  <meta name="keywords" content="kemeja seragam custom, seragam kantor, kemeja bordir, seragam BUMN, workshirt, polo custom, rompi seragam, Tasikmalaya, Bradwear Indonesia, kemeja Maryland, kemeja Nagata, kemeja Drill, seragam instansi pemerintah">
+  <meta name="author" content="Bradwear Indonesia">
+  <meta name="robots" content="index, follow">
+  <meta property="og:title" content="Bradwear Indonesia — Kemeja Seragam Custom Premium">
+  <meta property="og:description" content="Spesialis kemeja seragam custom berkualitas premium. Bordir 3D, desain gratis, kirim seluruh Indonesia.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://bradwearindonesia.com">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://bradwearindonesia.com">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet">
+
+  <!-- Schema.org JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ClothingStore",
+    "name": "Bradwear Indonesia",
+    "description": "Spesialis kemeja seragam custom berkualitas premium",
+    "url": "https://bradwearindonesia.com",
+    "telephone": "+6281234567890",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Karisma Residence, Blok C.46, RT.008/RW.003",
+      "addressLocality": "Margajaya, Kec. Mangunreja",
+      "addressRegion": "Kabupaten Tasikmalaya, Jawa Barat",
+      "postalCode": "46462",
+      "addressCountry": "ID"
+    }
+  }
+  </script>
+
+  <style>
+    /* ============================================================
+       CSS CUSTOM PROPERTIES
+    ============================================================ */
+    :root {
+      --bg: #ffffff;
+      --bg-secondary: #f9fafb;
+      --bg-dark: #111827;
+      --surface: #ffffff;
+      --border: #e5e7eb;
+      --text: #111827;
+      --text-muted: #6b7280;
+      --text-light: #9ca3af;
+      --accent: #dc2626;
+      --accent-hover: #b91c1c;
+      --font-body: 'DM Sans', sans-serif;
+      --font-display: 'Bebas Neue', sans-serif;
+      --radius: 8px;
+      --radius-lg: 16px;
+      --shadow: 0 1px 3px rgba(0,0,0,0.08), 0 1px 2px rgba(0,0,0,0.04);
+      --shadow-md: 0 4px 12px rgba(0,0,0,0.10);
+      --shadow-lg: 0 10px 40px rgba(0,0,0,0.12);
+      --transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    [data-theme="dark"] {
+      --bg: #0f0f13;
+      --bg-secondary: #1a1a22;
+      --bg-dark: #000000;
+      --surface: #1e1e2a;
+      --border: #2d2d3d;
+      --text: #f1f5f9;
+      --text-muted: #94a3b8;
+      --text-light: #64748b;
+    }
+
+    /* ============================================================
+       RESET & BASE
+    ============================================================ */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: var(--font-body);
+      background: var(--bg);
+      color: var(--text);
+      font-size: 15px;
+      line-height: 1.6;
+      transition: background 0.4s ease, color 0.4s ease;
+      overflow-x: hidden;
+    }
+    a { text-decoration: none; color: inherit; }
+    img { max-width: 100%; display: block; }
+    ul { list-style: none; }
+    button { cursor: pointer; border: none; background: none; font-family: var(--font-body); }
+
+    /* ============================================================
+       SCROLL REVEAL
+    ============================================================ */
+    .reveal {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+    .reveal-delay-1 { transition-delay: 0.1s; }
+    .reveal-delay-2 { transition-delay: 0.2s; }
+    .reveal-delay-3 { transition-delay: 0.3s; }
+    .reveal-delay-4 { transition-delay: 0.4s; }
+    .reveal-delay-5 { transition-delay: 0.5s; }
+
+    /* ============================================================
+       LAYOUT HELPERS
+    ============================================================ */
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+    .section-pad { padding: 88px 0; }
+    .section-pad-sm { padding: 64px 0; }
+
+    /* ============================================================
+       SECTION HEADERS
+    ============================================================ */
+    .section-eyebrow {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 12px;
+    }
+    .section-title {
+      font-family: var(--font-display);
+      font-size: clamp(36px, 5vw, 56px);
+      color: var(--text);
+      line-height: 1.0;
+      margin-bottom: 16px;
+    }
+    .section-subtitle {
+      font-size: 16px;
+      color: var(--text-muted);
+      max-width: 560px;
+      line-height: 1.7;
+    }
+    .section-header { margin-bottom: 48px; }
+    .section-header.centered { text-align: center; }
+    .section-header.centered .section-subtitle { margin: 0 auto; }
+
+    /* ============================================================
+       BUTTONS
+    ============================================================ */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-family: var(--font-body);
+      font-size: 14px;
+      font-weight: 600;
+      border-radius: 6px;
+      padding: 11px 22px;
+      transition: var(--transition);
+      cursor: pointer;
+      white-space: nowrap;
+    }
+    .btn-primary {
+      background: var(--accent);
+      color: white;
+      border: 2px solid var(--accent);
+    }
+    .btn-primary:hover {
+      background: var(--accent-hover);
+      border-color: var(--accent-hover);
+      transform: translateY(-1px);
+      box-shadow: 0 4px 16px rgba(220,38,38,0.35);
+    }
+    .btn-secondary {
+      background: transparent;
+      color: var(--text);
+      border: 2px solid var(--text);
+    }
+    .btn-secondary:hover {
+      background: var(--text);
+      color: var(--bg);
+      transform: translateY(-1px);
+    }
+    .btn-outline-white {
+      background: transparent;
+      color: white;
+      border: 2px solid rgba(255,255,255,0.6);
+    }
+    .btn-outline-white:hover {
+      background: rgba(255,255,255,0.12);
+      border-color: white;
+    }
+    .btn-whatsapp {
+      background: #25D366;
+      color: white;
+      border: 2px solid #25D366;
+      font-size: 15px;
+      padding: 13px 28px;
+    }
+    .btn-whatsapp:hover {
+      background: #1ebe5d;
+      border-color: #1ebe5d;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(37,211,102,0.4);
+    }
+    .btn-lg { font-size: 16px; padding: 14px 32px; }
+    .btn-full { width: 100%; justify-content: center; }
+
+    /* ============================================================
+       FEATHERED BLUR OVERLAY
+    ============================================================ */
+    .feathered-blur {
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      height: 40%;
+      background: linear-gradient(0deg, rgba(0,0,0,0.72), rgba(0,0,0,0.36), transparent);
+      pointer-events: none;
+      z-index: 2;
+    }
+    .feathered-blur::before {
+      content: "";
+      position: absolute;
+      bottom: 0; left: 0; right: 0; height: 100%;
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      -webkit-mask: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.8) 30%, rgba(0,0,0,0.4) 60%, rgba(0,0,0,0.1) 85%, transparent);
+      mask: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.8) 30%, rgba(0,0,0,0.4) 60%, rgba(0,0,0,0.1) 85%, transparent);
+    }
+
+    /* ============================================================
+       NAVBAR
+    ============================================================ */
+    #navbar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--bg);
+      border-bottom: 1px solid var(--border);
+      height: 64px;
+      display: flex;
+      align-items: center;
+      transition: box-shadow 0.3s ease, background 0.4s ease;
+    }
+    #navbar.scrolled {
+      box-shadow: 0 2px 20px rgba(0,0,0,0.08);
+    }
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 24px;
+      gap: 32px;
+    }
+    .nav-logo { flex-shrink: 0; }
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+      flex: 1;
+      justify-content: center;
+    }
+    .nav-links a {
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--text-muted);
+      transition: color 0.2s;
+      position: relative;
+    }
+    .nav-links a:hover,
+    .nav-links a.active { color: var(--accent); }
+    .nav-links a.active::after {
+      content: '';
+      position: absolute;
+      bottom: -4px; left: 0; right: 0;
+      height: 2px;
+      background: var(--accent);
+      border-radius: 2px;
+    }
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-shrink: 0;
+    }
+    .theme-toggle {
+      width: 36px; height: 36px;
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      color: var(--text-muted);
+      transition: var(--transition);
+      border: 1px solid var(--border);
+      background: var(--bg);
+    }
+    .theme-toggle:hover {
+      background: var(--bg-secondary);
+      color: var(--text);
+    }
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      width: 32px; height: 32px;
+      align-items: center; justify-content: center;
+      border-radius: 6px;
+      border: 1px solid var(--border);
+      background: var(--bg);
+      padding: 6px;
+    }
+    .hamburger span {
+      display: block;
+      width: 18px; height: 2px;
+      background: var(--text);
+      border-radius: 2px;
+      transition: var(--transition);
+    }
+    .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .hamburger.open span:nth-child(2) { opacity: 0; }
+    .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+    .mobile-menu {
+      display: none;
+      position: fixed;
+      top: 64px; left: 0; right: 0;
+      background: var(--bg);
+      border-bottom: 1px solid var(--border);
+      padding: 20px 24px;
+      z-index: 99;
+      box-shadow: var(--shadow-lg);
+    }
+    .mobile-menu.open { display: block; }
+    .mobile-menu a {
+      display: block;
+      padding: 12px 0;
+      font-size: 15px;
+      font-weight: 500;
+      color: var(--text-muted);
+      border-bottom: 1px solid var(--border);
+      transition: color 0.2s;
+    }
+    .mobile-menu a:hover { color: var(--accent); }
+    .mobile-menu .btn { margin-top: 16px; width: 100%; justify-content: center; }
+
+    /* ============================================================
+       HERO
+    ============================================================ */
+    #hero {
+      min-height: 100vh;
+      background: #0f172a;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+      position: relative;
+    }
+    .hero-bg-shapes {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      overflow: hidden;
+    }
+    .hero-shape {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(80px);
+      opacity: 0.08;
+    }
+    .hero-shape-1 {
+      width: 600px; height: 600px;
+      background: radial-gradient(circle, #dc2626, transparent);
+      top: -200px; right: -100px;
+    }
+    .hero-shape-2 {
+      width: 400px; height: 400px;
+      background: radial-gradient(circle, #1d4ed8, transparent);
+      bottom: -100px; left: -100px;
+    }
+    .hero-grid-overlay {
+      position: absolute;
+      inset: 0;
+      background-image: linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+                        linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+      background-size: 64px 64px;
+    }
+    .hero-inner {
+      position: relative;
+      z-index: 2;
+      width: 100%;
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 100px 24px 80px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      align-items: center;
+    }
+    .hero-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      background: rgba(220,38,38,0.12);
+      color: #f87171;
+      border: 1px solid rgba(220,38,38,0.3);
+      border-radius: 20px;
+      padding: 6px 14px;
+      margin-bottom: 24px;
+    }
+    .hero-pill .dot {
+      width: 6px; height: 6px;
+      border-radius: 50%;
+      background: #f87171;
+      animation: blink 1.6s ease-in-out infinite;
+    }
+    @keyframes blink {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.3; }
+    }
+    .hero-h1 {
+      font-family: var(--font-display);
+      font-size: clamp(52px, 7.5vw, 96px);
+      color: white;
+      line-height: 0.95;
+      letter-spacing: 1px;
+      margin-bottom: 14px;
+    }
+    .hero-h2 {
+      font-family: var(--font-display);
+      font-size: clamp(26px, 3.5vw, 46px);
+      color: #dc2626;
+      line-height: 1.1;
+      margin-bottom: 24px;
+    }
+    .hero-body {
+      font-size: 15px;
+      color: #9ca3af;
+      line-height: 1.8;
+      max-width: 480px;
+      margin-bottom: 36px;
+    }
+    .hero-body strong { color: #d1d5db; font-weight: 600; }
+    .hero-stats {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+      margin-bottom: 36px;
+    }
+    .hero-stat {
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 8px;
+      padding: 12px 10px;
+      text-align: center;
+      background: rgba(255,255,255,0.04);
+      backdrop-filter: blur(4px);
+    }
+    .hero-stat-num {
+      display: block;
+      font-family: var(--font-display);
+      font-size: 22px;
+      color: white;
+      line-height: 1.1;
+    }
+    .hero-stat-label {
+      display: block;
+      font-size: 10px;
+      color: #6b7280;
+      letter-spacing: 0.5px;
+      margin-top: 2px;
+    }
+    .hero-ctas { display: flex; gap: 14px; flex-wrap: wrap; }
+
+    /* Hero Visual */
+    .hero-visual-wrap {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+    .hero-shirt-card {
+      width: 100%;
+      max-width: 440px;
+      height: 520px;
+      border-radius: 20px;
+      overflow: hidden;
+      position: relative;
+      background: linear-gradient(145deg, #1e293b 0%, #0f172a 60%, #020617 100%);
+      box-shadow: 0 30px 80px rgba(0,0,0,0.5), 0 0 0 1px rgba(255,255,255,0.06);
+      transition: transform 0.1s ease;
+    }
+    /* CSS Shirt */
+    .shirt-container {
+      position: absolute;
+      top: 50%; left: 50%;
+      transform: translate(-50%, -50%) translateY(-10%);
+      width: 220px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .shirt-collar-wrap {
+      position: relative;
+      width: 80px;
+      height: 44px;
+      margin-bottom: -2px;
+    }
+    .shirt-collar-left {
+      position: absolute;
+      bottom: 0; left: 0;
+      width: 50px; height: 44px;
+      background: #f0f0f0;
+      clip-path: polygon(0 0, 100% 100%, 0 100%);
+    }
+    .shirt-collar-right {
+      position: absolute;
+      bottom: 0; right: 0;
+      width: 50px; height: 44px;
+      background: #e8e8e8;
+      clip-path: polygon(100% 0, 100% 100%, 0 100%);
+    }
+    .shirt-collar-inner {
+      position: absolute;
+      bottom: 0; left: 50%;
+      transform: translateX(-50%);
+      width: 22px; height: 32px;
+      background: #1e293b;
+      clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
+    }
+    .shirt-body {
+      width: 200px;
+      height: 260px;
+      background: linear-gradient(160deg, #1e3a5f 0%, #0d2137 100%);
+      border-radius: 0 0 16px 16px;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      overflow: hidden;
+    }
+    .shirt-body::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 50%; transform: translateX(-50%);
+      width: 1px; height: 100%;
+      background: rgba(255,255,255,0.08);
+    }
+    .shirt-buttons {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      align-items: center;
+      margin-top: 24px;
+    }
+    .shirt-btn {
+      width: 7px; height: 7px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.5);
+      box-shadow: 0 0 4px rgba(255,255,255,0.3);
+    }
+    .shirt-pocket {
+      position: absolute;
+      top: 28px; left: 28px;
+      width: 36px; height: 28px;
+      border: 1.5px solid rgba(255,255,255,0.18);
+      border-radius: 3px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .shirt-emblem {
+      position: absolute;
+      top: 10px; left: 50%; transform: translateX(-50%);
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 9px;
+      color: #dc2626;
+      letter-spacing: 1.5px;
+      white-space: nowrap;
+    }
+    .shirt-shoulder-left {
+      position: absolute;
+      top: -40px; left: -32px;
+      width: 80px; height: 50px;
+      background: linear-gradient(160deg, #1e3a5f, #0d2137);
+      border-radius: 50% 0 0 0;
+      transform: rotate(-8deg);
+    }
+    .shirt-shoulder-right {
+      position: absolute;
+      top: -40px; right: -32px;
+      width: 80px; height: 50px;
+      background: linear-gradient(200deg, #1e3a5f, #0d2137);
+      border-radius: 0 50% 0 0;
+      transform: rotate(8deg);
+    }
+    .shirt-brand-overlay {
+      position: absolute;
+      bottom: 20px; left: 50%; transform: translateX(-50%);
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 28px;
+      color: rgba(255,255,255,0.06);
+      letter-spacing: 3px;
+      white-space: nowrap;
+    }
+    /* Floating badges on hero */
+    .hero-badge {
+      position: absolute;
+      background: white;
+      color: #111827;
+      border-radius: 10px;
+      padding: 10px 14px;
+      font-size: 12px;
+      font-weight: 700;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.25);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      white-space: nowrap;
+      z-index: 5;
+      animation: float 4s ease-in-out infinite;
+    }
+    .hero-badge.top-right {
+      top: 14%; right: -10%;
+      animation-delay: 0s;
+    }
+    .hero-badge.bottom-left {
+      bottom: 22%; left: -8%;
+      animation-delay: 2s;
+    }
+    .hero-badge .badge-icon {
+      width: 28px; height: 28px;
+      border-radius: 6px;
+      background: var(--accent);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 14px;
+      flex-shrink: 0;
+    }
+    .hero-badge .badge-label { font-size: 11px; color: #6b7280; font-weight: 500; line-height: 1; }
+    .hero-badge .badge-val { font-size: 13px; color: #111827; font-weight: 700; line-height: 1.2; }
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-8px); }
+    }
+    /* Decorative circles */
+    .hero-deco {
+      position: absolute;
+      border-radius: 50%;
+      border: 1px solid rgba(255,255,255,0.06);
+    }
+    .hero-deco-1 {
+      width: 320px; height: 320px;
+      top: 50%; left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    .hero-deco-2 {
+      width: 480px; height: 480px;
+      top: 50%; left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    /* ============================================================
+       TICKER / MARQUEE
+    ============================================================ */
+    #ticker {
+      background: var(--bg);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      padding: 20px 0;
+    }
+    .ticker-layout {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+    .ticker-label {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+    .ticker-divider {
+      width: 1px; height: 28px;
+      background: var(--border);
+      flex-shrink: 0;
+    }
+    .ticker-viewport {
+      overflow: hidden;
+      flex: 1;
+      -webkit-mask: linear-gradient(to right, transparent 0%, black 12%, black 88%, transparent 100%);
+      mask: linear-gradient(to right, transparent 0%, black 12%, black 88%, transparent 100%);
+    }
+    .ticker-track {
+      display: flex;
+      align-items: center;
+      gap: 0;
+      width: max-content;
+      animation: scroll-ticker 28s linear infinite;
+    }
+    .ticker-track:hover { animation-play-state: paused; }
+    @keyframes scroll-ticker {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+    .ticker-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 6px 28px;
+      border-right: 1px solid var(--border);
+      white-space: nowrap;
+    }
+    .ticker-item span {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--text-muted);
+      transition: color 0.2s;
+    }
+    .ticker-item:hover span { color: var(--accent); }
+
+    /* ============================================================
+       ABOUT SECTION
+    ============================================================ */
+    #about { background: var(--bg-secondary); }
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.1fr;
+      gap: 64px;
+      align-items: center;
+    }
+    .about-visual {
+      position: relative;
+    }
+    .about-img-card {
+      width: 100%;
+      max-width: 420px;
+      height: 520px;
+      background: linear-gradient(150deg, #1e293b 0%, #0f172a 60%, #020617 100%);
+      border-radius: var(--radius-lg);
+      position: relative;
+      overflow: hidden;
+      box-shadow: var(--shadow-lg);
+    }
+    .about-watermark {
+      position: absolute;
+      top: 50%; left: 50%;
+      transform: translate(-50%, -50%) rotate(-20deg);
+      font-family: var(--font-display);
+      font-size: 80px;
+      color: rgba(255,255,255,0.04);
+      letter-spacing: 6px;
+      white-space: nowrap;
+      pointer-events: none;
+      line-height: 1;
+    }
+    /* Decorative shirt in about card */
+    .about-shirt {
+      position: absolute;
+      top: 50%; left: 50%;
+      transform: translate(-50%, -50%) translateY(-20px);
+      width: 160px;
+    }
+    .about-shirt-body {
+      width: 160px; height: 200px;
+      background: linear-gradient(145deg, #1e3a5f, #0d2137);
+      border-radius: 0 0 12px 12px;
+      position: relative;
+    }
+    .about-shirt-collar {
+      width: 60px; height: 34px;
+      margin: 0 auto;
+      position: relative;
+      overflow: hidden;
+    }
+    .about-shirt-collar::before {
+      content: '';
+      position: absolute;
+      left: 0; bottom: 0;
+      width: 0; height: 0;
+      border-left: 30px solid transparent;
+      border-bottom: 34px solid #e8e8e8;
+    }
+    .about-shirt-collar::after {
+      content: '';
+      position: absolute;
+      right: 0; bottom: 0;
+      width: 0; height: 0;
+      border-right: 30px solid transparent;
+      border-bottom: 34px solid #e0e0e0;
+    }
+    .about-stat-card {
+      position: absolute;
+      background: var(--surface);
+      border-radius: 10px;
+      padding: 12px 16px;
+      box-shadow: 0 8px 28px rgba(0,0,0,0.18);
+      min-width: 140px;
+      border: 1px solid var(--border);
+    }
+    .about-stat-card .sc-num {
+      font-family: var(--font-display);
+      font-size: 28px;
+      color: var(--accent);
+      line-height: 1;
+    }
+    .about-stat-card .sc-label {
+      font-size: 11px;
+      color: var(--text-muted);
+      margin-top: 2px;
+    }
+    .about-stat-card-1 { top: 10%; left: -24px; }
+    .about-stat-card-2 { bottom: 18%; right: -24px; }
+    .about-stat-card-3 { bottom: 5%; left: -12px; }
+    .about-features { margin-top: 32px; display: flex; flex-direction: column; gap: 20px; }
+    .about-feature {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+    }
+    .about-feature-icon {
+      width: 44px; height: 44px;
+      border-radius: 10px;
+      background: rgba(220,38,38,0.08);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 20px;
+      flex-shrink: 0;
+      border: 1px solid rgba(220,38,38,0.15);
+    }
+    .about-feature h4 {
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--text);
+      margin-bottom: 3px;
+    }
+    .about-feature p {
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+
+    /* ============================================================
+       PRODUCTS SECTION
+    ============================================================ */
+    #products { background: var(--bg); }
+    /* Color Swatch Scroll */
+    .color-swatch-bar {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 40px;
+    }
+    .swatch-label {
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--text-muted);
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+    .color-scroll {
+      display: flex;
+      overflow-x: auto;
+      gap: 8px;
+      padding-bottom: 8px;
+      scrollbar-width: thin;
+      scrollbar-color: var(--accent) var(--border);
+    }
+    .color-scroll::-webkit-scrollbar { height: 4px; }
+    .color-scroll::-webkit-scrollbar-track { background: var(--border); border-radius: 2px; }
+    .color-scroll::-webkit-scrollbar-thumb { background: var(--accent); border-radius: 2px; }
+    .swatch-item {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      padding: 6px 12px;
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      background: var(--surface);
+      white-space: nowrap;
+      cursor: pointer;
+      transition: var(--transition);
+      font-size: 12px;
+      font-weight: 500;
+      color: var(--text);
+    }
+    .swatch-item:hover {
+      border-color: var(--accent);
+      box-shadow: 0 0 0 2px rgba(220,38,38,0.12);
+    }
+    .swatch-dot {
+      width: 12px; height: 12px;
+      border-radius: 50%;
+      flex-shrink: 0;
+      border: 1.5px solid rgba(0,0,0,0.1);
+    }
+    /* Product Tabs */
+    .product-tabs {
+      display: flex;
+      align-items: center;
+      gap: 0;
+      border-bottom: 2px solid var(--border);
+      margin-bottom: 36px;
+      overflow-x: auto;
+      scrollbar-width: none;
+    }
+    .product-tabs::-webkit-scrollbar { display: none; }
+    .tab-btn {
+      padding: 12px 24px;
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--text-muted);
+      background: none;
+      border: none;
+      border-bottom: 2px solid transparent;
+      margin-bottom: -2px;
+      cursor: pointer;
+      transition: var(--transition);
+      white-space: nowrap;
+    }
+    .tab-btn:hover { color: var(--text); }
+    .tab-btn.active {
+      color: var(--accent);
+      border-bottom-color: var(--accent);
+    }
+    .tab-panel { display: none; }
+    .tab-panel.active { display: block; }
+    /* Product Grid */
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+    /* Product Card */
+    .product-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      transition: var(--transition);
+      cursor: pointer;
+      transform-style: preserve-3d;
+    }
+    .product-card:hover {
+      box-shadow: var(--shadow-lg);
+      transform: translateY(-4px);
+    }
+    .product-img {
+      position: relative;
+      height: 300px;
+      overflow: hidden;
+    }
+    .product-img-bg {
+      width: 100%; height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+    /* CSS Shirt in product card */
+    .p-shirt {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: relative;
+      z-index: 1;
+    }
+    .p-collar { width: 64px; height: 36px; position: relative; margin-bottom: -2px; }
+    .p-collar-l {
+      position: absolute;
+      bottom: 0; left: 0;
+      width: 38px; height: 36px;
+      background: rgba(255,255,255,0.88);
+      clip-path: polygon(0 0, 100% 100%, 0 100%);
+    }
+    .p-collar-r {
+      position: absolute;
+      bottom: 0; right: 0;
+      width: 38px; height: 36px;
+      background: rgba(255,255,255,0.75);
+      clip-path: polygon(100% 0, 100% 100%, 0 100%);
+    }
+    .p-collar-mid {
+      position: absolute;
+      bottom: 0; left: 50%; transform: translateX(-50%);
+      width: 16px; height: 24px;
+      clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
+    }
+    .p-body {
+      width: 160px; height: 210px;
+      border-radius: 0 0 12px 12px;
+      position: relative;
+      overflow: hidden;
+    }
+    .p-body::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 50%; transform: translateX(-50%);
+      width: 1px; height: 100%;
+      background: rgba(255,255,255,0.08);
+    }
+    .p-btns {
+      display: flex; flex-direction: column; gap: 12px;
+      align-items: center; margin-top: 18px;
+    }
+    .p-btn { width: 5px; height: 5px; border-radius: 50%; background: rgba(255,255,255,0.45); }
+    .p-pocket {
+      position: absolute;
+      top: 22px; left: 22px;
+      width: 28px; height: 22px;
+      border: 1.5px solid rgba(255,255,255,0.15);
+      border-radius: 2px;
+    }
+    .p-logo {
+      position: absolute;
+      top: 8px; right: 18px;
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 8px;
+      color: #dc2626;
+      letter-spacing: 1px;
+    }
+    .p-brand-bg {
+      position: absolute;
+      bottom: 10px; left: 50%; transform: translateX(-50%);
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 22px;
+      color: rgba(255,255,255,0.05);
+      letter-spacing: 2px;
+      white-space: nowrap;
+    }
+    .p-shoulder-l {
+      position: absolute;
+      top: -28px; left: -18px;
+      width: 56px; height: 36px;
+      border-radius: 50% 0 0 0;
+      transform: rotate(-6deg);
+    }
+    .p-shoulder-r {
+      position: absolute;
+      top: -28px; right: -18px;
+      width: 56px; height: 36px;
+      border-radius: 0 50% 0 0;
+      transform: rotate(6deg);
+    }
+    /* Card name overlay on image */
+    .product-img-label {
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      z-index: 3;
+      padding: 16px 16px 14px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .product-img-label span {
+      font-family: var(--font-display);
+      font-size: 20px;
+      color: white;
+      letter-spacing: 1px;
+      line-height: 1;
+    }
+    .product-img-label .open-icon {
+      width: 28px; height: 28px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.18);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 13px;
+      color: white;
+    }
+    /* Card Info */
+    .product-info { padding: 16px 18px 20px; }
+    .product-name {
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 4px;
+    }
+    .product-desc {
+      font-size: 12px;
+      color: var(--text-muted);
+      margin-bottom: 14px;
+      line-height: 1.5;
+    }
+    .product-materials {
+      display: flex;
+      gap: 6px;
+      flex-wrap: wrap;
+      margin-bottom: 12px;
+    }
+    .mat-chip {
+      font-size: 10px;
+      font-weight: 600;
+      background: var(--bg-secondary);
+      color: var(--text-muted);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      padding: 3px 8px;
+    }
+    .product-badges {
+      display: flex;
+      gap: 6px;
+      margin-bottom: 14px;
+    }
+    .prod-badge {
+      font-size: 10px;
+      font-weight: 700;
+      padding: 3px 8px;
+      border-radius: 4px;
+      letter-spacing: 0.3px;
+    }
+    .badge-bordir { background: rgba(220,38,38,0.08); color: var(--accent); border: 1px solid rgba(220,38,38,0.2); }
+    .badge-gratis { background: rgba(22,163,74,0.08); color: #16a34a; border: 1px solid rgba(22,163,74,0.2); }
+    .badge-custom { background: rgba(37,99,235,0.08); color: #2563eb; border: 1px solid rgba(37,99,235,0.2); }
+
+    /* ============================================================
+       MATERIALS SECTION
+    ============================================================ */
+    #materials { background: var(--bg-secondary); }
+    .materials-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+    .material-card {
+      background: var(--surface);
+      border-radius: 0 var(--radius) var(--radius) 0;
+      border-left: 4px solid var(--accent);
+      padding: 22px 24px;
+      box-shadow: var(--shadow);
+      transition: var(--transition);
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+    }
+    .material-card:hover {
+      box-shadow: var(--shadow-md);
+      transform: translateX(4px);
+    }
+    .mat-swatch {
+      width: 44px; height: 44px;
+      border-radius: 8px;
+      flex-shrink: 0;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    }
+    .mat-info h4 {
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 5px;
+    }
+    .mat-info p {
+      font-size: 12px;
+      color: var(--text-muted);
+      line-height: 1.5;
+      margin-bottom: 10px;
+    }
+    .mat-tags { display: flex; flex-wrap: wrap; gap: 5px; }
+    .mat-tag {
+      font-size: 10px;
+      font-weight: 600;
+      background: var(--bg-secondary);
+      color: var(--text-muted);
+      border: 1px solid var(--border);
+      border-radius: 3px;
+      padding: 2px 7px;
+    }
+
+    /* ============================================================
+       FEATURES / KEUNGGULAN
+    ============================================================ */
+    #features {
+      background: var(--bg-dark);
+      position: relative;
+      overflow: hidden;
+    }
+    .features-bg-shape {
+      position: absolute;
+      top: -120px; right: -120px;
+      width: 480px; height: 480px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(220,38,38,0.12), transparent 70%);
+      pointer-events: none;
+    }
+    .features-bg-shape-2 {
+      position: absolute;
+      bottom: -80px; left: -80px;
+      width: 300px; height: 300px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(30,58,138,0.15), transparent 70%);
+      pointer-events: none;
+    }
+    .features-inner { position: relative; z-index: 1; }
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+      margin-top: 48px;
+    }
+    .feature-item {
+      display: flex;
+      gap: 20px;
+      align-items: flex-start;
+      padding: 24px;
+      border: 1px solid rgba(255,255,255,0.07);
+      border-radius: var(--radius-lg);
+      background: rgba(255,255,255,0.03);
+      backdrop-filter: blur(8px);
+      transition: var(--transition);
+    }
+    .feature-item:hover {
+      border-color: rgba(220,38,38,0.3);
+      background: rgba(220,38,38,0.04);
+    }
+    .feature-icon {
+      font-size: 28px;
+      flex-shrink: 0;
+      line-height: 1;
+    }
+    .feature-item h4 {
+      font-size: 16px;
+      font-weight: 700;
+      color: white;
+      margin-bottom: 6px;
+    }
+    .feature-item p { font-size: 13px; color: #9ca3af; line-height: 1.6; }
+    .features-banner {
+      margin-top: 48px;
+      background: linear-gradient(135deg, #991b1b 0%, #b91c1c 50%, #991b1b 100%);
+      border-radius: var(--radius-lg);
+      padding: 28px 36px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+    .features-banner-text {
+      font-size: 17px;
+      font-weight: 700;
+      color: white;
+    }
+    .features-banner-text span {
+      font-family: var(--font-display);
+      font-size: 22px;
+      letter-spacing: 0.5px;
+    }
+
+    /* ============================================================
+       HOW TO ORDER
+    ============================================================ */
+    #order { background: var(--bg); }
+    .steps-wrap {
+      display: flex;
+      align-items: flex-start;
+      gap: 0;
+      position: relative;
+    }
+    .steps-wrap::before {
+      content: '';
+      position: absolute;
+      top: 24px; left: 24px; right: 24px;
+      height: 2px;
+      background: linear-gradient(to right, var(--accent), rgba(220,38,38,0.2));
+      z-index: 0;
+    }
+    .step-item {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 0 12px;
+      position: relative;
+      z-index: 1;
+    }
+    .step-num {
+      width: 48px; height: 48px;
+      border-radius: 50%;
+      background: var(--accent);
+      color: white;
+      font-family: var(--font-display);
+      font-size: 22px;
+      display: flex; align-items: center; justify-content: center;
+      margin-bottom: 14px;
+      box-shadow: 0 4px 16px rgba(220,38,38,0.4);
+    }
+    .step-icon {
+      font-size: 22px;
+      margin-bottom: 10px;
+    }
+    .step-title {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 6px;
+    }
+    .step-desc { font-size: 12px; color: var(--text-muted); line-height: 1.5; }
+    .order-cta-wrap {
+      text-align: center;
+      margin-top: 56px;
+    }
+
+    /* ============================================================
+       TESTIMONIALS
+    ============================================================ */
+    #testimonials { background: var(--bg-secondary); }
+    .testimonials-ticker { margin-bottom: 48px; }
+    .testi-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+    .testi-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-top: 3px solid var(--accent);
+      border-radius: var(--radius-lg);
+      padding: 24px;
+      transition: var(--transition);
+    }
+    .testi-card:hover {
+      box-shadow: var(--shadow-md);
+      transform: translateY(-3px);
+    }
+    .testi-header {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 16px;
+    }
+    .testi-logo {
+      width: 52px; height: 52px;
+      border-radius: 10px;
+      overflow: hidden;
+      flex-shrink: 0;
+    }
+    .testi-org {
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 3px;
+    }
+    .testi-stars { color: #f59e0b; font-size: 13px; letter-spacing: 2px; }
+    .testi-quote {
+      font-size: 14px;
+      color: var(--text-muted);
+      line-height: 1.7;
+      margin-bottom: 16px;
+      font-style: italic;
+    }
+    .testi-quote::before { content: '"'; }
+    .testi-quote::after { content: '"'; }
+    .testi-author {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .testi-author-line { flex: 1; height: 1px; background: var(--border); }
+    .testi-name { font-size: 12px; font-weight: 600; color: var(--text); }
+    .testi-role { font-size: 11px; color: var(--text-muted); }
+
+    /* ============================================================
+       CONTACT SECTION
+    ============================================================ */
+    #contact { background: var(--bg); }
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 56px;
+      align-items: start;
+    }
+    .contact-info-rows { display: flex; flex-direction: column; gap: 18px; margin: 28px 0; }
+    .contact-row {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+    }
+    .contact-icon {
+      width: 40px; height: 40px;
+      border-radius: 8px;
+      background: rgba(220,38,38,0.08);
+      border: 1px solid rgba(220,38,38,0.15);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 18px;
+      flex-shrink: 0;
+    }
+    .contact-row-label { font-size: 11px; font-weight: 600; color: var(--text-light); text-transform: uppercase; letter-spacing: 0.5px; }
+    .contact-row-val { font-size: 14px; color: var(--text); font-weight: 500; }
+    .contact-form-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 32px;
+      box-shadow: var(--shadow-md);
+    }
+    .form-title {
+      font-family: var(--font-display);
+      font-size: 28px;
+      color: var(--text);
+      margin-bottom: 4px;
+    }
+    .form-subtitle { font-size: 13px; color: var(--text-muted); margin-bottom: 24px; }
+    .form-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+    }
+    .form-group { display: flex; flex-direction: column; gap: 6px; }
+    .form-group.full { grid-column: 1 / -1; }
+    .form-group label {
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      padding: 11px 14px;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      font-family: var(--font-body);
+      font-size: 14px;
+      background: var(--bg);
+      color: var(--text);
+      transition: var(--transition);
+      resize: vertical;
+    }
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      outline: none;
+      border-color: var(--accent);
+      box-shadow: 0 0 0 3px rgba(220,38,38,0.1);
+    }
+    .form-group textarea { min-height: 100px; }
+
+    /* ============================================================
+       FOOTER
+    ============================================================ */
+    #footer {
+      background: #111827;
+      color: #d1d5db;
+      padding: 72px 0 0;
+    }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr;
+      gap: 48px;
+      padding-bottom: 48px;
+    }
+    .footer-about-text {
+      font-size: 13px;
+      color: #6b7280;
+      line-height: 1.8;
+      margin: 12px 0 20px;
+      max-width: 280px;
+    }
+    .footer-tagline {
+      font-family: var(--font-display);
+      font-size: 18px;
+      color: #e5e7eb;
+      margin-bottom: 4px;
+    }
+    .social-icons {
+      display: flex;
+      gap: 10px;
+    }
+    .social-icon {
+      width: 36px; height: 36px;
+      border-radius: 8px;
+      background: #1f2937;
+      display: flex; align-items: center; justify-content: center;
+      color: #9ca3af;
+      transition: var(--transition);
+      border: 1px solid #374151;
+    }
+    .social-icon:hover { background: var(--accent); color: white; border-color: var(--accent); }
+    .footer-col h4 {
+      font-size: 13px;
+      font-weight: 700;
+      color: #f9fafb;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      margin-bottom: 18px;
+    }
+    .footer-links { display: flex; flex-direction: column; gap: 10px; }
+    .footer-links a {
+      font-size: 13px;
+      color: #6b7280;
+      transition: color 0.2s;
+    }
+    .footer-links a:hover { color: #f9fafb; }
+    .footer-bar {
+      border-top: 1px solid #374151;
+      padding: 20px 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .footer-bar span { font-size: 12px; color: #4b5563; }
+
+    /* ============================================================
+       FLOATING ELEMENTS
+    ============================================================ */
+    .wa-float {
+      position: fixed;
+      bottom: 28px; right: 28px;
+      z-index: 200;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background: #25D366;
+      color: white;
+      border-radius: 50px;
+      padding: 12px 20px;
+      font-size: 14px;
+      font-weight: 600;
+      text-decoration: none;
+      box-shadow: 0 4px 20px rgba(37,211,102,0.45);
+      animation: pulse-ring 2.5s ease infinite;
+      transition: var(--transition);
+    }
+    .wa-float:hover {
+      background: #1ebe5d;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 28px rgba(37,211,102,0.55);
+    }
+    @keyframes pulse-ring {
+      0% { box-shadow: 0 0 0 0 rgba(37,211,102,0.6), 0 4px 20px rgba(37,211,102,0.45); }
+      70% { box-shadow: 0 0 0 14px rgba(37,211,102,0), 0 4px 20px rgba(37,211,102,0.45); }
+      100% { box-shadow: 0 0 0 0 rgba(37,211,102,0), 0 4px 20px rgba(37,211,102,0.45); }
+    }
+    .scroll-top {
+      position: fixed;
+      bottom: 28px; left: 28px;
+      z-index: 200;
+      width: 44px; height: 44px;
+      border-radius: 50%;
+      background: #111827;
+      color: white;
+      display: flex; align-items: center; justify-content: center;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+      opacity: 0;
+      transition: opacity 0.3s ease, transform 0.25s ease;
+      cursor: pointer;
+      border: none;
+    }
+    .scroll-top:hover { transform: translateY(-3px); }
+
+    /* ============================================================
+       MODAL
+    ============================================================ */
+    .modal-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.65);
+      z-index: 500;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      backdrop-filter: blur(4px);
+    }
+    .modal-overlay.open { display: flex; }
+    .modal-box {
+      background: var(--surface);
+      border-radius: var(--radius-lg);
+      max-width: 640px;
+      width: 100%;
+      max-height: 80vh;
+      overflow-y: auto;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+    }
+    .modal-header {
+      position: sticky;
+      top: 0;
+      background: var(--surface);
+      padding: 20px 28px;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      z-index: 1;
+    }
+    .modal-header h3 {
+      font-family: var(--font-display);
+      font-size: 24px;
+      color: var(--text);
+    }
+    .modal-close {
+      width: 32px; height: 32px;
+      border-radius: 50%;
+      background: var(--bg-secondary);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 18px;
+      color: var(--text-muted);
+      cursor: pointer;
+      border: none;
+      transition: var(--transition);
+    }
+    .modal-close:hover { background: var(--border); color: var(--text); }
+    .modal-body { padding: 28px; }
+    .modal-body h4 { font-size: 15px; font-weight: 700; color: var(--text); margin: 20px 0 8px; }
+    .modal-body h4:first-child { margin-top: 0; }
+    .modal-body p { font-size: 13px; color: var(--text-muted); line-height: 1.7; margin-bottom: 10px; }
+    .modal-body ul { padding-left: 18px; }
+    .modal-body ul li { font-size: 13px; color: var(--text-muted); margin-bottom: 6px; line-height: 1.6; }
+
+    /* ============================================================
+       RESPONSIVE
+    ============================================================ */
+    @media (max-width: 1024px) {
+      .hero-inner { grid-template-columns: 1fr; gap: 48px; }
+      .hero-visual-wrap { order: -1; }
+      .hero-shirt-card { max-width: 360px; height: 400px; margin: 0 auto; }
+      .hero-badge.top-right { top: 8%; right: 2%; }
+      .hero-badge.bottom-left { bottom: 10%; left: 2%; }
+      .about-grid { grid-template-columns: 1fr; }
+      .about-img-card { height: 340px; max-width: 100%; }
+      .about-stat-card-1 { top: 10%; left: 8px; }
+      .about-stat-card-2 { bottom: 10%; right: 8px; }
+      .about-stat-card-3 { bottom: 2%; left: 8px; }
+      .product-grid { grid-template-columns: repeat(2, 1fr); }
+      .contact-grid { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+      .features-grid { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+      .hamburger { display: flex; }
+      .nav-actions .btn { display: none; }
+      .nav-actions .theme-toggle { display: flex; }
+      .hero-stats { grid-template-columns: repeat(2, 1fr); }
+      .product-grid { grid-template-columns: 1fr; }
+      .materials-grid { grid-template-columns: 1fr; }
+      .testi-grid { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr; }
+      .steps-wrap {
+        flex-direction: column;
+        gap: 32px;
+      }
+      .steps-wrap::before { display: none; }
+      .step-item { flex-direction: row; text-align: left; gap: 16px; }
+      .step-num { margin-bottom: 0; flex-shrink: 0; }
+      .form-grid { grid-template-columns: 1fr; }
+      .section-pad { padding: 60px 0; }
+      .wa-float .wa-text { display: none; }
+      .wa-float { padding: 13px; border-radius: 50%; }
+      .features-banner { flex-direction: column; text-align: center; }
+    }
+    @media (max-width: 480px) {
+      .hero-h1 { font-size: 44px; }
+      .hero-ctas { flex-direction: column; }
+      .footer-bar { flex-direction: column; text-align: center; }
+    }
+  </style>
 </head>
 <body>
 
-<!-- ========================================================
+<!-- ============================================================
      NAVBAR
-======================================================== -->
-<header id="navbar" class="navbar">
-  <div class="container">
-    <div class="navbar-inner">
-      <!-- Logo -->
-      <a href="index.html" class="navbar-logo">
-        <svg viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M14.5 2L4 15h9.5l-2 9L22 11h-9l1.5-9z" fill="#FF6B35" stroke="#FF6B35" stroke-width="1.5" stroke-linejoin="round"/>
+============================================================ -->
+<nav id="navbar" role="navigation" aria-label="Navigasi utama">
+  <div class="nav-inner">
+    <!-- Logo -->
+    <a href="#" class="nav-logo" aria-label="Bradwear Indonesia - Beranda">
+      <svg viewBox="0 0 240 56" xmlns="http://www.w3.org/2000/svg" style="height:38px;width:auto">
+        <rect width="240" height="56" fill="#0a0a0a" rx="5"/>
+        <text x="12" y="34" font-family="Impact,Arial Black,sans-serif" font-size="24" fill="#00ff41" letter-spacing="1.5">BRADWEAR</text>
+        <text x="13" y="48" font-family="Arial,sans-serif" font-size="11" fill="#00ff41" letter-spacing="3.5">&gt;&gt;&gt; INDONESIA</text>
+      </svg>
+    </a>
+    <!-- Desktop Nav Links -->
+    <div class="nav-links">
+      <a href="#hero" class="active">Beranda</a>
+      <a href="#about">Tentang</a>
+      <a href="#products">Produk</a>
+      <a href="#materials">Bahan</a>
+      <a href="#testimonials">Testimoni</a>
+      <a href="#contact">Kontak</a>
+    </div>
+    <!-- Actions -->
+    <div class="nav-actions">
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle tema">
+        <svg id="moonIcon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
         </svg>
-        Akun<span class="logo-accent">ku</span>
-      </a>
-
-      <!-- Desktop Nav Links -->
-      <nav class="navbar-links">
-        <a href="index.html" class="active">Beranda</a>
-        <a href="products.html">Produk</a>
-        <a href="products.html">Kategori</a>
-        <a href="account.html">Tentang</a>
-      </nav>
-
-      <!-- Actions -->
-      <div class="navbar-actions">
-        <button class="icon-btn" id="searchBtn" title="Cari Produk">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/>
-          </svg>
-        </button>
-        <a href="#" class="icon-btn" title="Keranjang">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/>
-          </svg>
-          <span class="cart-badge">0</span>
-        </a>
-        <a href="account.html" class="btn btn-outline btn-sm">Masuk</a>
-        <a href="account.html" class="btn btn-primary btn-sm">Daftar</a>
-        <button class="hamburger" id="hamburger" aria-label="Menu">
-          <span></span><span></span><span></span>
-        </button>
-      </div>
+        <svg id="sunIcon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none">
+          <circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/>
+          <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+          <line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/>
+          <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+        </svg>
+      </button>
+      <a href="https://wa.me/6281234567890?text=Halo%20Bradwear%2C%20saya%20ingin%20pesan%20seragam" class="btn btn-primary" target="_blank" rel="noopener">Pesan Sekarang</a>
+      <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
     </div>
   </div>
-  <!-- Mobile Nav -->
-  <div class="mobile-nav" id="mobileNav">
-    <a href="index.html" class="active">🏠 Beranda</a>
-    <a href="products.html">📦 Produk</a>
-    <a href="products.html">🗂️ Kategori</a>
-    <a href="account.html">👤 Akun</a>
-    <div class="mobile-nav-divider"></div>
-    <div class="mobile-nav-actions">
-      <a href="account.html" class="btn btn-outline btn-sm">Masuk</a>
-      <a href="account.html" class="btn btn-primary btn-sm">Daftar</a>
-    </div>
+</nav>
+
+<!-- Mobile Menu -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#hero" onclick="closeMobileMenu()">Beranda</a>
+  <a href="#about" onclick="closeMobileMenu()">Tentang Kami</a>
+  <a href="#products" onclick="closeMobileMenu()">Produk</a>
+  <a href="#materials" onclick="closeMobileMenu()">Pilihan Bahan</a>
+  <a href="#testimonials" onclick="closeMobileMenu()">Testimoni</a>
+  <a href="#contact" onclick="closeMobileMenu()">Kontak</a>
+  <a href="https://wa.me/6281234567890?text=Halo%20Bradwear%2C%20saya%20ingin%20pesan%20seragam" class="btn btn-primary" target="_blank" rel="noopener">🛒 Pesan Sekarang</a>
+</div>
+
+<!-- ============================================================
+     HERO
+============================================================ -->
+<section id="hero" aria-label="Halaman utama Bradwear Indonesia">
+  <div class="hero-bg-shapes">
+    <div class="hero-shape hero-shape-1"></div>
+    <div class="hero-shape hero-shape-2"></div>
+    <div class="hero-grid-overlay"></div>
   </div>
-</header>
-
-<!-- ========================================================
-     HERO SECTION
-======================================================== -->
-<section id="hero" class="hero">
-  <div class="hero-bg"></div>
-  <div class="hero-grid"></div>
-
-  <!-- Parallax Orbs -->
-  <div class="orb orb-1" data-parallax="-0.08"></div>
-  <div class="orb orb-2" data-parallax="0.12"></div>
-  <div class="orb orb-3" data-parallax="-0.15"></div>
-
-  <div class="container" style="position:relative;z-index:2;width:100%;">
-    <div class="hero-content">
-      <div class="hero-badge">
-        <span class="hero-badge-dot"></span>
-        Marketplace #1 Produk Digital Indonesia
+  <div class="hero-inner">
+    <!-- Left: Text -->
+    <div class="hero-left">
+      <div class="hero-pill reveal">
+        <span class="dot"></span>
+        WORKSHIRT SPECIALIST
       </div>
-      <h1 class="hero-title">
-        Dapatkan Produk<br>
-        Digital <span class="gradient-text">Terbaik</span><br>
-        di Sini 🚀
-      </h1>
-      <p class="hero-sub">
-        Temukan ribuan produk digital berkualitas — ebook, akun VIP premium,
-        video pembelajaran, software, dan banyak lagi. Pengiriman instan,
-        harga terjangkau, garansi terpercaya.
+      <h1 class="hero-h1 reveal reveal-delay-1">KEMEJA<br>SERAGAM<br>CUSTOM<br>PREMIUM</h1>
+      <h2 class="hero-h2 reveal reveal-delay-2">Stay Bold. Stay Bradwear.</h2>
+      <p class="hero-body reveal reveal-delay-3">
+        <strong>Look sharp. Feel confident. Work with style.</strong> — Spesialis kemeja seragam kantor, celana, rompi, dan polo custom berkualitas premium untuk BUMN, BUMD, instansi pemerintah, dan korporasi di seluruh Indonesia.
       </p>
-      <div class="hero-actions">
-        <a href="products.html" class="btn btn-primary btn-lg">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
-          Jelajahi Produk
-        </a>
-        <a href="products.html" class="btn btn-outline-white btn-lg" data-scroll-to="#categories">
-          Lihat Kategori
-        </a>
-      </div>
-      <div class="hero-stats">
-        <div class="stat-item">
-          <span class="stat-value">1,200+</span>
-          <span class="stat-label">Produk Digital</span>
+      <!-- Stats -->
+      <div class="hero-stats reveal reveal-delay-3">
+        <div class="hero-stat">
+          <span class="hero-stat-num" data-count="500">0</span>
+          <span class="hero-stat-label">Unit/Hari</span>
         </div>
-        <div class="stat-item">
-          <span class="stat-value">50K+</span>
-          <span class="stat-label">Pengguna Aktif</span>
+        <div class="hero-stat">
+          <span class="hero-stat-num" data-count="10">0</span>
+          <span class="hero-stat-label">+ Tahun</span>
         </div>
-        <div class="stat-item">
-          <span class="stat-value">4.9★</span>
-          <span class="stat-label">Rating Kepuasan</span>
+        <div class="hero-stat">
+          <span class="hero-stat-num" data-count="1000">0</span>
+          <span class="hero-stat-label">+ Klien</span>
+        </div>
+        <div class="hero-stat">
+          <span class="hero-stat-num" data-count="34">0</span>
+          <span class="hero-stat-label">Provinsi</span>
         </div>
       </div>
+      <!-- CTAs -->
+      <div class="hero-ctas reveal reveal-delay-4">
+        <a href="https://wa.me/6281234567890?text=Halo%20Bradwear%2C%20saya%20ingin%20pesan%20seragam" class="btn btn-primary btn-lg" target="_blank" rel="noopener">🛒 Pesan Sekarang</a>
+        <a href="#products" class="btn btn-outline-white btn-lg">Lihat Produk ↓</a>
+      </div>
     </div>
-  </div>
-
-  <!-- Floating Visual Cards -->
-  <div class="hero-visual">
-    <div class="floating-card fc-main">
-      <div class="fc-thumb gt-1">📚</div>
-      <div class="fc-name">Panduan Bisnis Online 2024</div>
-      <div class="fc-price">Rp 85.000</div>
-    </div>
-    <div class="floating-card fc-1">
-      <div class="fc-thumb gt-2">🎬</div>
-      <div class="fc-name">Netflix Premium</div>
-      <div class="fc-price">Rp 45.000</div>
-    </div>
-    <div class="floating-card fc-2">
-      <div class="fc-thumb gt-3">💻</div>
-      <div class="fc-name">Kursus React.js</div>
-      <div class="fc-price">Rp 129.000</div>
-    </div>
-    <div class="floating-card fc-3">
-      <div class="fc-thumb gt-4">🎵</div>
-      <div class="fc-name">Spotify Premium</div>
-      <div class="fc-price">Rp 55.000</div>
+    <!-- Right: Visual -->
+    <div class="hero-visual-wrap reveal reveal-delay-2">
+      <!-- Decorative rings -->
+      <div class="hero-deco hero-deco-1"></div>
+      <div class="hero-deco hero-deco-2"></div>
+      <!-- Main Shirt Card -->
+      <div class="hero-shirt-card" id="hero-visual">
+        <div class="shirt-container">
+          <!-- Collar -->
+          <div class="shirt-collar-wrap">
+            <div class="shirt-collar-left"></div>
+            <div class="shirt-collar-right"></div>
+            <div class="shirt-collar-inner"></div>
+          </div>
+          <!-- Shirt Body -->
+          <div class="shirt-body">
+            <div class="shirt-shoulder-left"></div>
+            <div class="shirt-shoulder-right"></div>
+            <div class="shirt-pocket">
+              <span style="font-size:7px;color:rgba(255,255,255,0.5);font-family:'Bebas Neue',sans-serif;letter-spacing:0.5px">BW</span>
+            </div>
+            <div class="shirt-emblem">★ BRADWEAR INDONESIA ★</div>
+            <div class="shirt-buttons">
+              <div class="shirt-btn"></div>
+              <div class="shirt-btn"></div>
+              <div class="shirt-btn"></div>
+              <div class="shirt-btn"></div>
+              <div class="shirt-btn"></div>
+            </div>
+            <div class="shirt-brand-overlay">BRADWEAR</div>
+          </div>
+        </div>
+        <!-- Feathered blur overlay -->
+        <div class="feathered-blur"></div>
+        <!-- Label overlay -->
+        <div style="position:absolute;bottom:0;left:0;right:0;z-index:4;padding:18px 20px;display:flex;align-items:center;justify-content:space-between">
+          <span style="font-family:'Bebas Neue',sans-serif;font-size:22px;color:white;letter-spacing:1.5px;line-height:1">BRADWEAR PREMIUM</span>
+          <span style="background:rgba(220,38,38,0.85);color:white;font-size:10px;font-weight:700;padding:4px 10px;border-radius:4px;letter-spacing:0.5px">NEW COLLECTION</span>
+        </div>
+      </div>
+      <!-- Floating Badges -->
+      <div class="hero-badge top-right">
+        <div class="badge-icon">🪡</div>
+        <div>
+          <div class="badge-label">Teknologi</div>
+          <div class="badge-val">BORDIR 3D</div>
+        </div>
+      </div>
+      <div class="hero-badge bottom-left">
+        <div class="badge-icon">🎨</div>
+        <div>
+          <div class="badge-label">Layanan</div>
+          <div class="badge-val">DESAIN GRATIS</div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- ========================================================
-     CATEGORY SECTION
-======================================================== -->
-<section class="section" id="categories">
+<!-- ============================================================
+     TICKER / MARQUEE
+============================================================ -->
+<div id="ticker" aria-label="Klien terpercaya Bradwear Indonesia">
+  <div class="ticker-layout">
+    <span class="ticker-label">Dipercaya Oleh</span>
+    <div class="ticker-divider"></div>
+    <div class="ticker-viewport">
+      <div class="ticker-track" id="tickerTrack">
+        <!-- Items will be duplicated by JS -->
+        <div class="ticker-item">
+          <svg width="22" height="22" viewBox="0 0 52 52"><circle cx="26" cy="26" r="26" fill="#0d47a1"/><path d="M20 14l8 12h-6l8 12" stroke="#ffd700" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span>PT PLN (Persero)</span>
+        </div>
+        <div class="ticker-item">
+          <svg width="22" height="22" viewBox="0 0 52 52"><rect width="52" height="52" rx="8" fill="#006e8c"/><path d="M26 10 Q20 22 26 26 Q32 22 26 10Z" fill="#00b4d4"/><path d="M26 26 Q18 32 22 42h8 Q34 32 26 26Z" fill="#007ea4"/></svg>
+          <span>Pertamina</span>
+        </div>
+        <div class="ticker-item">
+          <svg width="22" height="22" viewBox="0 0 52 52"><rect width="52" height="52" rx="8" fill="#003087"/><text x="26" y="34" text-anchor="middle" font-family="Arial Black,Arial" font-size="18" font-weight="900" fill="white">BRI</text></svg>
+          <span>Bank BRI</span>
+        </div>
+        <div class="ticker-item">
+          <svg width="22" height="22" viewBox="0 0 52 52"><rect width="52" height="52" rx="26" fill="#e20613"/><text x="26" y="28" text-anchor="middle" font-family="Arial" font-size="9" font-weight="bold" fill="white">TELKOM</text><text x="26" y="40" text-anchor="middle" font-family="Arial" font-size="7" fill="white">INDONESIA</text></svg>
+          <span>Telkom Indonesia</span>
+        </div>
+        <div class="ticker-item">
+          <svg width="22" height="22" viewBox="0 0 52 52"><rect width="52" height="52" rx="8" fill="#1b5e20"/><polygon points="26,8 30,20 42,20 33,28 36,40 26,33 16,40 19,28 10,20 22,20" fill="#ffd700"/></svg>
+          <span>Pemkab Tasikmalaya</span>
+        </div>
+        <div class="ticker-item">
+          <svg width="22" height="22" viewBox="0 0 52 52"><rect width="52" height="52" rx="8" fill="#7b1522"/><polygon points="26,10 30,22 43,22 33,30 37,43 26,35 15,43 19,30 9,22 22,22" fill="#ffd700"/></svg>
+          <span>TNI Angkatan Darat</span>
+        </div>
+        <div class="ticker-item">
+          <svg width="22" height="22" viewBox="0 0 52 52"><rect width="52" height="52" rx="26" fill="#0277bd"/><path d="M26 12 Q18 24 18 30 a8 8 0 0 0 16 0 Q34 24 26 12Z" fill="white" opacity="0.9"/></svg>
+          <span>PDAM Tasikmalaya</span>
+        </div>
+        <div class="ticker-item">
+          <svg width="22" height="22" viewBox="0 0 52 52"><rect width="52" height="52" rx="8" fill="#e65100"/><path d="M10 34l16-18 16 18" stroke="white" stroke-width="3" fill="none"/><rect x="20" y="26" width="12" height="8" fill="white" rx="1"/></svg>
+          <span>Dinas Pendidikan</span>
+        </div>
+        <div class="ticker-item">
+          <svg width="22" height="22" viewBox="0 0 52 52"><rect width="52" height="52" rx="8" fill="#1a237e"/><text x="26" y="32" text-anchor="middle" font-family="Arial" font-size="10" font-weight="bold" fill="white">POLRI</text></svg>
+          <span>POLRI</span>
+        </div>
+        <div class="ticker-item">
+          <svg width="22" height="22" viewBox="0 0 52 52"><rect width="52" height="52" rx="8" fill="#004d40"/><text x="26" y="32" text-anchor="middle" font-family="Arial" font-size="9" font-weight="bold" fill="white">BANK</text><text x="26" y="43" text-anchor="middle" font-family="Arial" font-size="8" fill="white">BJB</text></svg>
+          <span>Bank BJB</span>
+        </div>
+        <div class="ticker-item">
+          <svg width="22" height="22" viewBox="0 0 52 52"><circle cx="26" cy="26" r="26" fill="#b71c1c"/><text x="26" y="32" text-anchor="middle" font-family="Arial" font-size="9" font-weight="bold" fill="white">PERTANIAN</text></svg>
+          <span>Dinas Pertanian</span>
+        </div>
+        <div class="ticker-item">
+          <svg width="22" height="22" viewBox="0 0 52 52"><rect width="52" height="52" rx="8" fill="#37474f"/><text x="26" y="30" text-anchor="middle" font-family="Arial" font-size="9" font-weight="bold" fill="white">PEMROV</text><text x="26" y="42" text-anchor="middle" font-family="Arial" font-size="8" fill="white">JABAR</text></svg>
+          <span>Pemprov Jawa Barat</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================================
+     ABOUT SECTION
+============================================================ -->
+<section id="about" class="section-pad" aria-label="Tentang Bradwear Indonesia">
+  <div class="container">
+    <div class="about-grid">
+      <!-- Left: Visual -->
+      <div class="about-visual reveal">
+        <div class="about-img-card">
+          <div class="about-watermark">BRADWEAR<br>INDONESIA</div>
+          <!-- Decorative shirt -->
+          <div class="about-shirt">
+            <div class="about-shirt-collar"></div>
+            <div class="about-shirt-body">
+              <div style="position:absolute;top:16px;left:50%;transform:translateX(-50%);font-family:'Bebas Neue',sans-serif;font-size:12px;color:#dc2626;letter-spacing:2px;white-space:nowrap">★ BRADWEAR ★</div>
+              <div style="position:absolute;bottom:12px;left:50%;transform:translateX(-50%);font-family:'Bebas Neue',sans-serif;font-size:36px;color:rgba(255,255,255,0.06);letter-spacing:2px;white-space:nowrap">BW</div>
+            </div>
+          </div>
+          <!-- Feathered blur -->
+          <div class="feathered-blur"></div>
+        </div>
+        <!-- Stat Cards -->
+        <div class="about-stat-card about-stat-card-1">
+          <div class="sc-num">500+</div>
+          <div class="sc-label">Unit Produksi/Hari</div>
+        </div>
+        <div class="about-stat-card about-stat-card-2">
+          <div class="sc-num">10+</div>
+          <div class="sc-label">Tahun Pengalaman</div>
+        </div>
+        <div class="about-stat-card about-stat-card-3">
+          <div class="sc-num">34</div>
+          <div class="sc-label">Provinsi Terjangkau</div>
+        </div>
+      </div>
+      <!-- Right: Text -->
+      <div class="about-text reveal reveal-delay-1">
+        <div class="section-header">
+          <span class="section-eyebrow">Tentang Kami</span>
+          <h2 class="section-title">WORKSHIRT SPECIALIST TERPERCAYA</h2>
+        </div>
+        <p style="color:var(--text-muted);font-size:15px;line-height:1.8;margin-bottom:16px">
+          Bradwear Indonesia adalah perusahaan spesialis pembuatan kemeja seragam custom yang telah berdiri selama lebih dari satu dekade di Tasikmalaya, Jawa Barat.
+        </p>
+        <p style="color:var(--text-muted);font-size:15px;line-height:1.8;margin-bottom:16px">
+          Kami melayani kebutuhan seragam berkualitas premium untuk BUMN, BUMD, instansi pemerintah, TNI, POLRI, perbankan, dan korporasi swasta di seluruh Indonesia.
+        </p>
+        <p style="color:var(--text-muted);font-size:15px;line-height:1.8;margin-bottom:32px">
+          Dengan kapasitas produksi ratusan unit per hari, team bordir profesional, dan layanan desain gratis, kami siap menjadi mitra seragam terpercaya perusahaan Anda.
+        </p>
+        <div class="about-features">
+          <div class="about-feature">
+            <div class="about-feature-icon">🏭</div>
+            <div>
+              <h4>Kapasitas Ratusan/Hari</h4>
+              <p>Produksi massal dengan quality control ketat di setiap tahapan</p>
+            </div>
+          </div>
+          <div class="about-feature">
+            <div class="about-feature-icon">✂️</div>
+            <div>
+              <h4>Bahan Premium</h4>
+              <p>Maryland, Nagata, Drill, Ripstok — pilihan material terbaik</p>
+            </div>
+          </div>
+          <div class="about-feature">
+            <div class="about-feature-icon">🚚</div>
+            <div>
+              <h4>Kirim Seluruh Indonesia</h4>
+              <p>Via ekspedisi terpercaya ke 34 provinsi tanpa terkecuali</p>
+            </div>
+          </div>
+          <div class="about-feature">
+            <div class="about-feature-icon">📐</div>
+            <div>
+              <h4>Order Satuan &amp; Massal</h4>
+              <p>Fleksibel dari 1 hingga ribuan pcs — tanpa minimum order</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     PRODUCTS SECTION
+============================================================ -->
+<section id="products" class="section-pad" aria-label="Katalog produk Bradwear Indonesia">
   <div class="container">
     <div class="section-header reveal">
-      <span class="section-label">Temukan yang Kamu Butuhkan</span>
-      <h2 class="section-title">Jelajahi <span class="gradient-text">Kategori</span> Produk</h2>
-      <p class="section-subtitle">Dari ebook, akun premium, hingga kursus online — semua ada di Akunku</p>
+      <span class="section-eyebrow">Katalog Produk</span>
+      <h2 class="section-title">PILIHAN SERAGAM CUSTOM KAMI</h2>
+      <p class="section-subtitle">Kemeja, celana, rompi, dan polo dengan desain custom dan bordir 3D premium untuk kebutuhan korporasi Anda</p>
     </div>
 
-    <div class="categories-scroll">
-      <a href="products.html?cat=ebook" class="category-card reveal reveal-delay-1" style="--cat-color:#6C3FE8">
-        <div class="cat-bg"></div>
-        <span class="cat-icon">📚</span>
-        <div class="cat-name">Ebook</div>
-        <div class="cat-count">1,200+ Judul</div>
-      </a>
-      <a href="products.html?cat=vip" class="category-card reveal reveal-delay-2" style="--cat-color:#FFB800">
-        <div class="cat-bg"></div>
-        <span class="cat-icon">👑</span>
-        <div class="cat-name">Akun VIP</div>
-        <div class="cat-count">300+ Akun</div>
-      </a>
-      <a href="products.html?cat=video" class="category-card reveal reveal-delay-3" style="--cat-color:#FF4D6A">
-        <div class="cat-bg"></div>
-        <span class="cat-icon">🎬</span>
-        <div class="cat-name">Video Learning</div>
-        <div class="cat-count">500+ Course</div>
-      </a>
-      <a href="products.html?cat=game" class="category-card reveal reveal-delay-4" style="--cat-color:#00D084">
-        <div class="cat-bg"></div>
-        <span class="cat-icon">🎮</span>
-        <div class="cat-name">Game</div>
-        <div class="cat-count">200+ Item</div>
-      </a>
-      <a href="products.html?cat=software" class="category-card reveal" style="--cat-color:#FF6B35">
-        <div class="cat-bg"></div>
-        <span class="cat-icon">🔑</span>
-        <div class="cat-name">Software License</div>
-        <div class="cat-count">150+ Lisensi</div>
-      </a>
-      <a href="products.html?cat=tools" class="category-card reveal reveal-delay-1" style="--cat-color:#8B65F0">
-        <div class="cat-bg"></div>
-        <span class="cat-icon">💎</span>
-        <div class="cat-name">Premium Tools</div>
-        <div class="cat-count">80+ Tools</div>
-      </a>
+    <!-- Color Swatch Bar -->
+    <div class="color-swatch-bar reveal reveal-delay-1">
+      <span class="swatch-label">Warna Tersedia:</span>
+      <div class="color-scroll">
+        <div class="swatch-item"><div class="swatch-dot" style="background:#1e3a5f"></div>Navy</div>
+        <div class="swatch-item"><div class="swatch-dot" style="background:#111827"></div>Hitam</div>
+        <div class="swatch-item"><div class="swatch-dot" style="background:#6b7280"></div>Abu-Abu</div>
+        <div class="swatch-item"><div class="swatch-dot" style="background:#dc2626"></div>Merah</div>
+        <div class="swatch-item"><div class="swatch-dot" style="background:#3d5a2e"></div>Hijau Army</div>
+        <div class="swatch-item"><div class="swatch-dot" style="background:#1d4ed8"></div>Biru Royal</div>
+        <div class="swatch-item"><div class="swatch-dot" style="background:#f5f0e0"></div>Cream</div>
+        <div class="swatch-item"><div class="swatch-dot" style="background:#6b4423"></div>Coklat</div>
+        <div class="swatch-item"><div class="swatch-dot" style="background:#f9fafb;border:1px solid #d1d5db"></div>Putih</div>
+        <div class="swatch-item"><div class="swatch-dot" style="background:#7b1f2a"></div>Maroon</div>
+        <div class="swatch-item"><div class="swatch-dot" style="background:#0d9488"></div>Tosca</div>
+        <div class="swatch-item"><div class="swatch-dot" style="background:#9333ea"></div>Ungu</div>
+        <div class="swatch-item"><div class="swatch-dot" style="background:#d97706"></div>Kuning Tua</div>
+        <div class="swatch-item"><div class="swatch-dot" style="background:#0891b2"></div>Biru Muda</div>
+        <div class="swatch-item"><div class="swatch-dot" style="background:#4b5563"></div>Abu Tua</div>
+        <div class="swatch-item"><div class="swatch-dot" style="background:#f97316"></div>Oranye</div>
+      </div>
+    </div>
+
+    <!-- Product Tabs -->
+    <div class="product-tabs reveal reveal-delay-1">
+      <button class="tab-btn active" onclick="switchTab(this,'tab-kemeja')">KEMEJA</button>
+      <button class="tab-btn" onclick="switchTab(this,'tab-celana')">CELANA</button>
+      <button class="tab-btn" onclick="switchTab(this,'tab-rompi')">ROMPI / VEST</button>
+      <button class="tab-btn" onclick="switchTab(this,'tab-polo')">POLO</button>
+    </div>
+
+    <!-- TAB: KEMEJA -->
+    <div class="tab-panel active" id="tab-kemeja">
+      <div class="product-grid">
+        <!-- Brad V1 -->
+        <div class="product-card reveal">
+          <div class="product-img">
+            <div class="product-img-bg" style="background:linear-gradient(145deg,#1e3a5f 0%,#0d2137 100%)">
+              <div class="p-shirt">
+                <div class="p-collar">
+                  <div class="p-collar-l"></div>
+                  <div class="p-collar-r"></div>
+                  <div class="p-collar-mid" style="background:#0d2137"></div>
+                </div>
+                <div class="p-body" style="background:linear-gradient(145deg,#1e3a5f,#0d2137)">
+                  <div class="p-shoulder-l" style="background:linear-gradient(145deg,#1e3a5f,#0d2137)"></div>
+                  <div class="p-shoulder-r" style="background:linear-gradient(200deg,#1e3a5f,#0d2137)"></div>
+                  <div class="p-pocket"></div>
+                  <div class="p-logo">BW</div>
+                  <div class="p-btns"><div class="p-btn"></div><div class="p-btn"></div><div class="p-btn"></div><div class="p-btn"></div></div>
+                  <div class="p-brand-bg">BRADWEAR</div>
+                </div>
+              </div>
+            </div>
+            <div class="feathered-blur"></div>
+            <div class="product-img-label">
+              <span>Brad V1</span>
+              <div class="open-icon">↗</div>
+            </div>
+          </div>
+          <div class="product-info">
+            <div class="product-name">Brad V1 — Classic Navy</div>
+            <div class="product-desc">Kemeja seragam slim fit klasik, cocok untuk formal kantor dan korporasi</div>
+            <div class="product-materials">
+              <span class="mat-chip">Maryland</span>
+              <span class="mat-chip">Nagata</span>
+              <span class="mat-chip">Drill</span>
+            </div>
+            <div class="product-badges">
+              <span class="prod-badge badge-bordir">BORDIR 3D</span>
+              <span class="prod-badge badge-gratis">DESAIN GRATIS</span>
+            </div>
+            <a href="https://wa.me/6281234567890?text=Halo%20Bradwear%2C%20saya%20ingin%20pesan%20seragam%20Brad%20V1" target="_blank" rel="noopener" class="btn btn-primary btn-full">Pesan Sekarang</a>
+          </div>
+        </div>
+        <!-- Brad V2 -->
+        <div class="product-card reveal reveal-delay-1">
+          <div class="product-img">
+            <div class="product-img-bg" style="background:linear-gradient(145deg,#1f2937 0%,#111827 100%)">
+              <div class="p-shirt">
+                <div class="p-collar">
+                  <div class="p-collar-l"></div>
+                  <div class="p-collar-r"></div>
+                  <div class="p-collar-mid" style="background:#111827"></div>
+                </div>
+                <div class="p-body" style="background:linear-gradient(145deg,#1f2937,#111827)">
+                  <div class="p-shoulder-l" style="background:linear-gradient(145deg,#1f2937,#111827)"></div>
+                  <div class="p-shoulder-r" style="background:linear-gradient(200deg,#1f2937,#111827)"></div>
+                  <div class="p-pocket"></div>
+                  <div class="p-logo">BW</div>
+                  <div class="p-btns"><div class="p-btn"></div><div class="p-btn"></div><div class="p-btn"></div><div class="p-btn"></div></div>
+                  <div class="p-brand-bg">BRADWEAR</div>
+                </div>
+              </div>
+            </div>
+            <div class="feathered-blur"></div>
+            <div class="product-img-label">
+              <span>Brad V2</span>
+              <div class="open-icon">↗</div>
+            </div>
+          </div>
+          <div class="product-info">
+            <div class="product-name">Brad V2 — Charcoal Modern</div>
+            <div class="product-desc">Kemeja modern fit dual pocket, tampilan profesional dan stylish</div>
+            <div class="product-materials">
+              <span class="mat-chip">Maryland</span>
+              <span class="mat-chip">Twill</span>
+            </div>
+            <div class="product-badges">
+              <span class="prod-badge badge-bordir">BORDIR 3D</span>
+              <span class="prod-badge badge-gratis">DESAIN GRATIS</span>
+            </div>
+            <a href="https://wa.me/6281234567890?text=Halo%20Bradwear%2C%20saya%20ingin%20pesan%20seragam%20Brad%20V2" target="_blank" rel="noopener" class="btn btn-primary btn-full">Pesan Sekarang</a>
+          </div>
+        </div>
+        <!-- Brad V3 -->
+        <div class="product-card reveal reveal-delay-2">
+          <div class="product-img">
+            <div class="product-img-bg" style="background:linear-gradient(145deg,#1a3a2a 0%,#0d1f16 100%)">
+              <div class="p-shirt">
+                <div class="p-collar">
+                  <div class="p-collar-l"></div>
+                  <div class="p-collar-r"></div>
+                  <div class="p-collar-mid" style="background:#0d1f16"></div>
+                </div>
+                <div class="p-body" style="background:linear-gradient(145deg,#1a3a2a,#0d1f16)">
+                  <div class="p-shoulder-l" style="background:linear-gradient(145deg,#1a3a2a,#0d1f16)"></div>
+                  <div class="p-shoulder-r" style="background:linear-gradient(200deg,#1a3a2a,#0d1f16)"></div>
+                  <div class="p-pocket"></div>
+                  <div class="p-logo">BW</div>
+                  <div class="p-btns"><div class="p-btn"></div><div class="p-btn"></div><div class="p-btn"></div><div class="p-btn"></div></div>
+                  <div class="p-brand-bg">BRADWEAR</div>
+                </div>
+              </div>
+            </div>
+            <div class="feathered-blur"></div>
+            <div class="product-img-label">
+              <span>Brad V3</span>
+              <div class="open-icon">↗</div>
+            </div>
+          </div>
+          <div class="product-info">
+            <div class="product-name">Brad V3 — Tactical Field</div>
+            <div class="product-desc">Kemeja tactical field shirt, ideal untuk lapangan dan instansi teknis</div>
+            <div class="product-materials">
+              <span class="mat-chip">Ripstok</span>
+              <span class="mat-chip">Drill</span>
+            </div>
+            <div class="product-badges">
+              <span class="prod-badge badge-bordir">BORDIR 3D</span>
+              <span class="prod-badge badge-custom">CUSTOM PATCH</span>
+            </div>
+            <a href="https://wa.me/6281234567890?text=Halo%20Bradwear%2C%20saya%20ingin%20pesan%20seragam%20Brad%20V3" target="_blank" rel="noopener" class="btn btn-primary btn-full">Pesan Sekarang</a>
+          </div>
+        </div>
+        <!-- Brad V4 -->
+        <div class="product-card reveal">
+          <div class="product-img">
+            <div class="product-img-bg" style="background:linear-gradient(145deg,#3b2a1a 0%,#1f160e 100%)">
+              <div class="p-shirt">
+                <div class="p-collar">
+                  <div class="p-collar-l"></div>
+                  <div class="p-collar-r"></div>
+                  <div class="p-collar-mid" style="background:#1f160e"></div>
+                </div>
+                <div class="p-body" style="background:linear-gradient(145deg,#3b2a1a,#1f160e)">
+                  <div class="p-shoulder-l" style="background:linear-gradient(145deg,#3b2a1a,#1f160e)"></div>
+                  <div class="p-shoulder-r" style="background:linear-gradient(200deg,#3b2a1a,#1f160e)"></div>
+                  <div class="p-pocket"></div>
+                  <div class="p-logo">BW</div>
+                  <div class="p-btns"><div class="p-btn"></div><div class="p-btn"></div><div class="p-btn"></div><div class="p-btn"></div></div>
+                  <div class="p-brand-bg">BRADWEAR</div>
+                </div>
+              </div>
+            </div>
+            <div class="feathered-blur"></div>
+            <div class="product-img-label">
+              <span>Brad V4</span>
+              <div class="open-icon">↗</div>
+            </div>
+          </div>
+          <div class="product-info">
+            <div class="product-name">Brad V4 — Safari Executive</div>
+            <div class="product-desc">Kemeja safari executive, elegant dan fungsional untuk manajemen</div>
+            <div class="product-materials">
+              <span class="mat-chip">Maryland</span>
+              <span class="mat-chip">Oxford</span>
+            </div>
+            <div class="product-badges">
+              <span class="prod-badge badge-bordir">BORDIR 3D</span>
+              <span class="prod-badge badge-gratis">DESAIN GRATIS</span>
+            </div>
+            <a href="https://wa.me/6281234567890?text=Halo%20Bradwear%2C%20saya%20ingin%20pesan%20seragam%20Brad%20V4" target="_blank" rel="noopener" class="btn btn-primary btn-full">Pesan Sekarang</a>
+          </div>
+        </div>
+        <!-- Yoroi -->
+        <div class="product-card reveal reveal-delay-1">
+          <div class="product-img">
+            <div class="product-img-bg" style="background:linear-gradient(145deg,#2d1b1b 0%,#1a0f0f 100%)">
+              <div class="p-shirt">
+                <div class="p-collar">
+                  <div class="p-collar-l"></div>
+                  <div class="p-collar-r"></div>
+                  <div class="p-collar-mid" style="background:#1a0f0f"></div>
+                </div>
+                <div class="p-body" style="background:linear-gradient(145deg,#2d1b1b,#1a0f0f)">
+                  <div class="p-shoulder-l" style="background:linear-gradient(145deg,#2d1b1b,#1a0f0f)"></div>
+                  <div class="p-shoulder-r" style="background:linear-gradient(200deg,#2d1b1b,#1a0f0f)"></div>
+                  <div class="p-pocket"></div>
+                  <div class="p-logo">BW</div>
+                  <div class="p-btns"><div class="p-btn"></div><div class="p-btn"></div><div class="p-btn"></div><div class="p-btn"></div></div>
+                  <div class="p-brand-bg">YOROI</div>
+                </div>
+              </div>
+            </div>
+            <div class="feathered-blur"></div>
+            <div class="product-img-label">
+              <span>Yoroi</span>
+              <div class="open-icon">↗</div>
+            </div>
+          </div>
+          <div class="product-info">
+            <div class="product-name">Yoroi — Armor Series</div>
+            <div class="product-desc">Kemeja armor series bold, tampilan kuat untuk tim lapangan dan operasional</div>
+            <div class="product-materials">
+              <span class="mat-chip">Ripstok</span>
+              <span class="mat-chip">Nagata</span>
+            </div>
+            <div class="product-badges">
+              <span class="prod-badge badge-bordir">BORDIR 3D</span>
+              <span class="prod-badge badge-custom">ANTI-ROBEK</span>
+            </div>
+            <a href="https://wa.me/6281234567890?text=Halo%20Bradwear%2C%20saya%20ingin%20pesan%20seragam%20Yoroi" target="_blank" rel="noopener" class="btn btn-primary btn-full">Pesan Sekarang</a>
+          </div>
+        </div>
+        <!-- Executive -->
+        <div class="product-card reveal reveal-delay-2">
+          <div class="product-img">
+            <div class="product-img-bg" style="background:linear-gradient(145deg,#1a1a2a 0%,#0a0a14 100%)">
+              <div class="p-shirt">
+                <div class="p-collar">
+                  <div class="p-collar-l"></div>
+                  <div class="p-collar-r"></div>
+                  <div class="p-collar-mid" style="background:#0a0a14"></div>
+                </div>
+                <div class="p-body" style="background:linear-gradient(145deg,#1a1a2a,#0a0a14)">
+                  <div class="p-shoulder-l" style="background:linear-gradient(145deg,#1a1a2a,#0a0a14)"></div>
+                  <div class="p-shoulder-r" style="background:linear-gradient(200deg,#1a1a2a,#0a0a14)"></div>
+                  <div class="p-pocket"></div>
+                  <div class="p-logo">BW</div>
+                  <div class="p-btns"><div class="p-btn"></div><div class="p-btn"></div><div class="p-btn"></div><div class="p-btn"></div></div>
+                  <div class="p-brand-bg">EXECUTIVE</div>
+                </div>
+              </div>
+            </div>
+            <div class="feathered-blur"></div>
+            <div class="product-img-label">
+              <span>Executive</span>
+              <div class="open-icon">↗</div>
+            </div>
+          </div>
+          <div class="product-info">
+            <div class="product-name">Executive — Full Premium</div>
+            <div class="product-desc">Kemeja full premium series untuk pimpinan dan level manajemen atas</div>
+            <div class="product-materials">
+              <span class="mat-chip">Maryland</span>
+              <span class="mat-chip">Twill</span>
+              <span class="mat-chip">Oxford</span>
+            </div>
+            <div class="product-badges">
+              <span class="prod-badge badge-bordir">BORDIR 3D</span>
+              <span class="prod-badge badge-gratis">DESAIN GRATIS</span>
+            </div>
+            <a href="https://wa.me/6281234567890?text=Halo%20Bradwear%2C%20saya%20ingin%20pesan%20seragam%20Executive" target="_blank" rel="noopener" class="btn btn-primary btn-full">Pesan Sekarang</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TAB: CELANA -->
+    <div class="tab-panel" id="tab-celana">
+      <div class="product-grid">
+        <div class="product-card reveal">
+          <div class="product-img">
+            <div class="product-img-bg" style="background:linear-gradient(145deg,#374151 0%,#1f2937 100%);display:flex;align-items:center;justify-content:center">
+              <div style="text-align:center;color:rgba(255,255,255,0.12)">
+                <div style="font-family:'Bebas Neue',sans-serif;font-size:56px;line-height:1">👖</div>
+                <div style="font-family:'Bebas Neue',sans-serif;font-size:18px;letter-spacing:3px">CELANA FORMAL</div>
+              </div>
+            </div>
+            <div class="feathered-blur"></div>
+            <div class="product-img-label"><span>Formal</span><div class="open-icon">↗</div></div>
+          </div>
+          <div class="product-info">
+            <div class="product-name">Celana Kerja Formal</div>
+            <div class="product-desc">Celana seragam formal slim-straight cut untuk kantor dan presentasi</div>
+            <div class="product-materials"><span class="mat-chip">Twill</span><span class="mat-chip">Maryland</span></div>
+            <div class="product-badges"><span class="prod-badge badge-gratis">DESAIN GRATIS</span></div>
+            <a href="https://wa.me/6281234567890?text=Halo%20Bradwear%2C%20saya%20ingin%20pesan%20Celana%20Kerja%20Formal" target="_blank" rel="noopener" class="btn btn-primary btn-full">Pesan Sekarang</a>
+          </div>
+        </div>
+        <div class="product-card reveal reveal-delay-1">
+          <div class="product-img">
+            <div class="product-img-bg" style="background:linear-gradient(145deg,#7a6745 0%,#4a3d28 100%);display:flex;align-items:center;justify-content:center">
+              <div style="text-align:center;color:rgba(255,255,255,0.12)">
+                <div style="font-family:'Bebas Neue',sans-serif;font-size:56px;line-height:1">👖</div>
+                <div style="font-family:'Bebas Neue',sans-serif;font-size:18px;letter-spacing:3px">CHINO</div>
+              </div>
+            </div>
+            <div class="feathered-blur"></div>
+            <div class="product-img-label"><span>Chino</span><div class="open-icon">↗</div></div>
+          </div>
+          <div class="product-info">
+            <div class="product-name">Celana Chino Seragam</div>
+            <div class="product-desc">Celana chino dengan kenyamanan tinggi untuk aktivitas semi-formal</div>
+            <div class="product-materials"><span class="mat-chip">Drill</span><span class="mat-chip">Oxford</span></div>
+            <div class="product-badges"><span class="prod-badge badge-gratis">DESAIN GRATIS</span></div>
+            <a href="https://wa.me/6281234567890?text=Halo%20Bradwear%2C%20saya%20ingin%20pesan%20Celana%20Chino%20Seragam" target="_blank" rel="noopener" class="btn btn-primary btn-full">Pesan Sekarang</a>
+          </div>
+        </div>
+        <div class="product-card reveal reveal-delay-2">
+          <div class="product-img">
+            <div class="product-img-bg" style="background:linear-gradient(145deg,#3d4a2e 0%,#232c1a 100%);display:flex;align-items:center;justify-content:center">
+              <div style="text-align:center;color:rgba(255,255,255,0.12)">
+                <div style="font-family:'Bebas Neue',sans-serif;font-size:56px;line-height:1">🪖</div>
+                <div style="font-family:'Bebas Neue',sans-serif;font-size:18px;letter-spacing:3px">TACTICAL</div>
+              </div>
+            </div>
+            <div class="feathered-blur"></div>
+            <div class="product-img-label"><span>Tactical</span><div class="open-icon">↗</div></div>
+          </div>
+          <div class="product-info">
+            <div class="product-name">Celana Tactical</div>
+            <div class="product-desc">Celana tactical dengan multi-pocket, durable untuk lapangan berat</div>
+            <div class="product-materials"><span class="mat-chip">Ripstok</span><span class="mat-chip">Drill</span></div>
+            <div class="product-badges"><span class="prod-badge badge-bordir">BORDIR 3D</span><span class="prod-badge badge-custom">ANTI-ROBEK</span></div>
+            <a href="https://wa.me/6281234567890?text=Halo%20Bradwear%2C%20saya%20ingin%20pesan%20Celana%20Tactical" target="_blank" rel="noopener" class="btn btn-primary btn-full">Pesan Sekarang</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TAB: ROMPI -->
+    <div class="tab-panel" id="tab-rompi">
+      <div class="product-grid">
+        <div class="product-card reveal">
+          <div class="product-img">
+            <div class="product-img-bg" style="background:linear-gradient(145deg,#c2410c 0%,#7c2d12 100%);display:flex;align-items:center;justify-content:center">
+              <div style="text-align:center;color:rgba(255,255,255,0.12)">
+                <div style="font-family:'Bebas Neue',sans-serif;font-size:56px;line-height:1">🦺</div>
+                <div style="font-family:'Bebas Neue',sans-serif;font-size:18px;letter-spacing:3px">ROMPI SAFETY</div>
+              </div>
+            </div>
+            <div class="feathered-blur"></div>
+            <div class="product-img-label"><span>Safety</span><div class="open-icon">↗</div></div>
+          </div>
+          <div class="product-info">
+            <div class="product-name">Rompi Safety</div>
+            <div class="product-desc">Rompi safety high-visibility dengan reflektor, standar K3 lapangan</div>
+            <div class="product-materials"><span class="mat-chip">Ripstok</span></div>
+            <div class="product-badges"><span class="prod-badge badge-bordir">BORDIR 3D</span><span class="prod-badge badge-custom">REFLEKTOR</span></div>
+            <a href="https://wa.me/6281234567890?text=Halo%20Bradwear%2C%20saya%20ingin%20pesan%20Rompi%20Safety" target="_blank" rel="noopener" class="btn btn-primary btn-full">Pesan Sekarang</a>
+          </div>
+        </div>
+        <div class="product-card reveal reveal-delay-1">
+          <div class="product-img">
+            <div class="product-img-bg" style="background:linear-gradient(145deg,#374151 0%,#1f2937 100%);display:flex;align-items:center;justify-content:center">
+              <div style="text-align:center;color:rgba(255,255,255,0.12)">
+                <div style="font-family:'Bebas Neue',sans-serif;font-size:56px;line-height:1">🦺</div>
+                <div style="font-family:'Bebas Neue',sans-serif;font-size:18px;letter-spacing:3px">ZIPPER</div>
+              </div>
+            </div>
+            <div class="feathered-blur"></div>
+            <div class="product-img-label"><span>Zipper</span><div class="open-icon">↗</div></div>
+          </div>
+          <div class="product-info">
+            <div class="product-name">Rompi Kerja Zipper</div>
+            <div class="product-desc">Rompi multi-pocket dengan zipper YKK berkualitas, nyaman dipakai seharian</div>
+            <div class="product-materials"><span class="mat-chip">Nagata</span><span class="mat-chip">Oxford</span></div>
+            <div class="product-badges"><span class="prod-badge badge-bordir">BORDIR 3D</span><span class="prod-badge badge-gratis">DESAIN GRATIS</span></div>
+            <a href="https://wa.me/6281234567890?text=Halo%20Bradwear%2C%20saya%20ingin%20pesan%20Rompi%20Kerja%20Zipper" target="_blank" rel="noopener" class="btn btn-primary btn-full">Pesan Sekarang</a>
+          </div>
+        </div>
+        <div class="product-card reveal reveal-delay-2">
+          <div class="product-img">
+            <div class="product-img-bg" style="background:linear-gradient(145deg,#1e3a5f 0%,#0d2137 100%);display:flex;align-items:center;justify-content:center">
+              <div style="text-align:center;color:rgba(255,255,255,0.12)">
+                <div style="font-family:'Bebas Neue',sans-serif;font-size:56px;line-height:1">🦺</div>
+                <div style="font-family:'Bebas Neue',sans-serif;font-size:18px;letter-spacing:3px">EXECUTIVE</div>
+              </div>
+            </div>
+            <div class="feathered-blur"></div>
+            <div class="product-img-label"><span>Executive</span><div class="open-icon">↗</div></div>
+          </div>
+          <div class="product-info">
+            <div class="product-name">Rompi Executive</div>
+            <div class="product-desc">Rompi eksekutif elegan untuk manajer dan pimpinan perusahaan</div>
+            <div class="product-materials"><span class="mat-chip">Maryland</span><span class="mat-chip">Twill</span></div>
+            <div class="product-badges"><span class="prod-badge badge-bordir">BORDIR 3D</span><span class="prod-badge badge-gratis">PREMIUM</span></div>
+            <a href="https://wa.me/6281234567890?text=Halo%20Bradwear%2C%20saya%20ingin%20pesan%20Rompi%20Executive" target="_blank" rel="noopener" class="btn btn-primary btn-full">Pesan Sekarang</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TAB: POLO -->
+    <div class="tab-panel" id="tab-polo">
+      <div class="product-grid">
+        <div class="product-card reveal">
+          <div class="product-img">
+            <div class="product-img-bg" style="background:linear-gradient(145deg,#1d4ed8 0%,#1e3a8a 100%);display:flex;align-items:center;justify-content:center">
+              <div style="text-align:center;color:rgba(255,255,255,0.12)">
+                <div style="font-family:'Bebas Neue',sans-serif;font-size:56px;line-height:1">👕</div>
+                <div style="font-family:'Bebas Neue',sans-serif;font-size:18px;letter-spacing:3px">POLO LACOSTE</div>
+              </div>
+            </div>
+            <div class="feathered-blur"></div>
+            <div class="product-img-label"><span>Polo Lacoste</span><div class="open-icon">↗</div></div>
+          </div>
+          <div class="product-info">
+            <div class="product-name">Polo Lacoste Custom</div>
+            <div class="product-desc">Polo shirt lacoste breathable, nyaman untuk sehari-hari dan outdoor</div>
+            <div class="product-materials"><span class="mat-chip">Lacoste</span><span class="mat-chip">Piqué</span></div>
+            <div class="product-badges"><span class="prod-badge badge-bordir">BORDIR 3D</span><span class="prod-badge badge-gratis">DESAIN GRATIS</span></div>
+            <a href="https://wa.me/6281234567890?text=Halo%20Bradwear%2C%20saya%20ingin%20pesan%20Polo%20Lacoste%20Custom" target="_blank" rel="noopener" class="btn btn-primary btn-full">Pesan Sekarang</a>
+          </div>
+        </div>
+        <div class="product-card reveal reveal-delay-1">
+          <div class="product-img">
+            <div class="product-img-bg" style="background:linear-gradient(145deg,#7f1d1d 0%,#450a0a 100%);display:flex;align-items:center;justify-content:center">
+              <div style="text-align:center;color:rgba(255,255,255,0.12)">
+                <div style="font-family:'Bebas Neue',sans-serif;font-size:56px;line-height:1">👕</div>
+                <div style="font-family:'Bebas Neue',sans-serif;font-size:18px;letter-spacing:3px">POLO PIQUÉ</div>
+              </div>
+            </div>
+            <div class="feathered-blur"></div>
+            <div class="product-img-label"><span>Polo Piqué</span><div class="open-icon">↗</div></div>
+          </div>
+          <div class="product-info">
+            <div class="product-name">Polo Piqué Premium</div>
+            <div class="product-desc">Polo piqué premium dengan tekstur khas, tampilan profesional dan berwibawa</div>
+            <div class="product-materials"><span class="mat-chip">Piqué</span><span class="mat-chip">Cotton</span></div>
+            <div class="product-badges"><span class="prod-badge badge-bordir">BORDIR 3D</span><span class="prod-badge badge-gratis">PREMIUM</span></div>
+            <a href="https://wa.me/6281234567890?text=Halo%20Bradwear%2C%20saya%20ingin%20pesan%20Polo%20Pique%20Premium" target="_blank" rel="noopener" class="btn btn-primary btn-full">Pesan Sekarang</a>
+          </div>
+        </div>
+        <div class="product-card reveal reveal-delay-2">
+          <div class="product-img">
+            <div class="product-img-bg" style="background:linear-gradient(145deg,#0d9488 0%,#065f46 100%);display:flex;align-items:center;justify-content:center">
+              <div style="text-align:center;color:rgba(255,255,255,0.12)">
+                <div style="font-family:'Bebas Neue',sans-serif;font-size:56px;line-height:1">👕</div>
+                <div style="font-family:'Bebas Neue',sans-serif;font-size:18px;letter-spacing:3px">POLO DRY FIT</div>
+              </div>
+            </div>
+            <div class="feathered-blur"></div>
+            <div class="product-img-label"><span>Polo DryFit</span><div class="open-icon">↗</div></div>
+          </div>
+          <div class="product-info">
+            <div class="product-name">Polo DryFit</div>
+            <div class="product-desc">Polo dryfit high performance, anti-keringat untuk tim outdoor dan event</div>
+            <div class="product-materials"><span class="mat-chip">DryFit</span><span class="mat-chip">Microfiber</span></div>
+            <div class="product-badges"><span class="prod-badge badge-bordir">BORDIR 3D</span><span class="prod-badge badge-custom">ANTI-KERINGAT</span></div>
+            <a href="https://wa.me/6281234567890?text=Halo%20Bradwear%2C%20saya%20ingin%20pesan%20Polo%20DryFit" target="_blank" rel="noopener" class="btn btn-primary btn-full">Pesan Sekarang</a>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- ========================================================
-     FEATURED PRODUCTS
-======================================================== -->
-<section class="section" style="padding-top:1rem;">
+<!-- ============================================================
+     MATERIALS SECTION
+============================================================ -->
+<section id="materials" class="section-pad" style="background:var(--bg-secondary)" aria-label="Pilihan bahan seragam premium">
   <div class="container">
-    <div class="section-header reveal" style="display:flex;align-items:flex-end;justify-content:space-between;flex-wrap:wrap;gap:1rem;margin-bottom:2rem;">
-      <div>
-        <span class="section-label">Terlaris Bulan Ini</span>
-        <h2 class="section-title">Produk Terlaris 🔥</h2>
-      </div>
-      <a href="products.html" class="btn btn-outline btn-sm">Lihat Semua →</a>
+    <div class="section-header centered reveal">
+      <span class="section-eyebrow">Bahan Unggulan</span>
+      <h2 class="section-title">PILIHAN BAHAN PREMIUM</h2>
+      <p class="section-subtitle">Material terbaik dipilih dengan cermat untuk setiap kebutuhan seragam Anda</p>
     </div>
-
-    <div class="products-grid">
-
-      <!-- Product 1 -->
-      <div class="product-card reveal" data-category="ebook">
-        <div class="product-thumb">
-          <div class="product-thumb-img gt-1">📚</div>
-          <div class="product-thumb-overlay"></div>
-          <span class="product-badge">Ebook</span>
-          <span class="discount-badge">-43%</span>
-          <button class="wishlist-btn" data-id="prod-1">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
-          </button>
-        </div>
-        <div class="product-body">
-          <div class="product-name">Panduan Bisnis Online 2024 — Strategi Lengkap</div>
-          <div class="product-meta">
-            <div class="product-rating">⭐ 4.9 <span>(1.2K)</span></div>
-          </div>
-          <div class="product-seller">
-            <div class="seller-avatar">BS</div>
-            BisnisPro Store
-          </div>
-          <div class="product-pricing">
-            <span class="price-original">Rp 150.000</span>
-            <span class="price-final">Rp 85.000</span>
-          </div>
-          <div class="product-footer">
-            <button class="btn btn-primary btn-sm btn-full add-to-cart">Beli Sekarang</button>
+    <div class="materials-grid">
+      <div class="material-card reveal">
+        <div class="mat-swatch" style="background:linear-gradient(145deg,#1e3a5f,#0d2137)"></div>
+        <div class="mat-info">
+          <h4>Maryland</h4>
+          <p>Bahan halus premium, anti-kusut, adem, dan nyaman sepanjang hari. Pilihan utama untuk kemeja formal dan korporasi.</p>
+          <div class="mat-tags">
+            <span class="mat-tag">Halus</span><span class="mat-tag">Anti-Kusut</span><span class="mat-tag">Breathable</span><span class="mat-tag">Formal</span>
           </div>
         </div>
       </div>
-
-      <!-- Product 2 -->
-      <div class="product-card reveal reveal-delay-1" data-category="vip">
-        <div class="product-thumb">
-          <div class="product-thumb-img gt-2">🎬</div>
-          <div class="product-thumb-overlay"></div>
-          <span class="product-badge">Akun VIP</span>
-          <span class="discount-badge">-40%</span>
-          <button class="wishlist-btn" data-id="prod-2">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
-          </button>
-        </div>
-        <div class="product-body">
-          <div class="product-name">Netflix Premium 1 Bulan Akun Pribadi</div>
-          <div class="product-meta">
-            <div class="product-rating">⭐ 4.8 <span>(3.4K)</span></div>
-          </div>
-          <div class="product-seller">
-            <div class="seller-avatar">AS</div>
-            AkunStore Official
-          </div>
-          <div class="product-pricing">
-            <span class="price-original">Rp 75.000</span>
-            <span class="price-final">Rp 45.000</span>
-          </div>
-          <div class="product-footer">
-            <button class="btn btn-primary btn-sm btn-full add-to-cart">Beli Sekarang</button>
+      <div class="material-card reveal reveal-delay-1">
+        <div class="mat-swatch" style="background:linear-gradient(145deg,#2d2d2d,#111111)"></div>
+        <div class="mat-info">
+          <h4>Nagata</h4>
+          <p>Cotton premium feel dengan daya tahan tinggi, breathable, dan nyaman. Cocok untuk penggunaan semi-formal dan harian.</p>
+          <div class="mat-tags">
+            <span class="mat-tag">Cotton Feel</span><span class="mat-tag">Durable</span><span class="mat-tag">Breathable</span><span class="mat-tag">Semi-Formal</span>
           </div>
         </div>
       </div>
-
-      <!-- Product 3 -->
-      <div class="product-card reveal reveal-delay-2" data-category="video">
-        <div class="product-thumb">
-          <div class="product-thumb-img gt-3">💻</div>
-          <div class="product-thumb-overlay"></div>
-          <span class="product-badge">Video Learning</span>
-          <span class="discount-badge">-57%</span>
-          <button class="wishlist-btn" data-id="prod-3">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
-          </button>
-        </div>
-        <div class="product-body">
-          <div class="product-name">Kursus React.js Lengkap dari Nol hingga Pro</div>
-          <div class="product-meta">
-            <div class="product-rating">⭐ 4.9 <span>(892)</span></div>
-          </div>
-          <div class="product-seller">
-            <div class="seller-avatar">DC</div>
-            DevCourse ID
-          </div>
-          <div class="product-pricing">
-            <span class="price-original">Rp 299.000</span>
-            <span class="price-final">Rp 129.000</span>
-          </div>
-          <div class="product-footer">
-            <button class="btn btn-primary btn-sm btn-full add-to-cart">Beli Sekarang</button>
+      <div class="material-card reveal reveal-delay-2">
+        <div class="mat-swatch" style="background:linear-gradient(145deg,#8B6914,#5a4510)"></div>
+        <div class="mat-info">
+          <h4>Drill</h4>
+          <p>Bahan tebal, kuat, dan sangat tahan lama. Ideal untuk seragam lapangan, proyek, dan aktivitas fisik intens.</p>
+          <div class="mat-tags">
+            <span class="mat-tag">Tebal</span><span class="mat-tag">Kuat</span><span class="mat-tag">Tahan Lama</span><span class="mat-tag">Lapangan</span>
           </div>
         </div>
       </div>
-
-      <!-- Product 4 -->
-      <div class="product-card reveal reveal-delay-3" data-category="vip">
-        <div class="product-thumb">
-          <div class="product-thumb-img gt-4">🎵</div>
-          <div class="product-thumb-overlay"></div>
-          <span class="product-badge">Akun VIP</span>
-          <span class="discount-badge">-39%</span>
-          <button class="wishlist-btn" data-id="prod-4">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
-          </button>
-        </div>
-        <div class="product-body">
-          <div class="product-name">Spotify Premium 3 Bulan Tanpa Iklan</div>
-          <div class="product-meta">
-            <div class="product-rating">⭐ 4.7 <span>(2.1K)</span></div>
-          </div>
-          <div class="product-seller">
-            <div class="seller-avatar">PM</div>
-            PremiumMall
-          </div>
-          <div class="product-pricing">
-            <span class="price-original">Rp 90.000</span>
-            <span class="price-final">Rp 55.000</span>
-          </div>
-          <div class="product-footer">
-            <button class="btn btn-primary btn-sm btn-full add-to-cart">Beli Sekarang</button>
+      <div class="material-card reveal">
+        <div class="mat-swatch" style="background:linear-gradient(145deg,#2d4a2d,#162016)"></div>
+        <div class="mat-info">
+          <h4>Ripstok</h4>
+          <p>Bahan anti-robek dengan teknologi ripstop weave, water resistant, dan ringan. Pilihan terbaik untuk kebutuhan tactical dan lapangan berat.</p>
+          <div class="mat-tags">
+            <span class="mat-tag">Anti-Robek</span><span class="mat-tag">Tactical</span><span class="mat-tag">Water Resistant</span><span class="mat-tag">Ringan</span>
           </div>
         </div>
       </div>
-
-      <!-- Product 5 -->
-      <div class="product-card reveal" data-category="ebook">
-        <div class="product-thumb">
-          <div class="product-thumb-img gt-5">📈</div>
-          <div class="product-thumb-overlay"></div>
-          <span class="product-badge">Ebook</span>
-          <span class="discount-badge">-56%</span>
-          <button class="wishlist-btn" data-id="prod-5">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
-          </button>
-        </div>
-        <div class="product-body">
-          <div class="product-name">Investasi Saham untuk Pemula 2024</div>
-          <div class="product-meta">
-            <div class="product-rating">⭐ 4.6 <span>(543)</span></div>
-          </div>
-          <div class="product-seller">
-            <div class="seller-avatar">IF</div>
-            InvestorForum
-          </div>
-          <div class="product-pricing">
-            <span class="price-original">Rp 79.000</span>
-            <span class="price-final">Rp 35.000</span>
-          </div>
-          <div class="product-footer">
-            <button class="btn btn-primary btn-sm btn-full add-to-cart">Beli Sekarang</button>
+      <div class="material-card reveal reveal-delay-1">
+        <div class="mat-swatch" style="background:linear-gradient(145deg,#6b3a4e,#3d1f2e)"></div>
+        <div class="mat-info">
+          <h4>Twill</h4>
+          <p>Diagonal weave yang halus dan premium. Memberikan tampilan eksklusif dengan tekstur khas yang cocok untuk seragam formal berkelas.</p>
+          <div class="mat-tags">
+            <span class="mat-tag">Diagonal Weave</span><span class="mat-tag">Halus</span><span class="mat-tag">Premium Look</span><span class="mat-tag">Formal</span>
           </div>
         </div>
       </div>
-
-      <!-- Product 6 -->
-      <div class="product-card reveal reveal-delay-1" data-category="software">
-        <div class="product-thumb">
-          <div class="product-thumb-img gt-6">🎨</div>
-          <div class="product-thumb-overlay"></div>
-          <span class="product-badge">Software</span>
-          <span class="discount-badge">-46%</span>
-          <button class="wishlist-btn" data-id="prod-6">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
-          </button>
-        </div>
-        <div class="product-body">
-          <div class="product-name">Adobe Creative Cloud All Apps 1 Bulan</div>
-          <div class="product-meta">
-            <div class="product-rating">⭐ 4.9 <span>(1.8K)</span></div>
+      <div class="material-card reveal reveal-delay-2">
+        <div class="mat-swatch" style="background:linear-gradient(145deg,#2a3f5f,#162234)"></div>
+        <div class="mat-info">
+          <h4>Oxford</h4>
+          <p>Bahan breathable, ringan, dan versatile. Sangat cocok untuk seragam yang memerlukan kenyamanan tinggi dalam penggunaan formal-casual.</p>
+          <div class="mat-tags">
+            <span class="mat-tag">Breathable</span><span class="mat-tag">Casual-Formal</span><span class="mat-tag">Durable</span><span class="mat-tag">Versatile</span>
           </div>
-          <div class="product-seller">
-            <div class="seller-avatar">SW</div>
-            SoftwareHub
-          </div>
-          <div class="product-pricing">
-            <span class="price-original">Rp 350.000</span>
-            <span class="price-final">Rp 189.000</span>
-          </div>
-          <div class="product-footer">
-            <button class="btn btn-primary btn-sm btn-full add-to-cart">Beli Sekarang</button>
-          </div>
-        </div>
-      </div>
-
-      <!-- Product 7 -->
-      <div class="product-card reveal reveal-delay-2" data-category="game">
-        <div class="product-thumb">
-          <div class="product-thumb-img gt-7">💎</div>
-          <div class="product-thumb-overlay"></div>
-          <span class="product-badge">Game</span>
-          <span class="discount-badge">-31%</span>
-          <button class="wishlist-btn" data-id="prod-7">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
-          </button>
-        </div>
-        <div class="product-body">
-          <div class="product-name">Free Fire 2100 Diamond Top Up Resmi</div>
-          <div class="product-meta">
-            <div class="product-rating">⭐ 4.8 <span>(5.6K)</span></div>
-          </div>
-          <div class="product-seller">
-            <div class="seller-avatar">GS</div>
-            GameStore ID
-          </div>
-          <div class="product-pricing">
-            <span class="price-original">Rp 200.000</span>
-            <span class="price-final">Rp 139.000</span>
-          </div>
-          <div class="product-footer">
-            <button class="btn btn-primary btn-sm btn-full add-to-cart">Beli Sekarang</button>
-          </div>
-        </div>
-      </div>
-
-      <!-- Product 8 -->
-      <div class="product-card reveal reveal-delay-3" data-category="video">
-        <div class="product-thumb">
-          <div class="product-thumb-img gt-8">🎨</div>
-          <div class="product-thumb-overlay"></div>
-          <span class="product-badge">Video Learning</span>
-          <span class="discount-badge">-60%</span>
-          <button class="wishlist-btn" data-id="prod-8">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
-          </button>
-        </div>
-        <div class="product-body">
-          <div class="product-name">UI/UX Design Masterclass — Figma & Prototype</div>
-          <div class="product-meta">
-            <div class="product-rating">⭐ 5.0 <span>(432)</span></div>
-          </div>
-          <div class="product-seller">
-            <div class="seller-avatar">UD</div>
-            UXDesign Academy
-          </div>
-          <div class="product-pricing">
-            <span class="price-original">Rp 249.000</span>
-            <span class="price-final">Rp 99.000</span>
-          </div>
-          <div class="product-footer">
-            <button class="btn btn-primary btn-sm btn-full add-to-cart">Beli Sekarang</button>
-          </div>
-        </div>
-      </div>
-
-    </div><!-- /products-grid -->
-  </div>
-</section>
-
-<!-- ========================================================
-     FLASH SALE SECTION
-======================================================== -->
-<section class="flash-sale">
-  <div class="container" style="position:relative;z-index:1;">
-    <div class="flash-header reveal">
-      <div class="flash-title">
-        <span class="flash-icon">⚡</span>
-        <h2>Flash Sale <span class="gradient-text">Hari Ini</span></h2>
-      </div>
-      <div class="countdown">
-        <div class="count-block">
-          <span class="count-num" id="countdown-hours">--</span>
-          <span class="count-label">Jam</span>
-        </div>
-        <span class="count-sep">:</span>
-        <div class="count-block">
-          <span class="count-num" id="countdown-minutes">--</span>
-          <span class="count-label">Menit</span>
-        </div>
-        <span class="count-sep">:</span>
-        <div class="count-block">
-          <span class="count-num" id="countdown-seconds">--</span>
-          <span class="count-label">Detik</span>
         </div>
       </div>
     </div>
-
-    <div class="flash-products">
-      <div class="product-card reveal">
-        <div class="product-thumb">
-          <div class="product-thumb-img gt-9">🐍</div>
-          <span class="product-badge">Video</span>
-          <span class="discount-badge">-60%</span>
-          <button class="wishlist-btn" data-id="prod-flash-1">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
-          </button>
-        </div>
-        <div class="product-body">
-          <div class="product-name">Python Programming Pro — Data Science</div>
-          <div class="product-pricing">
-            <span class="price-original">Rp 199.000</span>
-            <span class="price-final">Rp 79.000</span>
-          </div>
-          <div class="product-footer">
-            <button class="btn btn-primary btn-sm btn-full add-to-cart">Beli Sekarang</button>
-          </div>
-        </div>
-      </div>
-
-      <div class="product-card reveal reveal-delay-1">
-        <div class="product-thumb">
-          <div class="product-thumb-img gt-10">🎨</div>
-          <span class="product-badge">Tools</span>
-          <span class="discount-badge">-47%</span>
-          <button class="wishlist-btn" data-id="prod-flash-2">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
-          </button>
-        </div>
-        <div class="product-body">
-          <div class="product-name">Canva Pro 1 Bulan — Desain Tanpa Batas</div>
-          <div class="product-pricing">
-            <span class="price-original">Rp 55.000</span>
-            <span class="price-final">Rp 29.000</span>
-          </div>
-          <div class="product-footer">
-            <button class="btn btn-primary btn-sm btn-full add-to-cart">Beli Sekarang</button>
-          </div>
-        </div>
-      </div>
-
-      <div class="product-card reveal reveal-delay-2">
-        <div class="product-thumb">
-          <div class="product-thumb-img gt-11">▶️</div>
-          <span class="product-badge">Akun VIP</span>
-          <span class="discount-badge">-45%</span>
-          <button class="wishlist-btn" data-id="prod-flash-3">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
-          </button>
-        </div>
-        <div class="product-body">
-          <div class="product-name">YouTube Premium 1 Bulan Bebas Iklan</div>
-          <div class="product-pricing">
-            <span class="price-original">Rp 69.000</span>
-            <span class="price-final">Rp 38.000</span>
-          </div>
-          <div class="product-footer">
-            <button class="btn btn-primary btn-sm btn-full add-to-cart">Beli Sekarang</button>
-          </div>
-        </div>
-      </div>
-
-      <div class="product-card reveal reveal-delay-3">
-        <div class="product-thumb">
-          <div class="product-thumb-img gt-12">📊</div>
-          <span class="product-badge">Ebook</span>
-          <span class="discount-badge">-51%</span>
-          <button class="wishlist-btn" data-id="prod-flash-4">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
-          </button>
-        </div>
-        <div class="product-body">
-          <div class="product-name">Digital Marketing A-Z Panduan Lengkap</div>
-          <div class="product-pricing">
-            <span class="price-original">Rp 99.000</span>
-            <span class="price-final">Rp 49.000</span>
-          </div>
-          <div class="product-footer">
-            <button class="btn btn-primary btn-sm btn-full add-to-cart">Beli Sekarang</button>
-          </div>
-        </div>
-      </div>
-    </div><!-- /flash-products -->
   </div>
 </section>
 
-<!-- ========================================================
+<!-- ============================================================
+     FEATURES / KEUNGGULAN
+============================================================ -->
+<section id="features" class="section-pad" aria-label="Keunggulan Bradwear Indonesia">
+  <div class="features-bg-shape"></div>
+  <div class="features-bg-shape-2"></div>
+  <div class="container features-inner">
+    <div class="section-header reveal">
+      <span class="section-eyebrow" style="color:#f87171">Keunggulan Kami</span>
+      <h2 class="section-title" style="color:white">MENGAPA PILIH<br>BRADWEAR?</h2>
+      <p class="section-subtitle" style="color:#6b7280">Komitmen kami adalah memberikan produk dan layanan terbaik untuk setiap klien, dari satuan hingga ribuan unit</p>
+    </div>
+    <div class="features-grid">
+      <div class="feature-item reveal">
+        <div class="feature-icon">🪡</div>
+        <div>
+          <h4>Bordir 3D Premium</h4>
+          <p>Bordir timbul presisi tinggi untuk logo, nama, dan identitas brand perusahaan Anda dengan detail luar biasa</p>
+        </div>
+      </div>
+      <div class="feature-item reveal reveal-delay-1">
+        <div class="feature-icon">🎨</div>
+        <div>
+          <h4>Desain Gratis</h4>
+          <p>Tim desainer profesional kami siap membuat mockup dan visualisasi seragam tanpa biaya tambahan apapun</p>
+        </div>
+      </div>
+      <div class="feature-item reveal reveal-delay-2">
+        <div class="feature-icon">📦</div>
+        <div>
+          <h4>Produksi Massal</h4>
+          <p>500+ unit per hari dengan quality control ketat dan konsisten di setiap tahapan produksi kami</p>
+        </div>
+      </div>
+      <div class="feature-item reveal reveal-delay-3">
+        <div class="feature-icon">📏</div>
+        <div>
+          <h4>Order Satuan</h4>
+          <p>Tidak ada minimum order — dari 1 pcs pun kami layani dengan standar kualitas yang sama tingginya</p>
+        </div>
+      </div>
+      <div class="feature-item reveal reveal-delay-4">
+        <div class="feature-icon">🚀</div>
+        <div>
+          <h4>Kirim Nasional</h4>
+          <p>Pengiriman ke 34 provinsi seluruh Indonesia via JNE, J&T, SiCepat, Pos Indonesia, dan ekspedisi terpercaya</p>
+        </div>
+      </div>
+      <div class="feature-item reveal reveal-delay-5">
+        <div class="feature-icon">🏆</div>
+        <div>
+          <h4>Garansi Kualitas</h4>
+          <p>Setiap produk diperiksa dan diverifikasi secara ketat sebelum dikemas dan dikirimkan kepada Anda</p>
+        </div>
+      </div>
+    </div>
+    <div class="features-banner reveal">
+      <div class="features-banner-text">
+        🎁 <span>DESAIN GRATIS</span> + KONSULTASI TANPA BIAYA<br>
+        <span style="font-family:var(--font-body);font-size:14px;color:rgba(255,255,255,0.7);font-weight:400">untuk setiap order, tanpa syarat minimum</span>
+      </div>
+      <a href="https://wa.me/6281234567890?text=Halo%20Bradwear%2C%20saya%20ingin%20konsultasi%20seragam%20gratis" target="_blank" rel="noopener" class="btn btn-outline-white" style="flex-shrink:0">Konsultasi Gratis →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     HOW TO ORDER / PROSES
+============================================================ -->
+<section id="order" class="section-pad" aria-label="Cara pemesanan seragam Bradwear">
+  <div class="container">
+    <div class="section-header centered reveal">
+      <span class="section-eyebrow">Cara Pemesanan</span>
+      <h2 class="section-title">MUDAH, CEPAT, TRANSPARAN</h2>
+      <p class="section-subtitle">Lima langkah sederhana dari konsultasi hingga seragam tiba di tangan Anda</p>
+    </div>
+    <div class="steps-wrap">
+      <div class="step-item reveal">
+        <div>
+          <div class="step-num">1</div>
+          <div class="step-icon">💬</div>
+          <div class="step-title">Konsultasi</div>
+          <div class="step-desc">Hubungi kami via WhatsApp untuk diskusi kebutuhan seragam Anda</div>
+        </div>
+      </div>
+      <div class="step-item reveal reveal-delay-1">
+        <div>
+          <div class="step-num">2</div>
+          <div class="step-icon">🎨</div>
+          <div class="step-title">Desain</div>
+          <div class="step-desc">Tim kami buat mockup desain seragam Anda secara gratis</div>
+        </div>
+      </div>
+      <div class="step-item reveal reveal-delay-2">
+        <div>
+          <div class="step-num">3</div>
+          <div class="step-icon">✅</div>
+          <div class="step-title">Konfirmasi</div>
+          <div class="step-desc">Review dan setujui desain, lakukan pembayaran DP untuk produksi</div>
+        </div>
+      </div>
+      <div class="step-item reveal reveal-delay-3">
+        <div>
+          <div class="step-num">4</div>
+          <div class="step-icon">🏭</div>
+          <div class="step-title">Produksi</div>
+          <div class="step-desc">Proses produksi dimulai dengan QC ketat di setiap tahap</div>
+        </div>
+      </div>
+      <div class="step-item reveal reveal-delay-4">
+        <div>
+          <div class="step-num">5</div>
+          <div class="step-icon">📦</div>
+          <div class="step-title">Pengiriman</div>
+          <div class="step-desc">Seragam dikemas rapi dan dikirim ke alamat Anda di seluruh Indonesia</div>
+        </div>
+      </div>
+    </div>
+    <div class="order-cta-wrap reveal">
+      <p style="font-size:14px;color:var(--text-muted);margin-bottom:20px">Siap memulai? Hubungi kami sekarang dan dapatkan konsultasi gratis!</p>
+      <a href="https://wa.me/6281234567890?text=Halo%20Bradwear%2C%20saya%20ingin%20memulai%20pemesanan%20seragam" target="_blank" rel="noopener" class="btn btn-whatsapp btn-lg">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+        <span>Mulai Pesan via WhatsApp</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
      TESTIMONIALS
-======================================================== -->
-<section class="section">
+============================================================ -->
+<section id="testimonials" class="section-pad" style="background:var(--bg-secondary)" aria-label="Testimoni klien Bradwear Indonesia">
   <div class="container">
-    <div class="section-header center reveal">
-      <span class="section-label">Apa Kata Mereka</span>
-      <h2 class="section-title">Dipercaya <span class="gradient-text">50.000+</span> Pengguna</h2>
-      <p class="section-subtitle">Bergabunglah dengan ribuan pelanggan puas yang telah berbelanja di Akunku</p>
+    <div class="section-header centered reveal">
+      <span class="section-eyebrow">Testimoni Klien</span>
+      <h2 class="section-title">DIPERCAYA INSTITUSI TERKEMUKA</h2>
+      <p class="section-subtitle">Kepuasan klien adalah prioritas utama kami — dari BUMN hingga instansi pemerintah</p>
     </div>
-
-    <div class="testimonials-grid" style="margin-top:2.5rem;">
-      <div class="testimonial-card reveal">
-        <div class="t-stars">★★★★★</div>
-        <p class="t-quote">"Pengiriman super cepat! Beli Netflix Premium jam 10 malam, langsung aktif dalam 5 menit. Harga juga jauh lebih murah dibanding beli langsung. Recommended banget!"</p>
-        <div class="t-author">
-          <div class="t-avatar" style="background:linear-gradient(135deg,#6C3FE8,#FF6B35)">AR</div>
-          <div>
-            <div class="t-name">Ahmad Rizky</div>
-            <div class="t-role">Content Creator, Jakarta</div>
-          </div>
-        </div>
-      </div>
-
-      <div class="testimonial-card reveal reveal-delay-2">
-        <div class="t-stars">★★★★★</div>
-        <p class="t-quote">"Udah langganan Adobe CC dari Akunku selama 6 bulan. Harganya konsisten murah, akun aman & stabil. CS juga sangat responsif kalau ada masalah. 10/10 deh!"</p>
-        <div class="t-author">
-          <div class="t-avatar" style="background:linear-gradient(135deg,#FF416C,#FF4B2B)">SI</div>
-          <div>
-            <div class="t-name">Siti Indriani</div>
-            <div class="t-role">Graphic Designer, Bandung</div>
-          </div>
-        </div>
-      </div>
-
-      <div class="testimonial-card reveal reveal-delay-3">
-        <div class="t-stars">★★★★☆</div>
-        <p class="t-quote">"Beli kursus React.js di sini, materi lengkap dan update. Harga diskon sampai 60% bikin dompet senang. Sudah selesai kursus dan langsung dapat kerja. Terima kasih Akunku!"</p>
-        <div class="t-author">
-          <div class="t-avatar" style="background:linear-gradient(135deg,#0575E6,#021B79)">BH</div>
-          <div>
-            <div class="t-name">Budi Hartono</div>
-            <div class="t-role">Junior Developer, Surabaya</div>
+    <!-- Ticker for testimonials section -->
+    <div class="testimonials-ticker reveal">
+      <div style="overflow:hidden;-webkit-mask:linear-gradient(to right,transparent 0%,black 10%,black 90%,transparent 100%);mask:linear-gradient(to right,transparent 0%,black 10%,black 90%,transparent 100%)">
+        <div class="ticker-track" id="testiTicker">
+          <div style="display:flex;align-items:center;gap:0;width:max-content">
+            <!-- Logos colored -->
+            <div style="display:flex;align-items:center;gap:10px;padding:8px 32px;border-right:1px solid var(--border)"><svg width="36" height="36" viewBox="0 0 52 52"><circle cx="26" cy="26" r="26" fill="#0d47a1"/><path d="M20 14l8 12h-6l8 12" stroke="#ffd700" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/><text x="26" y="46" text-anchor="middle" font-family="Arial" font-size="7" font-weight="bold" fill="#ffd700">PLN</text></svg><span style="font-size:13px;font-weight:600;color:var(--text-muted)">PT PLN</span></div>
+            <div style="display:flex;align-items:center;gap:10px;padding:8px 32px;border-right:1px solid var(--border)"><svg width="36" height="36" viewBox="0 0 52 52"><rect width="52" height="52" rx="8" fill="#006e8c"/><path d="M26 10 Q20 22 26 26 Q32 22 26 10Z" fill="#00b4d4"/><path d="M26 26 Q18 32 22 42h8 Q34 32 26 26Z" fill="#007ea4"/><text x="26" y="50" text-anchor="middle" font-family="Arial" font-size="6" font-weight="bold" fill="white">PERTAMINA</text></svg><span style="font-size:13px;font-weight:600;color:var(--text-muted)">Pertamina</span></div>
+            <div style="display:flex;align-items:center;gap:10px;padding:8px 32px;border-right:1px solid var(--border)"><svg width="36" height="36" viewBox="0 0 52 52"><rect width="52" height="52" rx="8" fill="#003087"/><text x="26" y="34" text-anchor="middle" font-family="Arial Black,Arial" font-size="20" font-weight="900" fill="white">BRI</text></svg><span style="font-size:13px;font-weight:600;color:var(--text-muted)">Bank BRI</span></div>
+            <div style="display:flex;align-items:center;gap:10px;padding:8px 32px;border-right:1px solid var(--border)"><svg width="36" height="36" viewBox="0 0 52 52"><rect width="52" height="52" rx="26" fill="#e20613"/><text x="26" y="30" text-anchor="middle" font-family="Arial" font-size="10" font-weight="bold" fill="white">TELKOM</text><text x="26" y="42" text-anchor="middle" font-family="Arial" font-size="7" fill="white">INDONESIA</text></svg><span style="font-size:13px;font-weight:600;color:var(--text-muted)">Telkom</span></div>
+            <div style="display:flex;align-items:center;gap:10px;padding:8px 32px;border-right:1px solid var(--border)"><svg width="36" height="36" viewBox="0 0 52 52"><rect width="52" height="52" rx="8" fill="#1b5e20"/><polygon points="26,8 30,20 42,20 33,28 36,40 26,33 16,40 19,28 10,20 22,20" fill="#ffd700"/></svg><span style="font-size:13px;font-weight:600;color:var(--text-muted)">Pemkab Tsm</span></div>
+            <div style="display:flex;align-items:center;gap:10px;padding:8px 32px;border-right:1px solid var(--border)"><svg width="36" height="36" viewBox="0 0 52 52"><rect width="52" height="52" rx="8" fill="#7b1522"/><polygon points="26,10 30,22 43,22 33,30 37,43 26,35 15,43 19,30 9,22 22,22" fill="#ffd700" stroke="#ffd700" stroke-width="0.5"/></svg><span style="font-size:13px;font-weight:600;color:var(--text-muted)">TNI AD</span></div>
+            <div style="display:flex;align-items:center;gap:10px;padding:8px 32px;border-right:1px solid var(--border)"><svg width="36" height="36" viewBox="0 0 52 52"><rect width="52" height="52" rx="26" fill="#0277bd"/><path d="M26 12 Q18 24 18 30 a8 8 0 0 0 16 0 Q34 24 26 12Z" fill="white" opacity="0.9"/></svg><span style="font-size:13px;font-weight:600;color:var(--text-muted)">PDAM</span></div>
+            <div style="display:flex;align-items:center;gap:10px;padding:8px 32px;border-right:1px solid var(--border)"><svg width="36" height="36" viewBox="0 0 52 52"><rect width="52" height="52" rx="8" fill="#e65100"/><path d="M10 34l16-18 16 18" stroke="white" stroke-width="3" fill="none"/><rect x="20" y="26" width="12" height="8" fill="white" rx="1"/></svg><span style="font-size:13px;font-weight:600;color:var(--text-muted)">Dinas Pendidikan</span></div>
+            <!-- Duplicate -->
+            <div style="display:flex;align-items:center;gap:10px;padding:8px 32px;border-right:1px solid var(--border)"><svg width="36" height="36" viewBox="0 0 52 52"><circle cx="26" cy="26" r="26" fill="#0d47a1"/><path d="M20 14l8 12h-6l8 12" stroke="#ffd700" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/><text x="26" y="46" text-anchor="middle" font-family="Arial" font-size="7" font-weight="bold" fill="#ffd700">PLN</text></svg><span style="font-size:13px;font-weight:600;color:var(--text-muted)">PT PLN</span></div>
+            <div style="display:flex;align-items:center;gap:10px;padding:8px 32px;border-right:1px solid var(--border)"><svg width="36" height="36" viewBox="0 0 52 52"><rect width="52" height="52" rx="8" fill="#006e8c"/><path d="M26 10 Q20 22 26 26 Q32 22 26 10Z" fill="#00b4d4"/><path d="M26 26 Q18 32 22 42h8 Q34 32 26 26Z" fill="#007ea4"/><text x="26" y="50" text-anchor="middle" font-family="Arial" font-size="6" font-weight="bold" fill="white">PERTAMINA</text></svg><span style="font-size:13px;font-weight:600;color:var(--text-muted)">Pertamina</span></div>
+            <div style="display:flex;align-items:center;gap:10px;padding:8px 32px;border-right:1px solid var(--border)"><svg width="36" height="36" viewBox="0 0 52 52"><rect width="52" height="52" rx="8" fill="#003087"/><text x="26" y="34" text-anchor="middle" font-family="Arial Black,Arial" font-size="20" font-weight="900" fill="white">BRI</text></svg><span style="font-size:13px;font-weight:600;color:var(--text-muted)">Bank BRI</span></div>
+            <div style="display:flex;align-items:center;gap:10px;padding:8px 32px;border-right:1px solid var(--border)"><svg width="36" height="36" viewBox="0 0 52 52"><rect width="52" height="52" rx="26" fill="#e20613"/><text x="26" y="30" text-anchor="middle" font-family="Arial" font-size="10" font-weight="bold" fill="white">TELKOM</text><text x="26" y="42" text-anchor="middle" font-family="Arial" font-size="7" fill="white">INDONESIA</text></svg><span style="font-size:13px;font-weight:600;color:var(--text-muted)">Telkom</span></div>
+            <div style="display:flex;align-items:center;gap:10px;padding:8px 32px;border-right:1px solid var(--border)"><svg width="36" height="36" viewBox="0 0 52 52"><rect width="52" height="52" rx="8" fill="#1b5e20"/><polygon points="26,8 30,20 42,20 33,28 36,40 26,33 16,40 19,28 10,20 22,20" fill="#ffd700"/></svg><span style="font-size:13px;font-weight:600;color:var(--text-muted)">Pemkab Tsm</span></div>
+            <div style="display:flex;align-items:center;gap:10px;padding:8px 32px;border-right:1px solid var(--border)"><svg width="36" height="36" viewBox="0 0 52 52"><rect width="52" height="52" rx="8" fill="#7b1522"/><polygon points="26,10 30,22 43,22 33,30 37,43 26,35 15,43 19,30 9,22 22,22" fill="#ffd700" stroke="#ffd700" stroke-width="0.5"/></svg><span style="font-size:13px;font-weight:600;color:var(--text-muted)">TNI AD</span></div>
+            <div style="display:flex;align-items:center;gap:10px;padding:8px 32px;border-right:1px solid var(--border)"><svg width="36" height="36" viewBox="0 0 52 52"><rect width="52" height="52" rx="26" fill="#0277bd"/><path d="M26 12 Q18 24 18 30 a8 8 0 0 0 16 0 Q34 24 26 12Z" fill="white" opacity="0.9"/></svg><span style="font-size:13px;font-weight:600;color:var(--text-muted)">PDAM</span></div>
+            <div style="display:flex;align-items:center;gap:10px;padding:8px 32px;border-right:1px solid var(--border)"><svg width="36" height="36" viewBox="0 0 52 52"><rect width="52" height="52" rx="8" fill="#e65100"/><path d="M10 34l16-18 16 18" stroke="white" stroke-width="3" fill="none"/><rect x="20" y="26" width="12" height="8" fill="white" rx="1"/></svg><span style="font-size:13px;font-weight:600;color:var(--text-muted)">Dinas Pendidikan</span></div>
           </div>
         </div>
       </div>
     </div>
-
+    <!-- Testimonial Grid -->
+    <div class="testi-grid">
+      <!-- 1 -->
+      <div class="testi-card reveal">
+        <div class="testi-header">
+          <div class="testi-logo">
+            <svg width="52" height="52" viewBox="0 0 52 52"><circle cx="26" cy="26" r="26" fill="#0d47a1"/><path d="M20 14l8 12h-6l8 12" stroke="#ffd700" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/><text x="26" y="46" text-anchor="middle" font-family="Arial" font-size="7" font-weight="bold" fill="#ffd700">PLN</text></svg>
+          </div>
+          <div>
+            <div class="testi-org">PT PLN (Persero)</div>
+            <div class="testi-stars">★★★★★</div>
+          </div>
+        </div>
+        <p class="testi-quote">Bradwear telah menyuplai 500+ kemeja seragam lapangan untuk teknisi kami. Kualitas jahitan dan bordir logo sangat memuaskan dan konsisten di setiap unit.</p>
+        <div class="testi-author">
+          <div class="testi-author-line"></div>
+          <div style="text-align:right">
+            <div class="testi-name">Ir. Budi Santoso</div>
+            <div class="testi-role">Manager SDM Regional Jawa Barat</div>
+          </div>
+        </div>
+      </div>
+      <!-- 2 -->
+      <div class="testi-card reveal reveal-delay-1">
+        <div class="testi-header">
+          <div class="testi-logo">
+            <svg width="52" height="52" viewBox="0 0 52 52"><rect width="52" height="52" rx="8" fill="#006e8c"/><path d="M26 10 Q20 22 26 26 Q32 22 26 10Z" fill="#00b4d4"/><path d="M26 26 Q18 32 22 42h8 Q34 32 26 26Z" fill="#007ea4"/><text x="26" y="50" text-anchor="middle" font-family="Arial" font-size="6" font-weight="bold" fill="white">PERTAMINA</text></svg>
+          </div>
+          <div>
+            <div class="testi-org">PT Pertamina (Persero)</div>
+            <div class="testi-stars">★★★★★</div>
+          </div>
+        </div>
+        <p class="testi-quote">Kami sangat puas dengan kemeja seragam tactical berkualitas tinggi. Pengiriman tepat waktu ke seluruh SPBU kami di Jawa Barat tanpa hambatan.</p>
+        <div class="testi-author">
+          <div class="testi-author-line"></div>
+          <div style="text-align:right">
+            <div class="testi-name">Dra. Sri Wahyuni</div>
+            <div class="testi-role">Kepala Divisi Umum</div>
+          </div>
+        </div>
+      </div>
+      <!-- 3 -->
+      <div class="testi-card reveal">
+        <div class="testi-header">
+          <div class="testi-logo">
+            <svg width="52" height="52" viewBox="0 0 52 52"><rect width="52" height="52" rx="8" fill="#003087"/><text x="26" y="34" text-anchor="middle" font-family="Arial Black,Arial" font-size="20" font-weight="900" fill="white">BRI</text></svg>
+          </div>
+          <div>
+            <div class="testi-org">Bank BRI</div>
+            <div class="testi-stars">★★★★★</div>
+          </div>
+        </div>
+        <p class="testi-quote">Seragam formal Bradwear sangat cocok untuk identitas brand perbankan kami. Tampilan rapi dan profesional — karyawan pun sangat puas memakainya.</p>
+        <div class="testi-author">
+          <div class="testi-author-line"></div>
+          <div style="text-align:right">
+            <div class="testi-name">Ahmad Rizal</div>
+            <div class="testi-role">HRD Manager Cabang Tasikmalaya</div>
+          </div>
+        </div>
+      </div>
+      <!-- 4 -->
+      <div class="testi-card reveal reveal-delay-1">
+        <div class="testi-header">
+          <div class="testi-logo">
+            <svg width="52" height="52" viewBox="0 0 52 52"><rect width="52" height="52" rx="26" fill="#e20613"/><text x="26" y="30" text-anchor="middle" font-family="Arial" font-size="10" font-weight="bold" fill="white">TELKOM</text><text x="26" y="42" text-anchor="middle" font-family="Arial" font-size="7" fill="white">INDONESIA</text></svg>
+          </div>
+          <div>
+            <div class="testi-org">Telkom Indonesia</div>
+            <div class="testi-stars">★★★★★</div>
+          </div>
+        </div>
+        <p class="testi-quote">Produksi massal 1000+ unit dalam waktu singkat dengan kualitas konsisten. Tim Bradwear sangat responsif dan profesional dalam setiap komunikasi.</p>
+        <div class="testi-author">
+          <div class="testi-author-line"></div>
+          <div style="text-align:right">
+            <div class="testi-name">Hendra Kusuma</div>
+            <div class="testi-role">Procurement Manager</div>
+          </div>
+        </div>
+      </div>
+      <!-- 5 -->
+      <div class="testi-card reveal">
+        <div class="testi-header">
+          <div class="testi-logo">
+            <svg width="52" height="52" viewBox="0 0 52 52"><rect width="52" height="52" rx="8" fill="#1b5e20"/><polygon points="26,8 30,20 42,20 33,28 36,40 26,33 16,40 19,28 10,20 22,20" fill="#ffd700"/></svg>
+          </div>
+          <div>
+            <div class="testi-org">Pemkab Tasikmalaya</div>
+            <div class="testi-stars">★★★★★</div>
+          </div>
+        </div>
+        <p class="testi-quote">Seragam ASN Kabupaten Tasikmalaya kami percayakan kepada Bradwear. Hasilnya sangat rapi, profesional, dan sesuai ekspektasi kami yang tinggi.</p>
+        <div class="testi-author">
+          <div class="testi-author-line"></div>
+          <div style="text-align:right">
+            <div class="testi-name">Drs. Asep Suhendar</div>
+            <div class="testi-role">Sekretaris Daerah</div>
+          </div>
+        </div>
+      </div>
+      <!-- 6 -->
+      <div class="testi-card reveal reveal-delay-1">
+        <div class="testi-header">
+          <div class="testi-logo">
+            <svg width="52" height="52" viewBox="0 0 52 52"><rect width="52" height="52" rx="8" fill="#7b1522"/><polygon points="26,10 30,22 43,22 33,30 37,43 26,35 15,43 19,30 9,22 22,22" fill="#ffd700" stroke="#ffd700" stroke-width="0.5"/></svg>
+          </div>
+          <div>
+            <div class="testi-org">TNI Angkatan Darat</div>
+            <div class="testi-stars">★★★★★</div>
+          </div>
+        </div>
+        <p class="testi-quote">Kemeja tactical dan rompi lapangan Bradwear memenuhi standar ketahanan yang kami butuhkan untuk kegiatan lapangan dengan kondisi ekstrem.</p>
+        <div class="testi-author">
+          <div class="testi-author-line"></div>
+          <div style="text-align:right">
+            <div class="testi-name">Kol. Inf. Wahyu Prasetyo</div>
+            <div class="testi-role">Asisten Logistik</div>
+          </div>
+        </div>
+      </div>
+      <!-- 7 -->
+      <div class="testi-card reveal">
+        <div class="testi-header">
+          <div class="testi-logo">
+            <svg width="52" height="52" viewBox="0 0 52 52"><rect width="52" height="52" rx="26" fill="#0277bd"/><path d="M26 12 Q18 24 18 30 a8 8 0 0 0 16 0 Q34 24 26 12Z" fill="white" opacity="0.9"/></svg>
+          </div>
+          <div>
+            <div class="testi-org">PDAM Tasikmalaya</div>
+            <div class="testi-stars">★★★★★</div>
+          </div>
+        </div>
+        <p class="testi-quote">Desain gratis dan bordir logo PDAM kami sangat presisi. Petugas lapangan kini tampil lebih profesional dan seragam di mata masyarakat.</p>
+        <div class="testi-author">
+          <div class="testi-author-line"></div>
+          <div style="text-align:right">
+            <div class="testi-name">Ir. Dede Kusnadi</div>
+            <div class="testi-role">Direktur Umum PDAM</div>
+          </div>
+        </div>
+      </div>
+      <!-- 8 -->
+      <div class="testi-card reveal reveal-delay-1">
+        <div class="testi-header">
+          <div class="testi-logo">
+            <svg width="52" height="52" viewBox="0 0 52 52"><rect width="52" height="52" rx="8" fill="#e65100"/><path d="M10 34l16-18 16 18" stroke="white" stroke-width="3" fill="none"/><rect x="20" y="26" width="12" height="8" fill="white" rx="1"/></svg>
+          </div>
+          <div>
+            <div class="testi-org">Dinas Pendidikan Jabar</div>
+            <div class="testi-stars">★★★★★</div>
+          </div>
+        </div>
+        <p class="testi-quote">Seragam guru dan staf pendidikan kami kini seragam dan rapi berkat Bradwear. Pelayanan memuaskan, harga kompetitif, dan pengiriman sangat cepat!</p>
+        <div class="testi-author">
+          <div class="testi-author-line"></div>
+          <div style="text-align:right">
+            <div class="testi-name">Dr. Hj. Nani Suryani</div>
+            <div class="testi-role">Kepala Dinas Pendidikan Jabar</div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
-<!-- ========================================================
-     CTA BANNER
-======================================================== -->
-<section style="padding:0 0 5rem;">
+<!-- ============================================================
+     CONTACT SECTION
+============================================================ -->
+<section id="contact" class="section-pad" aria-label="Kontak Bradwear Indonesia">
   <div class="container">
-    <div class="reveal" style="background:linear-gradient(135deg,var(--primary) 0%,#8B45E8 50%,var(--secondary) 100%);border-radius:24px;padding:3rem 2.5rem;text-align:center;position:relative;overflow:hidden;">
-      <div style="position:absolute;top:-60px;right:-60px;width:200px;height:200px;background:rgba(255,255,255,0.05);border-radius:50%;"></div>
-      <div style="position:absolute;bottom:-80px;left:-40px;width:240px;height:240px;background:rgba(255,255,255,0.04);border-radius:50%;"></div>
-      <div style="position:relative;z-index:1;">
-        <h2 style="font-size:clamp(1.5rem,3vw,2.25rem);font-weight:800;margin-bottom:0.75rem;">Mulai Belanja Digital Sekarang! 🛍️</h2>
-        <p style="color:rgba(255,255,255,0.85);font-size:0.95rem;margin-bottom:2rem;max-width:480px;margin-left:auto;margin-right:auto;">Daftar gratis dan dapatkan voucher Rp 25.000 untuk pembelian pertama kamu</p>
-        <div style="display:flex;gap:0.75rem;justify-content:center;flex-wrap:wrap;">
-          <a href="account.html" class="btn btn-outline-white btn-lg">Daftar Gratis</a>
-          <a href="products.html" class="btn btn-lg" style="background:rgba(255,255,255,0.15);color:#fff;border:2px solid rgba(255,255,255,0.3);">Lihat Produk →</a>
+    <div class="contact-grid">
+      <!-- Left -->
+      <div class="reveal">
+        <span class="section-eyebrow">Hubungi Kami</span>
+        <h2 class="section-title">SIAP MELAYANI<br>KEBUTUHAN ANDA</h2>
+        <p style="color:var(--text-muted);font-size:15px;line-height:1.7;margin-bottom:8px">Tim kami siap membantu dari konsultasi desain hingga seragam sampai di tangan Anda. Tidak ada pertanyaan terlalu kecil — kami senang membantu!</p>
+        <div class="contact-info-rows">
+          <div class="contact-row">
+            <div class="contact-icon">📍</div>
+            <div>
+              <div class="contact-row-label">Alamat</div>
+              <div class="contact-row-val">Karisma Residence, Blok C.46, RT.008/RW.003, Margajaya, Kec. Mangunreja, Kabupaten Tasikmalaya, Jawa Barat 46462</div>
+            </div>
+          </div>
+          <div class="contact-row">
+            <div class="contact-icon">📱</div>
+            <div>
+              <div class="contact-row-label">WhatsApp</div>
+              <div class="contact-row-val">+62 812-3456-7890</div>
+            </div>
+          </div>
+          <div class="contact-row">
+            <div class="contact-icon">🌐</div>
+            <div>
+              <div class="contact-row-label">Website</div>
+              <div class="contact-row-val">bradwearindonesia.com</div>
+            </div>
+          </div>
+          <div class="contact-row">
+            <div class="contact-icon">🕐</div>
+            <div>
+              <div class="contact-row-label">Jam Operasional</div>
+              <div class="contact-row-val">Senin – Sabtu, 08.00 – 17.00 WIB</div>
+            </div>
+          </div>
         </div>
+        <a href="https://wa.me/6281234567890?text=Halo%20Bradwear%2C%20saya%20ingin%20pesan%20seragam" target="_blank" rel="noopener" class="btn btn-whatsapp btn-lg" style="margin-bottom:24px">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+          Chat via WhatsApp
+        </a>
+        <iframe
+          src="https://maps.google.com/maps?q=Mangunreja+Tasikmalaya+Jawa+Barat+Indonesia&output=embed&z=14"
+          width="100%" height="280"
+          frameborder="0"
+          style="border-radius:12px;border:1px solid var(--border);display:block"
+          allowfullscreen
+          loading="lazy"
+          title="Lokasi Bradwear Indonesia di Tasikmalaya"
+        ></iframe>
+      </div>
+      <!-- Right: Form -->
+      <div class="contact-form-card reveal reveal-delay-1">
+        <div class="form-title">KIRIM PESAN</div>
+        <p class="form-subtitle">Isi formulir di bawah dan kami akan segera menghubungi Anda via WhatsApp</p>
+        <form id="contactForm" onsubmit="submitForm(event)">
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="namaField">Nama Lengkap *</label>
+              <input type="text" id="namaField" placeholder="Nama Anda" required>
+            </div>
+            <div class="form-group">
+              <label for="instansiField">Instansi / Perusahaan *</label>
+              <input type="text" id="instansiField" placeholder="Nama perusahaan/instansi" required>
+            </div>
+            <div class="form-group">
+              <label for="hpField">No. HP / WhatsApp *</label>
+              <input type="tel" id="hpField" placeholder="08xxxxxxxxxx" required>
+            </div>
+            <div class="form-group">
+              <label for="produkField">Produk yang Diminati</label>
+              <select id="produkField">
+                <option value="">-- Pilih Produk --</option>
+                <option>Kemeja Seragam Custom</option>
+                <option>Celana Seragam</option>
+                <option>Rompi / Vest</option>
+                <option>Polo Shirt Custom</option>
+                <option>Paket Lengkap (Kemeja + Celana)</option>
+                <option>Lainnya</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="jumlahField">Estimasi Jumlah (pcs)</label>
+              <input type="number" id="jumlahField" placeholder="Contoh: 100" min="1">
+            </div>
+            <div class="form-group full">
+              <label for="pesanField">Pesan / Keterangan</label>
+              <textarea id="pesanField" placeholder="Ceritakan kebutuhan seragam Anda (jenis, bahan, warna, deadline, dll)"></textarea>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-primary btn-full btn-lg" style="margin-top:16px">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+            Kirim via WhatsApp
+          </button>
+        </form>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ========================================================
+<!-- ============================================================
      FOOTER
-======================================================== -->
-<footer class="footer">
+============================================================ -->
+<footer id="footer" aria-label="Footer Bradwear Indonesia">
   <div class="container">
     <div class="footer-grid">
-      <!-- Brand -->
-      <div class="footer-brand">
-        <div class="footer-logo">
-          <svg width="22" height="22" viewBox="0 0 26 26" fill="none">
-            <path d="M14.5 2L4 15h9.5l-2 9L22 11h-9l1.5-9z" fill="#FF6B35" stroke="#FF6B35" stroke-width="1.5" stroke-linejoin="round"/>
-          </svg>
-          Akun<span class="logo-accent">ku</span>
+      <!-- Col 1: About -->
+      <div>
+        <svg viewBox="0 0 240 56" xmlns="http://www.w3.org/2000/svg" style="height:36px;width:auto;margin-bottom:12px">
+          <rect width="240" height="56" fill="#0a0a0a" rx="5"/>
+          <text x="12" y="34" font-family="Impact,Arial Black,sans-serif" font-size="24" fill="#00ff41" letter-spacing="1.5">BRADWEAR</text>
+          <text x="13" y="48" font-family="Arial,sans-serif" font-size="11" fill="#00ff41" letter-spacing="3.5">&gt;&gt;&gt; INDONESIA</text>
+        </svg>
+        <div class="footer-tagline">Stay Bold. Stay Bradwear.</div>
+        <p class="footer-about-text">Spesialis kemeja seragam custom premium melayani seluruh Indonesia sejak lebih dari satu dekade. Bordir 3D, desain gratis, pengiriman ke 34 provinsi.</p>
+        <div class="social-icons">
+          <!-- Instagram -->
+          <a href="#" class="social-icon" aria-label="Instagram Bradwear">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          </a>
+          <!-- Facebook -->
+          <a href="#" class="social-icon" aria-label="Facebook Bradwear">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+          </a>
+          <!-- TikTok -->
+          <a href="#" class="social-icon" aria-label="TikTok Bradwear">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.37 6.37 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.69a8.18 8.18 0 0 0 4.79 1.53V6.77a4.85 4.85 0 0 1-1.02-.08z"/></svg>
+          </a>
+          <!-- YouTube -->
+          <a href="#" class="social-icon" aria-label="YouTube Bradwear">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-1.96C18.88 4 12 4 12 4s-6.88 0-8.6.46A2.78 2.78 0 0 0 1.46 6.42 29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58A2.78 2.78 0 0 0 3.4 19.54C5.12 20 12 20 12 20s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-1.96A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="white"/></svg>
+          </a>
         </div>
-        <p class="footer-tagline">Toko Digital Terpercaya Indonesia. Temukan ribuan produk digital berkualitas dengan harga terbaik dan pengiriman instan.</p>
-        <div class="footer-socials">
-          <a href="#" class="social-btn" title="Instagram">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
-          </a>
-          <a href="#" class="social-btn" title="Twitter/X">
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
-          </a>
-          <a href="#" class="social-btn" title="YouTube">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 0 0-1.95 1.96A29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58A2.78 2.78 0 0 0 3.41 19.6C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.95A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02"/></svg>
-          </a>
-          <a href="#" class="social-btn" title="WhatsApp">
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
-          </a>
+      </div>
+      <!-- Col 2: Layanan -->
+      <div>
+        <h4>Layanan</h4>
+        <div class="footer-links">
+          <a href="#products">Kemeja Custom</a>
+          <a href="#products">Celana Seragam</a>
+          <a href="#products">Rompi / Vest</a>
+          <a href="#products">Polo Custom</a>
+          <a href="#features">Bordir 3D</a>
+          <a href="#features">Desain Gratis</a>
         </div>
       </div>
-
-      <!-- Links -->
-      <div class="footer-col">
-        <h4>Akunku</h4>
-        <ul class="footer-links">
-          <li><a href="#">Tentang Kami</a></li>
-          <li><a href="#">Karir</a></li>
-          <li><a href="#">Blog</a></li>
-          <li><a href="#">Press Kit</a></li>
-          <li><a href="#">Mitra Seller</a></li>
-        </ul>
-      </div>
-
-      <div class="footer-col">
-        <h4>Kategori</h4>
-        <ul class="footer-links">
-          <li><a href="products.html">📚 Ebook</a></li>
-          <li><a href="products.html">👑 Akun VIP</a></li>
-          <li><a href="products.html">🎬 Video Learning</a></li>
-          <li><a href="products.html">🎮 Game Item</a></li>
-          <li><a href="products.html">🔑 Software</a></li>
-        </ul>
-      </div>
-
-      <div class="footer-col">
-        <h4>Dukungan</h4>
-        <ul class="footer-links">
-          <li><a href="#">Pusat Bantuan</a></li>
-          <li><a href="#">Cara Pembelian</a></li>
-          <li><a href="#">Kebijakan Refund</a></li>
-          <li><a href="#">Syarat & Ketentuan</a></li>
-          <li><a href="#">Kebijakan Privasi</a></li>
-        </ul>
+      <!-- Col 3: Informasi -->
+      <div>
+        <h4>Informasi</h4>
+        <div class="footer-links">
+          <a href="#about">Tentang Kami</a>
+          <a href="#order">Cara Pemesanan</a>
+          <a href="#testimonials">Testimoni</a>
+          <a href="#" onclick="openModal('privacyModal');return false">Privacy Policy</a>
+          <a href="#" onclick="openModal('termsModal');return false">Syarat &amp; Ketentuan</a>
+          <a href="#contact">Kontak</a>
+        </div>
       </div>
     </div>
-
-    <div class="footer-bottom">
-      <p>© 2024 Akunku — Toko Digital Terpercaya Indonesia. Hak cipta dilindungi.</p>
-      <div class="footer-badges">
-        <span class="footer-badge">🔒 SSL Secure</span>
-        <span class="footer-badge">✅ Terpercaya</span>
-        <span class="footer-badge">💳 Multi Payment</span>
-      </div>
+    <div class="footer-bar">
+      <span>© 2025 Bradwear Indonesia. All rights reserved.</span>
+      <span>Made with ❤️ in Tasikmalaya, Jawa Barat</span>
     </div>
   </div>
 </footer>
 
-<script src="js/main.js"></script>
+<!-- ============================================================
+     FLOATING ELEMENTS
+============================================================ -->
+<!-- WhatsApp Float -->
+<a href="https://wa.me/6281234567890?text=Halo%20Bradwear%2C%20saya%20ingin%20pesan%20seragam" class="wa-float" target="_blank" rel="noopener" aria-label="Chat WhatsApp Bradwear">
+  <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+  <span class="wa-text">Chat Sekarang</span>
+</a>
+
+<!-- Scroll to Top -->
+<button class="scroll-top" id="scrollTop" onclick="scrollToTop()" aria-label="Kembali ke atas">
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 15l-6-6-6 6"/></svg>
+</button>
+
+<!-- ============================================================
+     MODALS
+============================================================ -->
+<!-- Privacy Policy Modal -->
+<div class="modal-overlay" id="privacyModal" onclick="handleOverlayClick(event,'privacyModal')" role="dialog" aria-modal="true" aria-labelledby="privacyTitle">
+  <div class="modal-box">
+    <div class="modal-header">
+      <h3 id="privacyTitle">PRIVACY POLICY</h3>
+      <button class="modal-close" onclick="closeModal('privacyModal')" aria-label="Tutup">&times;</button>
+    </div>
+    <div class="modal-body">
+      <p>Terakhir diperbarui: Januari 2025</p>
+      <h4>1. Informasi yang Kami Kumpulkan</h4>
+      <p>Bradwear Indonesia mengumpulkan informasi yang Anda berikan secara langsung, termasuk nama, nomor telepon/WhatsApp, nama perusahaan/instansi, dan detail kebutuhan seragam Anda.</p>
+      <h4>2. Cara Penggunaan Informasi</h4>
+      <p>Informasi yang kami kumpulkan digunakan untuk:</p>
+      <ul>
+        <li>Memproses dan menyelesaikan pesanan seragam Anda</li>
+        <li>Berkomunikasi dengan Anda mengenai pesanan dan layanan</li>
+        <li>Memberikan informasi produk dan penawaran yang relevan</li>
+        <li>Meningkatkan kualitas layanan kami</li>
+      </ul>
+      <h4>3. Keamanan Data</h4>
+      <p>Kami berkomitmen untuk melindungi informasi pribadi Anda dengan menerapkan langkah-langkah keamanan yang sesuai. Data Anda tidak akan dijual kepada pihak ketiga manapun.</p>
+      <h4>4. Cookie Policy</h4>
+      <p>Website kami menggunakan cookie untuk meningkatkan pengalaman pengguna. Anda dapat menonaktifkan cookie melalui pengaturan browser Anda, meskipun hal ini mungkin memengaruhi fungsionalitas website.</p>
+      <h4>5. Data WhatsApp dan Kontak</h4>
+      <p>Nomor WhatsApp yang Anda berikan digunakan semata-mata untuk keperluan komunikasi terkait pesanan dan layanan Bradwear Indonesia. Kami tidak akan menggunakannya untuk tujuan lain tanpa persetujuan Anda.</p>
+      <h4>6. Hak Pengguna</h4>
+      <p>Anda memiliki hak untuk mengakses, memperbaiki, atau meminta penghapusan data pribadi Anda yang kami simpan. Silakan hubungi kami melalui WhatsApp untuk mengajukan permintaan.</p>
+      <h4>7. Perubahan Kebijakan</h4>
+      <p>Kami berhak memperbarui kebijakan privasi ini sewaktu-waktu. Perubahan akan diberitahukan melalui website ini.</p>
+      <h4>8. Kontak Kami</h4>
+      <p>Untuk pertanyaan mengenai kebijakan privasi ini, hubungi kami di: WhatsApp +62 812-3456-7890 atau melalui formulir kontak di website ini.</p>
+    </div>
+  </div>
+</div>
+
+<!-- Terms Modal -->
+<div class="modal-overlay" id="termsModal" onclick="handleOverlayClick(event,'termsModal')" role="dialog" aria-modal="true" aria-labelledby="termsTitle">
+  <div class="modal-box">
+    <div class="modal-header">
+      <h3 id="termsTitle">SYARAT &amp; KETENTUAN</h3>
+      <button class="modal-close" onclick="closeModal('termsModal')" aria-label="Tutup">&times;</button>
+    </div>
+    <div class="modal-body">
+      <p>Dengan menggunakan layanan Bradwear Indonesia, Anda menyetujui syarat dan ketentuan berikut:</p>
+      <h4>1. Pemesanan</h4>
+      <ul>
+        <li>Pesanan dianggap sah setelah konfirmasi dari pihak Bradwear Indonesia</li>
+        <li>Pembayaran DP minimal 50% dilakukan setelah desain disetujui</li>
+        <li>Pelunasan dilakukan sebelum pengiriman produk</li>
+        <li>Bradwear berhak menolak pesanan yang tidak sesuai kemampuan produksi</li>
+      </ul>
+      <h4>2. Desain dan Persetujuan</h4>
+      <ul>
+        <li>Layanan desain gratis mencakup mockup digital seragam</li>
+        <li>Revisi desain maksimal 3 kali tanpa biaya tambahan</li>
+        <li>Setelah desain disetujui dan produksi dimulai, perubahan tidak dapat dilakukan</li>
+        <li>Klien bertanggung jawab atas keakuratan desain yang disetujui</li>
+      </ul>
+      <h4>3. Produksi dan Waktu</h4>
+      <ul>
+        <li>Waktu produksi standar 7–14 hari kerja setelah konfirmasi dan DP diterima</li>
+        <li>Order massal (&gt;500 pcs) memerlukan waktu produksi lebih lama</li>
+        <li>Bradwear tidak bertanggung jawab atas keterlambatan akibat force majeure</li>
+      </ul>
+      <h4>4. Pengiriman</h4>
+      <ul>
+        <li>Biaya pengiriman ditanggung oleh klien kecuali ada perjanjian lain</li>
+        <li>Risiko pengiriman beralih kepada klien setelah barang diserahkan ke ekspedisi</li>
+        <li>Bradwear tidak bertanggung jawab atas kerusakan atau kehilangan di perjalanan</li>
+      </ul>
+      <h4>5. Garansi dan Komplain</h4>
+      <ul>
+        <li>Garansi berlaku untuk cacat produksi yang terbukti kesalahan dari pihak Bradwear</li>
+        <li>Komplain harus disampaikan maksimal 3 hari setelah produk diterima</li>
+        <li>Foto bukti diperlukan untuk pengajuan komplain</li>
+      </ul>
+      <h4>6. Pembatalan</h4>
+      <p>Pembatalan pesanan setelah produksi dimulai tidak dapat dilakukan dan DP tidak dapat dikembalikan.</p>
+      <h4>7. Hukum yang Berlaku</h4>
+      <p>Syarat dan ketentuan ini tunduk pada hukum yang berlaku di Indonesia.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================================
+     JAVASCRIPT
+============================================================ -->
+<script>
+  /* ================================================
+     1. THEME: DARK / LIGHT
+  ================================================ */
+  (function() {
+    const saved = localStorage.getItem('bradwear-theme') || 'light';
+    document.documentElement.setAttribute('data-theme', saved);
+    updateThemeIcons(saved);
+    function updateThemeIcons(t) {
+      const moon = document.getElementById('moonIcon');
+      const sun = document.getElementById('sunIcon');
+      if (!moon || !sun) return;
+      if (t === 'dark') { moon.style.display = 'none'; sun.style.display = 'block'; }
+      else { moon.style.display = 'block'; sun.style.display = 'none'; }
+    }
+    window.updateThemeIcons = updateThemeIcons;
+  })();
+
+  document.getElementById('themeToggle').addEventListener('click', function() {
+    const current = document.documentElement.getAttribute('data-theme');
+    const next = current === 'dark' ? 'light' : 'dark';
+    document.documentElement.setAttribute('data-theme', next);
+    localStorage.setItem('bradwear-theme', next);
+    updateThemeIcons(next);
+  });
+
+  /* ================================================
+     2. STICKY NAVBAR + SCROLL EFFECTS
+  ================================================ */
+  const navbar = document.getElementById('navbar');
+  const scrollTopBtn = document.getElementById('scrollTop');
+  const heroVisual = document.getElementById('hero-visual');
+
+  window.addEventListener('scroll', function() {
+    const sy = window.scrollY;
+    // Navbar shadow
+    navbar.classList.toggle('scrolled', sy > 50);
+    // Scroll to top button
+    scrollTopBtn.style.opacity = sy > 300 ? '1' : '0';
+    scrollTopBtn.style.pointerEvents = sy > 300 ? 'auto' : 'none';
+    // Parallax on hero visual
+    if (heroVisual) {
+      heroVisual.style.transform = 'translateY(' + (sy * 0.12) + 'px)';
+    }
+    // Active nav link
+    updateActiveNav();
+  }, { passive: true });
+
+  function scrollToTop() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  function updateActiveNav() {
+    const sections = ['hero', 'about', 'products', 'materials', 'features', 'order', 'testimonials', 'contact'];
+    const links = document.querySelectorAll('.nav-links a');
+    let current = 'hero';
+    for (const id of sections) {
+      const el = document.getElementById(id);
+      if (el && window.scrollY >= el.offsetTop - 80) current = id;
+    }
+    links.forEach(a => {
+      const href = a.getAttribute('href').replace('#', '');
+      a.classList.toggle('active', href === current);
+    });
+  }
+
+  /* ================================================
+     3. MOBILE MENU
+  ================================================ */
+  const hamburger = document.getElementById('hamburger');
+  const mobileMenu = document.getElementById('mobileMenu');
+
+  hamburger.addEventListener('click', function() {
+    const isOpen = mobileMenu.classList.toggle('open');
+    hamburger.classList.toggle('open', isOpen);
+    hamburger.setAttribute('aria-expanded', isOpen);
+  });
+
+  function closeMobileMenu() {
+    mobileMenu.classList.remove('open');
+    hamburger.classList.remove('open');
+    hamburger.setAttribute('aria-expanded', 'false');
+  }
+
+  /* ================================================
+     4. PRODUCT TABS
+  ================================================ */
+  function switchTab(btn, panelId) {
+    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+    document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+    btn.classList.add('active');
+    document.getElementById(panelId).classList.add('active');
+  }
+
+  /* ================================================
+     5. ANIMATED COUNTERS
+  ================================================ */
+  function animateCounter(el, target, duration) {
+    const start = performance.now();
+    const isLarge = target >= 1000;
+    function update(now) {
+      const elapsed = now - start;
+      const progress = Math.min(elapsed / duration, 1);
+      const eased = 1 - Math.pow(1 - progress, 3);
+      const current = Math.round(eased * target);
+      el.textContent = isLarge ? (current >= 1000 ? (current / 1000).toFixed(0) + 'K' : current) : current;
+      if (progress < 1) requestAnimationFrame(update);
+      else el.textContent = isLarge && target >= 1000 ? (target / 1000).toFixed(0) + 'K+' : target + '+';
+    }
+    requestAnimationFrame(update);
+  }
+
+  /* ================================================
+     6. SCROLL REVEAL (IntersectionObserver)
+  ================================================ */
+  const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        // Check for counter
+        entry.target.querySelectorAll('[data-count]').forEach(el => {
+          const target = parseInt(el.dataset.count);
+          animateCounter(el, target, 1800);
+        });
+        revealObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+
+  document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+  // Also observe hero stats directly
+  const heroStatNums = document.querySelectorAll('.hero-stat-num[data-count]');
+  const counterObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        animateCounter(entry.target, parseInt(entry.target.dataset.count), 2000);
+        counterObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.5 });
+  heroStatNums.forEach(el => counterObserver.observe(el));
+
+  /* ================================================
+     7. PRODUCT CARD 3D TILT
+  ================================================ */
+  document.querySelectorAll('.product-card').forEach(card => {
+    card.addEventListener('mousemove', function(e) {
+      const rect = card.getBoundingClientRect();
+      const x = (e.clientX - rect.left) / rect.width - 0.5;
+      const y = (e.clientY - rect.top) / rect.height - 0.5;
+      card.style.transform = 'translateY(-4px) rotateY(' + (x * 6) + 'deg) rotateX(' + (-y * 4) + 'deg)';
+    });
+    card.addEventListener('mouseleave', function() {
+      card.style.transform = '';
+    });
+  });
+
+  /* ================================================
+     8. TICKER DUPLICATE (seamless loop)
+  ================================================ */
+  function setupTicker(trackId) {
+    const track = document.getElementById(trackId);
+    if (!track) return;
+    const original = track.innerHTML;
+    track.innerHTML = original + original;
+  }
+  setupTicker('tickerTrack');
+
+  /* ================================================
+     9. CONTACT FORM → WHATSAPP
+  ================================================ */
+  function submitForm(e) {
+    e.preventDefault();
+    const nama = document.getElementById('namaField').value.trim();
+    const instansi = document.getElementById('instansiField').value.trim();
+    const hp = document.getElementById('hpField').value.trim();
+    const produk = document.getElementById('produkField').value;
+    const jumlah = document.getElementById('jumlahField').value.trim();
+    const pesan = document.getElementById('pesanField').value.trim();
+    let msg = 'Halo Bradwear Indonesia! Saya ingin memesan seragam.\n\n';
+    msg += '📋 *DATA PEMESAN*\n';
+    msg += '• Nama: ' + nama + '\n';
+    msg += '• Instansi: ' + instansi + '\n';
+    msg += '• No. HP: ' + hp + '\n';
+    if (produk) msg += '• Produk: ' + produk + '\n';
+    if (jumlah) msg += '• Est. Jumlah: ' + jumlah + ' pcs\n';
+    if (pesan) msg += '\n📝 *PESAN:*\n' + pesan;
+    msg += '\n\nMohon informasinya, terima kasih! 🙏';
+    const url = 'https://wa.me/6281234567890?text=' + encodeURIComponent(msg);
+    window.open(url, '_blank');
+  }
+
+  /* ================================================
+     10. MODALS
+  ================================================ */
+  function openModal(id) {
+    document.getElementById(id).classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeModal(id) {
+    document.getElementById(id).classList.remove('open');
+    document.body.style.overflow = '';
+  }
+  function handleOverlayClick(e, id) {
+    if (e.target === e.currentTarget) closeModal(id);
+  }
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') {
+      document.querySelectorAll('.modal-overlay.open').forEach(m => {
+        m.classList.remove('open');
+      });
+      document.body.style.overflow = '';
+    }
+  });
+
+  /* ================================================
+     11. SMOOTH SCROLL FOR NAV LINKS
+  ================================================ */
+  document.querySelectorAll('a[href^="#"]').forEach(link => {
+    link.addEventListener('click', function(e) {
+      const href = this.getAttribute('href');
+      if (href === '#') return;
+      const target = document.querySelector(href);
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    });
+  });
+</script>
 </body>
 </html>
